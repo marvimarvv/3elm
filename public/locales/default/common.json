@@ -1,0 +1,43 @@
+{
+  "about": {
+    "title": "This is the about page."
+  },
+  "contact": {
+    "title": "Lets make the world a more knowledgeable place together.",
+    "enterprise headline": "For Enterprises & Instituions",
+    "enterprise text": "You, your Institution, NGO or Enterprise have a great idea? You would like to cooperate with us on it? We are always excited to work on new projects, conceptualizing new ways of delivering facts and knowledge in new entertaining ways.",
+    "support headline": " Support us",
+    "support text 1": "Having a business with a social compenent is one of our dreams. It's fullfiling to know that we are doing our best leave a positive impact on our beautiful world.",
+    "support text 2": "Nevertheless, we are real people with real duties and rents to pay in real life. You can help us, pursue our dream of empowering scientific discourse in the Arabic-Speaking world by sponsoring and donating to 3ELM.",
+    "reach headline": "Reach out",
+    "reach text": "You enjoy our 3ELM videos and have some inquiries, suggestions or ideas? You are a scientist or an academic with a great idea, you think we have to know about?"
+  },
+  "home": {
+    "hero title1": "Art",
+    "hero title2": "X",
+    "hero title3": "Science",
+    "hero subtitle": "This is the subtitle",
+    "about title": "Hi, WE ARE 3ELM",
+    "about main": "3elm is predominantly an Arabic Speaking popular Science Initiative and a science-centric design studio, with a clear goal of empowering Scientific discourse in every Arabic-speaking household.",
+    "card1 title": "Values",
+    "card1 point1": "In Arabic",
+    "card1 point2": "Empowering",
+    "card1 point3": "Accessible",
+    "card1 point4": "Factual",
+    "card1 point5": "Entertaining",
+    "card2 title": "Design Practice",
+    "card2 point1": "Analytical",
+    "card2 point2": "Thorough Research",
+    "card2 point3": "Critical Thinking",
+    "card2 point4": "Following the essence of Egyptian modernity and Bauhaus",
+    "card2 point5": "Visually compelling",
+    "card3 title": "The Ultimate Goals",
+    "card3 point1": "Leaving a positive mark in the world",
+    "card3 point2": "An Arabic speaking nation of scientists and thinkers"
+  },
+  "navigation": {
+    "work": "Work",
+    "about": "About us",
+    "contact": "Contact us"
+  }
+} 

@@ -35,6 +35,7 @@ export default () => {
       modules={[Navigation]}
       spaceBetween={0}
       navigation
+      loop={true}
     >
       <SwiperSlide className="video-background aspect-video">
         <div className="grid h-full place-items-center text-fluid-xl">1</div>

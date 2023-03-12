@@ -20,17 +20,38 @@ export default function Nav({ pageContent }) {
   return (
     <>
       <nav className="hidden items-center gap-4 md:flex">
-        <Link className="m-auto text-center" href="/work">
+        <Link
+          className={
+            router.pathname == "/work"
+              ? "m-auto rounded-full bg-darkorange px-3 py-2 text-center"
+              : "m-auto text-center"
+          }
+          href="/work"
+        >
           {t("navigation.work")}
         </Link>
         <div className="h-2 w-2 rounded-full bg-orange"></div>
-        <Link className="m-auto text-center" href="/about">
+        <Link
+          className={
+            router.pathname == "/about"
+              ? "m-auto rounded-full bg-darkorange px-3 py-2 text-center"
+              : "m-auto text-center"
+          }
+          href="/about"
+        >
           {t("navigation.about")}
         </Link>
         <div className="h-2 w-2 rounded-full bg-orange"></div>
         <Logo className="m-auto"></Logo>
         <div className="h-2 w-2 rounded-full bg-orange"></div>
-        <Link className="m-auto text-center" href="/contact">
+        <Link
+          className={
+            router.pathname == "/contact"
+              ? "m-auto rounded-full bg-darkorange px-3 py-2 text-center"
+              : "m-auto text-center"
+          }
+          href="/contact"
+        >
           {t("navigation.contact")}
         </Link>
         <div className="h-2 w-2 rounded-full bg-orange"></div>

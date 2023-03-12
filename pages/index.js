@@ -114,10 +114,10 @@ export default function Home() {
               </figure>
             </figgroup>
           </div>
-          <div className="hover-card__side hover-card__side--back clip-path-corner--left absolute inset-0 bg-orange p-4">
+          <div className="hover-card__side hover-card__side--back clip-path-corner--left absolute inset-0 flex items-center justify-center bg-orange p-4">
             <ul
               role="list"
-              className="flex h-full list-disc flex-col justify-evenly pl-[23%] pr-[20%] marker:text-deepblue"
+              className="flex h-full list-disc flex-col justify-evenly p-8 marker:text-deepblue"
             >
               <li>{t("home.card1 point1")}</li>
               <li>{t("home.card1 point2")}</li>
@@ -140,10 +140,10 @@ export default function Home() {
               </figure>
             </figgroup>
           </div>
-          <div className="hover-card__side hover-card__side--back clip-path-corner--left absolute inset-0 bg-orange p-4">
+          <div className="hover-card__side hover-card__side--back clip-path-corner--left absolute inset-0 flex h-full items-center justify-center bg-orange p-4">
             <ul
               role="list"
-              className="flex h-full list-disc flex-col justify-evenly pl-[23%] pr-[20%] marker:text-deepblue"
+              className="flex h-full list-disc flex-col justify-evenly p-8 marker:text-deepblue"
             >
               <li>{t("home.card2 point1")}</li>
               <li>{t("home.card2 point2")}</li>
@@ -166,10 +166,10 @@ export default function Home() {
               </figure>
             </figgroup>
           </div>
-          <div className="hover-card__side hover-card__side--back clip-path-corner--left absolute inset-0 bg-orange p-4">
+          <div className="hover-card__side hover-card__side--back clip-path-corner--left absolute inset-0 flex items-center justify-center bg-orange p-4">
             <ul
               role="list"
-              className="flex h-full list-disc flex-col justify-evenly pl-[23%] pr-[20%] marker:text-deepblue"
+              className="flex h-full list-disc flex-col justify-evenly p-8 marker:text-deepblue"
             >
               <li>{t("home.card3 point1")}</li>
               <li>{t("home.card3 point2")}</li>

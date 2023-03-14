@@ -4,7 +4,7 @@ import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
-export default function About() {
+export default function Privacy() {
   const { t } = useTranslation();
 
   return (
@@ -13,7 +13,7 @@ export default function About() {
         <title>{siteTitle}</title>
       </Head>
       <section>
-        <h1 className="text-cohead text-fluid-xl">{t("about.title")}</h1>
+        <h1 className="text-cohead text-fluid-xl">{t("privacy.title")}</h1>
       </section>
     </Layout>
   );

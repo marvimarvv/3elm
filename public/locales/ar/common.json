@@ -16,6 +16,19 @@
     "form message": "Your message",
     "form button": "Submit"
   },
+  "footer": {
+    "quotation": "“To speak a language is to take on a world, a culture.”",
+    "author": "Frantz Fanon",
+    "imprint":"Imprint",
+    "privacy": "Data and privacy policy",
+    "copyright": "© 3elm GmbH, 2023.",
+    "address headline": "Our Studio.",
+    "address street": "Curschmannstraße 16",
+    "address city": "20251 Hamburg",
+    "address country":"Germany",
+    "socials headline": "Find us.",
+    "thanks": "Thank you!"
+  },
   "home": {
     "hero title1": "عنوان المنزل",
     "hero title2": "وصف المنزل",
@@ -39,10 +52,16 @@
     "card3 point1": "Leaving a positive mark in the world",
     "card3 point2": "An Arabic speaking nation of scientists and thinkers"
   },
+  "imprint": {
+    "title": "This is the imprint page."
+  },
   "navigation": {
     "work": "Work",
     "about": "About us",
     "contact": "Contact us"
+  },
+  "privacy": {
+    "title": "This is the privacy page."
   },
   "work": {
     "title": "This is the work page."

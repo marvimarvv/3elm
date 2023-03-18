@@ -11,7 +11,7 @@ export default function Layout({ children, home }) {
   return (
     <div
       ref={pageContent}
-      className="mx-auto max-w-screen-2xl px-[max(20px,4vw)] pt-[max(20px,4vw)] font-cotext text-white selection:bg-orange selection:text-white"
+      className=" mx-auto max-w-screen-2xl overflow-hidden scroll-smooth px-[max(20px,4vw)] pt-[max(20px,4vw)] font-cotext text-white selection:bg-orange selection:text-white"
     >
       <Head>
         <link rel="icon" href="/favicon.ico" />

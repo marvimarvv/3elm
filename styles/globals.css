@@ -52,7 +52,7 @@
   .arrow-background {
     background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkiIGhlaWdodD0iMzgiIHZpZXdCb3g9IjAgMCAxOSAzOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1Ljg4NjkgMzQuMTJMMyAxNy4zNjdMMTUuODg2OSAzIiBzdHJva2U9IiNDODRCMjUiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=");
     background-size: 13% 21%;
-    }
+   }
 
   .border-image-perforation {
     border-image-slice: 9 19 9 19;
@@ -82,6 +82,14 @@
     clip-path: polygon(3.91% -3.13%, 100% -1px, 100% 77.08%, 8.08% 78.76%, 0.48% 99.03%, 3.68% 54.69%);
   }
 
+  .gif-shape-outside-ltr {
+    shape-outside: polygon(34.67% 5.21%, 100% 0%, 100.27% 88.90%, 29.07% 89.24%, 16.67% 45.93%);
+  }
+
+  .gif-shape-outside-rtl {
+    shape-outside: polygon(65.33% 5.21%, 0% 0%, 0% 88.90%, 70.93% 89.24%, 83.33% 45.93%);
+  }
+
   .mirror {
     transform: rotateY(180deg);
   }
@@ -102,9 +110,9 @@
     direction: ltr;
   }
 
-    .swiper-button-disabled {
-      display: none;
-    }
+  .swiper-button-disabled {
+    display: none;
+  }
 
   .swiper-button-next,
   .swiper-button-prev {

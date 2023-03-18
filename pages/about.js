@@ -1,6 +1,10 @@
 import Layout, { siteTitle } from "../components/layout";
 
+import CircleScrollAnimation from "../components/circleScrollAnimation";
+import Gif from "../public/images/ARABIC.gif";
 import Head from "next/head";
+import Image from "next/image";
+import StoryIllustration from "../components/storyIllustration";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
@@ -12,8 +16,35 @@ export default function About() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section>
-        <h1 className="text-cohead text-fluid-xl">{t("about.title")}</h1>
+      <section className="mb-40">
+        <h1 className=" mb-7">
+          <span className="text-fluid-s block font-cohead">
+            {t("about.title top")}
+          </span>
+          <span className="font-cohead text-fluid-l">
+            {t("about.title bottom")}
+          </span>
+        </h1>
+        <Image
+          unoptimized={true}
+          src={Gif}
+          alt="Arabic letters moving up and down"
+          className="rtl:gif-shape-outside-rtl ltr:gif-shape-outside-ltr rtl:mirror w-8/12 ltr:float-right rtl:relative rtl:-z-10 rtl:float-left md:w-5/12 ltr:md:-mr-8 rtl:md:-ml-8"
+        />
+        <p className="text-cohead text-fluid-s mb-7 leading-7">
+          {t("about.paragraph 1")}
+        </p>
+        <p className="font-cohead text-fluid-m">{t("about.paragraph 2")}</p>
+      </section>
+      <CircleScrollAnimation className="relative mb-40 grid h-screen place-items-center overflow-y-clip md:-mx-8" />
+      <section className="border-image-perforation -mx-8 mb-40 grid grid-cols-3 gap-10 bg-brightorange px-[3vh] py-16">
+        <div class="col-span-2 pl-6">
+          <h2 className="font-cohead text-fluid-l font-bold">
+            {t("about.story title")}
+          </h2>
+          <p className="text-fluid-s max-w-[60ch]">{t("about.story text")}</p>
+        </div>
+        <StoryIllustration className="h-full w-full" />
       </section>
     </Layout>
   );

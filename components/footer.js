@@ -20,9 +20,24 @@ export default function Footer() {
             <span className="font-normal">{t("footer.author")}</span>
           </blockquote>
           <div className="flex flex-col gap-y-2 self-end ltr:mr-auto rtl:ml-auto">
-            <a href="mailto:info@3elm.com">info@3elm.com</a>
-            <Link href="/imprint">{t("footer.imprint")}</Link>
-            <Link href="/privacy">{t("footer.privacy")}</Link>
+            <a
+              className=" transition-opacity duration-300 hover:opacity-50"
+              href="mailto:info@3elm.com"
+            >
+              info@3elm.com
+            </a>
+            <Link
+              className=" transition-opacity duration-300 hover:opacity-50"
+              href="/imprint"
+            >
+              {t("footer.imprint")}
+            </Link>
+            <Link
+              className=" transition-opacity duration-300 hover:opacity-50"
+              href="/privacy"
+            >
+              {t("footer.privacy")}
+            </Link>
             <p className="align-self-end font-light opacity-80">
               {t("footer.copyright")}
             </p>
@@ -42,12 +57,48 @@ export default function Footer() {
               {t("footer.socials headline")}
             </h3>
             <div className="grid grid-cols-3 gap-6 md:gap-3">
-              <FacebookIcon className={"md:h-3/5 md:w-auto"} fill="white" />
-              <TiktokIcon className={"md:h-3/5 md:w-auto"} fill="white" />
-              <YoutubeIcon className={"md:h-3/5 md:w-auto"} fill="white" />
-              <InstagramIcon className={"md:h-3/5 md:w-auto"} fill="white" />
-              <LinkedinIcon className={"md:h-3/5 md:w-auto"} fill="white" />
-              <TwitterIcon className={"md:h-3/5 md:w-auto"} fill="white" />
+              <a
+                href="https://www.facebook.com/3elmgmbh"
+                target="_blank"
+                className=" transition-opacity duration-300 hover:opacity-50"
+              >
+                <FacebookIcon className={"md:h-3/5 md:w-auto"} fill="white" />
+              </a>
+              <a
+                href="https://tiktok.com/@3elmstudio"
+                target="_blank"
+                className=" transition-opacity duration-300 hover:opacity-50"
+              >
+                <TiktokIcon className={"md:h-3/5 md:w-auto"} fill="white" />
+              </a>
+              <a
+                href="https://www.youtube.com/@3elmstudio"
+                target="_blank"
+                className=" transition-opacity duration-300 hover:opacity-50"
+              >
+                <YoutubeIcon className={"md:h-3/5 md:w-auto"} fill="white" />
+              </a>
+              <a
+                href="https://instagram.com/3elmstudio"
+                target="_blank"
+                className=" transition-opacity duration-300 hover:opacity-50"
+              >
+                <InstagramIcon className={"md:h-3/5 md:w-auto"} fill="white" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/3elmstudio/"
+                target="_blank"
+                className=" transition-opacity duration-300 hover:opacity-50"
+              >
+                <LinkedinIcon className={"md:h-3/5 md:w-auto"} fill="white" />
+              </a>
+              <a
+                href="https://twitter.com/3elmstudio"
+                target="_blank"
+                className=" transition-opacity duration-300 hover:opacity-50"
+              >
+                <TwitterIcon className={"md:h-3/5 md:w-auto"} fill="white" />
+              </a>
             </div>
           </div>
         </div>

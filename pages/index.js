@@ -43,7 +43,7 @@ export default function Home() {
             }}
             className="leading-none text-brightorange"
           >
-            {t("home.hero title1")}
+            {t("home.hero title 1")}
           </m.span>
           <m.span
             initial={{ y: 10 }}
@@ -57,7 +57,7 @@ export default function Home() {
             }}
             className="leading-none text-green"
           >
-            {t("home.hero title2")}
+            {t("home.hero title 2")}
           </m.span>
           <m.span
             initial={{ y: 10 }}
@@ -71,7 +71,7 @@ export default function Home() {
             }}
             className="leading-none text-cyan"
           >
-            {t("home.hero title3")}
+            {t("home.hero title 3")}
             <m.span className="text-brightorange"> !</m.span>
           </m.span>
         </h1>
@@ -106,7 +106,7 @@ export default function Home() {
             <figgroup className="clip-path-corner--right flex h-[90%] w-[90%] flex-col bg-darkorange">
               <figcaption>
                 <h3 className="mt-3 text-center font-cohead text-fluid-m">
-                  {t("home.card1 title")}
+                  {t("home.card 1 title")}
                 </h3>
               </figcaption>
               <figure className="arrow-background m-3 flex-grow bg-repeat-space">
@@ -119,11 +119,11 @@ export default function Home() {
               role="list"
               className="flex h-full list-disc flex-col justify-evenly p-8 marker:text-deepblue"
             >
-              <li>{t("home.card1 point1")}</li>
-              <li>{t("home.card1 point2")}</li>
-              <li>{t("home.card1 point3")}</li>
-              <li>{t("home.card1 point4")}</li>
-              <li>{t("home.card1 point5")}</li>
+              <li>{t("home.card 1 point 1")}</li>
+              <li>{t("home.card 1 point 2")}</li>
+              <li>{t("home.card 1 point 3")}</li>
+              <li>{t("home.card 1 point 4")}</li>
+              <li>{t("home.card 1 point 5")}</li>
             </ul>
           </div>
         </div>
@@ -132,7 +132,7 @@ export default function Home() {
             <figgroup className="clip-path-corner--right flex h-[90%] w-[90%] flex-col bg-darkorange">
               <figcaption>
                 <h3 className="mt-3 text-center font-cohead text-fluid-m">
-                  {t("home.card2 title")}
+                  {t("home.card 2 title")}
                 </h3>
               </figcaption>
               <figure className="arrow-background m-3 flex-grow bg-repeat-space">
@@ -145,11 +145,11 @@ export default function Home() {
               role="list"
               className="flex h-full list-disc flex-col justify-evenly p-8 marker:text-deepblue"
             >
-              <li>{t("home.card2 point1")}</li>
-              <li>{t("home.card2 point2")}</li>
-              <li>{t("home.card2 point3")}</li>
-              <li>{t("home.card2 point4")}</li>
-              <li>{t("home.card2 point5")}</li>
+              <li>{t("home.card 2 point 1")}</li>
+              <li>{t("home.card 2 point 2")}</li>
+              <li>{t("home.card 2 point 3")}</li>
+              <li>{t("home.card 2 point 4")}</li>
+              <li>{t("home.card 2 point 5")}</li>
             </ul>
           </div>
         </div>
@@ -158,7 +158,7 @@ export default function Home() {
             <figgroup className="clip-path-corner--right flex h-[90%] w-[90%] flex-col bg-darkorange">
               <figcaption>
                 <h3 className="mt-3 text-center font-cohead text-fluid-m">
-                  {t("home.card3 title")}
+                  {t("home.card 3 title")}
                 </h3>
               </figcaption>
               <figure className="arrow-background m-3 flex-grow bg-repeat-space">
@@ -171,67 +171,91 @@ export default function Home() {
               role="list"
               className="flex h-full list-disc flex-col justify-evenly p-8 marker:text-deepblue"
             >
-              <li>{t("home.card3 point1")}</li>
-              <li>{t("home.card3 point2")}</li>
+              <li>{t("home.card 3 point 1")}</li>
+              <li>{t("home.card 3 point 2")}</li>
             </ul>
           </div>
         </div>
       </section>
       <section className="rtl:reverse-rtl mb-40 grid grid-cols-3 items-end gap-y-12 gap-x-6">
         <h2 className="flex flex-col justify-self-center text-center font-cohead text-fluid-l">
-          <span className="text-green">Our</span>
+          <span className="text-green">{t("home.socials title 1")}</span>
           <div className="flex justify-between px-2">
             <div className="h-2 w-2 rounded-full bg-orange"></div>
             <div className="h-2 w-2 rounded-full bg-orange"></div>
           </div>
-          <span className="text-cyan">Socials</span>
+          <span className="text-cyan">{t("home.socials title 2")}</span>
         </h2>
         <div class="relative col-start-1 col-end-2 row-start-1 row-end-2">
-          <div className="clip-path-message--left col-start-1 col-end-2 row-start-1 row-end-2 h-16 bg-orange">
+          <a
+            href="https://www.facebook.com/3elmgmbh"
+            target="_blank"
+            className="clip-path-message--left group col-start-1 col-end-2 row-start-1 row-end-2 block h-16 bg-orange transition-colors hover:bg-white active:bg-orange"
+          >
             <FacebookIcon className="h-3/5 pt-2.5 pl-2.5" fill="white" />
-          </div>
+          </a>
           <HeartIcon></HeartIcon>
         </div>
         <div className="clip-path-message--left col-start-1 col-end-2 row-start-2 row-end-3 h-16 bg-orange"></div>
-        <div className="clip-path-message--left group col-start-1 col-end-2 row-start-2 row-end-3 h-16 -translate-y-2 translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange">
+        <a
+          href="https://instagram.com/3elmstudio"
+          target="_blank"
+          className="clip-path-message--left group col-start-1 col-end-2 row-start-2 row-end-3 h-16 -translate-y-2 translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange"
+        >
           <InstagramIcon className="h-3/5 pt-2.5 pl-2.5" fill="#E24F27" />
-        </div>
-        <div className="clip-path-message--left col-start-1 col-end-2 row-start-3 row-end-4 h-16 bg-orange">
+        </a>
+        <a
+          href="https://twitter.com/3elmstudio"
+          target="_blank"
+          className="clip-path-message--left group col-start-1 col-end-2 row-start-3 row-end-4 h-16 bg-orange transition-colors hover:bg-white active:bg-orange"
+        >
           <TwitterIcon className="h-3/5 pt-2.5 pl-2.5" fill="white" />
-        </div>
+        </a>
         <div className="clip-path-message--right col-start-3 col-end-4 row-start-1 row-end-2 h-16 bg-orange"></div>
-        <div className="clip-path-message--right group col-start-3 col-end-4 row-start-1 row-end-2 h-16 -translate-y-2 -translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange">
+        <a
+          href="https://www.youtube.com/@3elmstudio"
+          target="_blank"
+          className="clip-path-message--right group col-start-3 col-end-4 row-start-1 row-end-2 h-16 -translate-y-2 -translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange"
+        >
           <YoutubeIcon
             className="ml-auto h-3/5 w-auto pt-2.5 pr-2.5"
             fill="#E24F27"
           />
-        </div>
-        <div className="clip-path-message--right col-start-3 col-end-4 row-start-2 row-end-3 h-16 bg-orange">
+        </a>
+        <a
+          href="https://tiktok.com/@3elmstudio"
+          target="_blank"
+          className="clip-path-message--right group col-start-3 col-end-4 row-start-2 row-end-3 h-16 bg-orange transition-colors hover:bg-white active:bg-orange"
+        >
           <TiktokIcon
             className={"ml-auto h-3/5 w-auto pt-2.5 pr-2.5"}
             fill="white"
           />
-        </div>
+        </a>
         <div className="relative col-start-3 col-end-4 row-start-3 row-end-4">
           <div className="clip-path-message--right h-16 bg-orange"></div>
           <LikeIcon></LikeIcon>
         </div>
-        <div className="clip-path-message--right group col-start-3 col-end-4 row-start-3 row-end-4 h-16 -translate-y-2 -translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange">
+        <a
+          href="https://www.linkedin.com/company/3elmstudio/"
+          target="_blank"
+          className="clip-path-message--right group col-start-3 col-end-4 row-start-3 row-end-4 h-16 -translate-y-2 -translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange"
+        >
           <LinkedinIcon
             className="ml-auto h-3/5 w-auto pt-2.5 pr-2.5"
             fill="#E24F27"
           />
-        </div>
+        </a>
         <FishIllustration className="col-start-1 col-end-4 row-start-2 row-end-5 h-full w-full"></FishIllustration>
       </section>
       <section className="-mx-[max(20px,4vw)] mb-40 text-center md:mx-0">
         <h2 className="mb-6 inline-flex flex-col text-center font-cohead text-fluid-l">
-          <span className="text-green">Our</span>
+          <span className="text-green">{t("home.projects title 1")}</span>
           <div className="flex justify-between px-2">
             <div className="h-2 w-2 rounded-full bg-orange"></div>
             <div className="h-2 w-2 rounded-full bg-orange"></div>
           </div>
-          <span className="text-cyan">Projects</span>
+          <span className="text-cyan">{t("home.projects title 2")}</span>
         </h2>
         <Carousel />
       </section>

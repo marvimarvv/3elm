@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export default function LocaleSwitcher() {
+export default function LocaleSwitcher({ className }) {
   const router = useRouter();
 
   const { locales, locale: activeLocale } = router;
@@ -11,7 +11,7 @@ export default function LocaleSwitcher() {
   );
 
   return (
-    <span className="text-muted cursor-pointer text-center text-fluid-xl md:m-auto md:text-base">
+    <span className={className}>
       {otherLocales?.map((locale) => {
         const { pathname, query, asPath } = router;
         return (

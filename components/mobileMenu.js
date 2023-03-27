@@ -45,11 +45,11 @@ export default function MobileMenu({ className, pageContent }) {
           </Popover.Button>
           <Popover.Overlay className="fixed inset-0 bg-deepblue" />
           <Transition
-            enter="transition duration-100 ease-out"
+            enter="transition duration-700 ease-out"
             enterFrom="transform scale-95 opacity-0"
             enterTo="transform scale-100 opacity-100"
-            leave="transition duration-75 ease-out"
-            leaveFrom="transform scale-100 opacity-100"
+            leave="transition duration-100 ease-out"
+            leaveFrom="transform scale-300 opacity-100"
             leaveTo="transform scale-95 opacity-0"
             className="fixed inset-0 grid place-items-center"
           >

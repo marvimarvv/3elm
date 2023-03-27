@@ -1,6 +1,7 @@
 import Layout, { siteTitle } from "../components/layout";
 
 import CircleScrollAnimation from "../components/circleScrollAnimation";
+import CurvedText from "../components/curvedText";
 import Gif from "../public/images/ARABIC.gif";
 import Head from "next/head";
 import Image from "next/image";
@@ -37,14 +38,42 @@ export default function About() {
         <p className="font-cohead text-fluid-m">{t("about.paragraph 2")}</p>
       </section>
       <CircleScrollAnimation className="relative mb-40 grid h-screen place-items-center overflow-y-clip md:-mx-8" />
-      <section className="border-image-perforation -mx-8 mb-40 grid grid-cols-3 gap-10 bg-brightorange px-[3vh] py-16">
-        <div class="col-span-2 pl-6">
-          <h2 className="font-cohead text-fluid-l font-bold">
+      <section className="border-image-perforation -mx-8 mb-40 grid grid-cols-1 gap-10 bg-brightorange px-[3vh] py-16 md:grid-cols-3">
+        <div class="pl-6 md:col-span-2">
+          <h2 className="mb-2 font-cohead text-fluid-l font-bold">
             {t("about.story title")}
           </h2>
           <p className="text-fluid-s max-w-[60ch]">{t("about.story text")}</p>
         </div>
         <StoryIllustration className="h-full w-full" />
+      </section>
+      <section className="mb-40">
+        <h2 className="mb-2 font-cohead text-fluid-xl font-bold text-green">
+          {t("about.how title")}
+          <span className="text-cyan ltr:ml-3 rtl:mr-3">
+            {t("about.how title question mark 1")}
+          </span>
+          <span className="align-text-top text-fluid-l text-cyan">
+            {t("about.how title question mark 2")}
+          </span>
+        </h2>
+        <p className="text-fluid-s mb-6">{t("about.how text 1")}</p>
+        <p className="mb-6 font-cohead text-fluid-m font-bold">
+          {t("about.how text 2")}
+        </p>
+        <a className="flex cursor-pointer items-center justify-center rounded-full bg-brightorange p-4 transition-all hover:-translate-y-2 active:translate-y-2 active:bg-darkorange md:inline-flex">
+          {t("about.how button")}
+        </a>
+      </section>
+      <section className="mb-40 text-center">
+        <h2 className="mb-6 inline-flex flex-col text-center font-cohead text-fluid-l">
+          <CurvedText className="text-green" text="red" />
+          <div className="flex justify-between px-2">
+            <div className="h-2 w-2 rounded-full bg-orange"></div>
+            <div className="h-2 w-2 rounded-full bg-orange"></div>
+          </div>
+          <span className="text-cyan">{t("about.brains title 2")}</span>
+        </h2>
       </section>
     </Layout>
   );

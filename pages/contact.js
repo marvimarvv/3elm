@@ -30,8 +30,11 @@ export default function Contact() {
           </h2>
           <FishIllustrationContact className="w-full" />
           <p>{t("contact.enterprise text")}</p>
-          <a className="mt-auto flex cursor-pointer items-center justify-center rounded-full bg-brightorange p-4 transition-all hover:-translate-y-2 active:translate-y-2 active:bg-darkorange">
-            Click
+          <a
+            href="mailto:kirolousibrahim@3elm.com"
+            className="mt-auto flex cursor-pointer items-center justify-center rounded-full bg-brightorange p-4 transition-all hover:-translate-y-2 active:translate-y-2 active:bg-darkorange"
+          >
+            {t("contact.enterprise button")}
           </a>
         </section>
         <section className="relative flex flex-col gap-4">
@@ -42,8 +45,12 @@ export default function Contact() {
           <PearIllustration className="w-full" />
           <p>{t("contact.support text 1")}</p>
           <p>{t("contact.support text 2")}</p>
-          <a className="mt-auto flex cursor-pointer items-center justify-center rounded-full bg-brightorange p-4 transition-all hover:-translate-y-2 active:translate-y-2 active:bg-darkorange">
-            Click
+          <a
+            href="https://www.patreon.com/3elm"
+            target="_blank"
+            className="mt-auto flex cursor-pointer items-center justify-center rounded-full bg-brightorange p-4 transition-all hover:-translate-y-2 active:translate-y-2 active:bg-darkorange"
+          >
+            {t("contact.support button")}
           </a>
         </section>
         <section className="relative flex flex-col gap-4">
@@ -53,9 +60,6 @@ export default function Contact() {
           </h2>
           <BirdIllustration className="w-full" />
           <p>{t("contact.reach text")}</p>
-          <a className="mt-auto flex cursor-pointer items-center justify-center rounded-full bg-brightorange p-4 transition-all hover:-translate-y-2 active:translate-y-2 active:bg-darkorange">
-            Click
-          </a>
         </section>
         <section className="border-image-perforation  bg-brightorange p-8">
           <form action="" className="flex h-full flex-col gap-4">

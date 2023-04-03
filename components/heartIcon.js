@@ -16,9 +16,9 @@ export default function HeartIcon() {
         xmlns="http://www.w3.org/2000/svg"
         className="absolute -bottom-8 right-2"
         style={{
-          transform: isInView ? "scale(3)" : "none",
+          transform: isInView ? "scale(1)" : "scale(0.5)",
           opacity: isInView ? 1 : 0,
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          transition: "all .7s cubic-bezier(.29,-1.08,.69,4)",
         }}
       >
         <path

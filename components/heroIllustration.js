@@ -189,7 +189,7 @@ export default function HeroIllustration() {
         animate={{ y: 20 }}
         transition={{
           duration: 3,
-          yoyo: Infinity,
+
           ease: "easeInOut",
           repeat: Infinity,
           repeatType: "reverse",
@@ -282,11 +282,20 @@ export default function HeroIllustration() {
         d="M1365.23 331.69L1363.27 295.931L1331.6 312.7L1334.28 347.834L1365.23 331.69ZM1324.43 348.59L1320.43 283.164C1320.14 279.073 1322.28 275.539 1324.97 275.664C1327.17 275.764 1328.99 278.33 1329.23 281.68L1330.87 303.097L1362.74 286.221L1361.29 259.683C1361.01 254.794 1363.15 250.57 1365.83 250.721C1368.03 250.845 1369.85 253.908 1370.1 257.912L1377.46 379.489L1367.45 374.027L1365.74 341.103L1336.45 355.451L1324.43 348.59Z"
         fill="#E15027"
       />
-      <path
+      <m.path
         d="M1219.8 305.671C1233.84 305.671 1245.22 297.489 1245.22 287.398C1245.22 277.306 1233.84 269.125 1219.8 269.125C1205.76 269.125 1194.38 277.306 1194.38 287.398C1194.38 297.489 1205.76 305.671 1219.8 305.671Z"
         stroke="#913223"
         stroke-width="2"
         stroke-miterlimit="10"
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        transition={{
+          duration: 2,
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatType: "reverse",
+          repeatDelay: 1,
+        }}
       />
       <path
         d="M1218.54 281.12C1228.43 281.12 1236.64 286.252 1238.31 293.009C1239.33 291.314 1239.88 289.375 1239.89 287.398C1239.89 279.424 1230.89 272.96 1219.8 272.96C1208.7 272.96 1199.71 279.424 1199.71 287.398C1199.71 288.257 1199.82 289.113 1200.03 289.947C1203.08 284.76 1210.22 281.12 1218.54 281.12Z"
@@ -344,7 +353,7 @@ export default function HeroIllustration() {
         animate={{ opacity: 0 }}
         transition={{
           duration: 3,
-          yoyo: Infinity,
+
           ease: "easeInOut",
           repeat: Infinity,
           repeatType: "reverse",
@@ -376,11 +385,20 @@ export default function HeroIllustration() {
           fill="#913223"
         />
       </m.g>
-      <path
+      <m.path
         d="M1281.93 425.719C1295.97 425.719 1307.35 417.537 1307.35 407.446C1307.35 397.354 1295.97 389.173 1281.93 389.173C1267.89 389.173 1256.5 397.354 1256.5 407.446C1256.5 417.537 1267.89 425.719 1281.93 425.719Z"
         stroke="#913223"
         stroke-width="2"
         stroke-miterlimit="10"
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        transition={{
+          duration: 2,
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatType: "reverse",
+          repeatDelay: 1,
+        }}
       />
       <path
         d="M1280.67 401.169C1290.55 401.169 1298.76 406.301 1300.44 413.058C1301.46 411.363 1302 409.424 1302.01 407.447C1302.01 399.473 1293.02 393.009 1281.93 393.009C1270.83 393.009 1261.84 399.473 1261.84 407.447C1261.84 408.306 1261.95 409.162 1262.16 409.996C1265.2 404.809 1272.35 401.169 1280.67 401.169Z"
@@ -628,21 +646,39 @@ export default function HeroIllustration() {
         d="M1146.23 484.144C1146.17 484.237 1146.1 484.326 1146.05 484.424C1145.07 486.244 1144.1 488.064 1143.12 489.886C1143.08 489.973 1143.04 490.065 1143 490.165C1143.08 490.221 1143.14 490.272 1143.21 490.308C1144.83 491.174 1146.45 492.041 1148.08 492.908C1148.13 492.939 1148.2 492.959 1148.26 492.984L1147.85 493.761C1147.73 493.689 1147.62 493.611 1147.51 493.548C1145.75 492.606 1143.99 491.665 1142.23 490.725L1141.83 490.509L1145.46 483.724L1146.23 484.144Z"
         fill="#10122D"
       />
-      <path
+      <m.path
         d="M862.349 806.208C876.39 806.208 887.772 798.027 887.772 787.935C887.772 777.844 876.39 769.662 862.349 769.662C848.308 769.662 836.926 777.844 836.926 787.935C836.926 798.027 848.308 806.208 862.349 806.208Z"
         stroke="#913223"
         stroke-width="2"
         stroke-miterlimit="10"
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        transition={{
+          duration: 2,
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatType: "reverse",
+          repeatDelay: 1,
+        }}
       />
       <path
         d="M861.093 781.659C870.977 781.659 879.187 786.79 880.862 793.547C881.882 791.852 882.426 789.914 882.436 787.935C882.436 779.962 873.443 773.498 862.349 773.498C851.255 773.498 842.261 779.962 842.261 787.935C842.263 788.795 842.37 789.652 842.58 790.485C845.626 785.298 852.768 781.659 861.093 781.659Z"
         fill="#70241C"
       />
-      <path
+      <m.path
         d="M1118.1 658.432C1132.14 658.432 1143.52 650.251 1143.52 640.159C1143.52 630.068 1132.14 621.886 1118.1 621.886C1104.06 621.886 1092.68 630.068 1092.68 640.159C1092.68 650.251 1104.06 658.432 1118.1 658.432Z"
         stroke="#913223"
         stroke-width="2"
         stroke-miterlimit="10"
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        transition={{
+          duration: 2,
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatType: "reverse",
+          repeatDelay: 1,
+        }}
       />
       <path
         d="M1116.85 633.883C1126.73 633.883 1134.94 639.014 1136.62 645.771C1137.64 644.076 1138.18 642.138 1138.19 640.159C1138.19 632.186 1129.2 625.722 1118.1 625.722C1107.01 625.722 1098.01 632.186 1098.01 640.159C1098.02 641.019 1098.12 641.876 1098.33 642.709C1101.38 637.522 1108.52 633.883 1116.85 633.883Z"
@@ -667,7 +703,7 @@ export default function HeroIllustration() {
         animate={{ y: 15 }}
         transition={{
           duration: 4,
-          yoyo: Infinity,
+
           ease: "easeInOut",
           repeat: Infinity,
           repeatType: "reverse",
@@ -706,7 +742,7 @@ export default function HeroIllustration() {
         transition={{
           delay: 2,
           duration: 8,
-          yoyo: Infinity,
+
           ease: "easeInOut",
         }}
       />
@@ -717,7 +753,7 @@ export default function HeroIllustration() {
         transition={{
           delay: 2,
           duration: 8,
-          yoyo: Infinity,
+
           ease: "easeInOut",
         }}
         className="pyramid-offset-path"
@@ -781,7 +817,7 @@ export default function HeroIllustration() {
         animate={{ y: 15 }}
         transition={{
           duration: 3,
-          yoyo: Infinity,
+
           ease: "easeInOut",
           repeat: Infinity,
           repeatType: "reverse",
@@ -983,11 +1019,20 @@ export default function HeroIllustration() {
         d="M1254.9 1311.19L1231.38 1321.89L1229.1 1316.34L1252.72 1305.9L1254.9 1311.19Z"
         fill="#E15027"
       />
-      <path
+      <m.path
         d="M913.862 1656.33C944.983 1656.33 970.212 1638.19 970.212 1615.83C970.212 1593.46 944.983 1575.32 913.862 1575.32C882.741 1575.32 857.512 1593.46 857.512 1615.83C857.512 1638.19 882.741 1656.33 913.862 1656.33Z"
         stroke="#913223"
         stroke-width="2"
         stroke-miterlimit="10"
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        transition={{
+          duration: 2,
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatType: "reverse",
+          repeatDelay: 1,
+        }}
       />
       <path
         d="M911.079 1601.91C932.985 1601.91 951.179 1613.29 954.897 1628.26C957.156 1624.51 958.361 1620.21 958.385 1615.83C958.385 1598.15 938.452 1583.83 913.862 1583.83C889.272 1583.83 869.339 1598.15 869.339 1615.83C869.344 1617.73 869.581 1619.63 870.045 1621.48C876.8 1609.98 892.627 1601.91 911.079 1601.91Z"
@@ -1257,10 +1302,9 @@ export default function HeroIllustration() {
           opacity: [0, 1, 1, 0],
         }}
         transition={{
-          times: [0, 0.05, 0.8, 1],
+          times: [0, 0.05, 0.885, 0.89],
           duration: 16,
           delay: 0.2,
-          yoyo: Infinity,
           ease: "easeIn",
         }}
         className="outer-tube-offset-path--inner"
@@ -1276,9 +1320,8 @@ export default function HeroIllustration() {
           initial={{ "--outer-tube-offset": "0%" }}
           animate={{ "--outer-tube-offset": "100%", opacity: [0, 1, 1, 0] }}
           transition={{
-            times: [0, 0.05, 0.8, 1],
+            times: [0, 0.05, 0.885, 0.89],
             duration: 16,
-            yoyo: Infinity,
             ease: "easeIn",
           }}
           className="outer-tube-offset-path"
@@ -1293,9 +1336,9 @@ export default function HeroIllustration() {
           initial={{ "--outer-tube-offset": "0%" }}
           animate={{ "--outer-tube-offset": "100%", opacity: [0, 1, 1, 0] }}
           transition={{
-            times: [0, 0.05, 0.8, 1],
+            times: [0, 0.05, 0.885, 0.89],
             duration: 16,
-            yoyo: Infinity,
+
             ease: "easeIn",
             delay: 2,
           }}
@@ -1311,9 +1354,9 @@ export default function HeroIllustration() {
           initial={{ "--outer-tube-offset": "0%" }}
           animate={{ "--outer-tube-offset": "100%", opacity: [0, 1, 1, 0] }}
           transition={{
-            times: [0, 0.05, 0.8, 1],
+            times: [0, 0.05, 0.885, 0.89],
             duration: 16,
-            yoyo: Infinity,
+
             ease: "easeIn",
             delay: 3,
           }}
@@ -1329,9 +1372,9 @@ export default function HeroIllustration() {
           initial={{ "--outer-tube-offset": "0%" }}
           animate={{ "--outer-tube-offset": "100%", opacity: [0, 1, 1, 0] }}
           transition={{
-            times: [0, 0.05, 0.8, 1],
+            times: [0, 0.05, 0.885, 0.89],
             duration: 16,
-            yoyo: Infinity,
+
             ease: "easeIn",
             delay: 5,
           }}
@@ -1347,9 +1390,9 @@ export default function HeroIllustration() {
           initial={{ "--outer-tube-offset": "0%" }}
           animate={{ "--outer-tube-offset": "100%", opacity: [0, 1, 1, 0] }}
           transition={{
-            times: [0, 0.05, 0.8, 1],
+            times: [0, 0.05, 0.885, 0.89],
             duration: 16,
-            yoyo: Infinity,
+
             ease: "easeIn",
             delay: 8,
           }}
@@ -1365,9 +1408,9 @@ export default function HeroIllustration() {
           initial={{ "--outer-tube-offset": "0%" }}
           animate={{ "--outer-tube-offset": "100%", opacity: [0, 1, 1, 0] }}
           transition={{
-            times: [0, 0.05, 0.8, 1],
+            times: [0, 0.05, 0.885, 0.89],
             duration: 16,
-            yoyo: Infinity,
+
             ease: "easeIn",
             delay: 10,
           }}
@@ -1383,9 +1426,9 @@ export default function HeroIllustration() {
           initial={{ "--outer-tube-offset": "0%" }}
           animate={{ "--outer-tube-offset": "100%", opacity: [0, 1, 1, 0] }}
           transition={{
-            times: [0, 0.05, 0.8, 1],
+            times: [0, 0.05, 0.885, 0.89],
             duration: 16,
-            yoyo: Infinity,
+
             ease: "easeIn",
             delay: 12,
           }}
@@ -1401,9 +1444,9 @@ export default function HeroIllustration() {
           initial={{ "--outer-tube-offset": "0%" }}
           animate={{ "--outer-tube-offset": "100%", opacity: [0, 1, 1, 0] }}
           transition={{
-            times: [0, 0.05, 0.8, 1],
+            times: [0, 0.05, 0.885, 0.89],
             duration: 16,
-            yoyo: Infinity,
+
             ease: "easeIn",
             delay: 14,
           }}
@@ -1419,9 +1462,9 @@ export default function HeroIllustration() {
           initial={{ "--outer-tube-offset": "0%" }}
           animate={{ "--outer-tube-offset": "100%", opacity: [0, 1, 1, 0] }}
           transition={{
-            times: [0, 0.05, 0.8, 1],
+            times: [0, 0.05, 0.885, 0.89],
             duration: 16,
-            yoyo: Infinity,
+
             ease: "easeIn",
             delay: 16,
           }}
@@ -1437,9 +1480,9 @@ export default function HeroIllustration() {
           initial={{ "--outer-tube-offset": "0%" }}
           animate={{ "--outer-tube-offset": "100%", opacity: [0, 1, 1, 0] }}
           transition={{
-            times: [0, 0.05, 0.8, 1],
+            times: [0, 0.05, 0.885, 0.89],
             duration: 16,
-            yoyo: Infinity,
+
             ease: "easeIn",
             delay: 18,
           }}
@@ -1525,7 +1568,24 @@ export default function HeroIllustration() {
         d="M735.32 963.016C740.081 963.016 743.94 959.157 743.94 954.396C743.94 949.636 740.081 945.776 735.32 945.776C730.559 945.776 726.7 949.636 726.7 954.396C726.7 959.157 730.559 963.016 735.32 963.016Z"
         fill="#8CC756"
       />
-      <path
+      <m.path
+        initial={{ "--inner-tube-offset--outer": "0%" }}
+        animate={{
+          "--inner-tube-offset--outer": "100%",
+          opacity: [0, 1, 1, 0],
+        }}
+        transition={{
+          times: [0, 0.05, 0.885, 0.89],
+          duration: 16,
+          delay: 0.2,
+
+          ease: "easeIn",
+        }}
+        className="inner-tube-offset-path--outer"
+        style={{
+          offsetDistance: "var(--inner-tube-offset--outer)",
+          offsetRotate: "0deg",
+        }}
         d="M674.981 997.495C679.742 997.495 683.601 993.636 683.601 988.875C683.601 984.115 679.742 980.255 674.981 980.255C670.22 980.255 666.361 984.115 666.361 988.875C666.361 993.636 670.22 997.495 674.981 997.495Z"
         fill="#6FCBDC"
       />
@@ -1661,7 +1721,7 @@ export default function HeroIllustration() {
         animate={{ y: 20 }}
         transition={{
           duration: 4,
-          yoyo: Infinity,
+
           ease: "easeInOut",
           repeat: Infinity,
           repeatType: "reverse",
@@ -1741,7 +1801,7 @@ export default function HeroIllustration() {
         animate={{ opacity: 0, scale: 0 }}
         transition={{
           duration: 4,
-          yoyo: Infinity,
+
           ease: "easeInOut",
           repeat: Infinity,
           repeatType: "reverse",
@@ -1944,13 +2004,14 @@ export default function HeroIllustration() {
       </m.g>
       <m.path
         initial={{ scale: 1 }}
-        animate={{ scale: 5 }}
+        animate={{ scale: [3, 1] }}
         transition={{
-          ease: "easeInOut",
-          duration: 1,
-          repeatDelay: 0,
-          repeat: 1,
-          repeatType: "mirror",
+          type: "spring",
+          stiffness: 1000,
+          damping: 20,
+          repeatDelay: 10,
+          repeat: Infinity,
+          repeatType: "loop",
         }}
         d="M1318.26 151.67L1320.02 155.243L1323.97 155.816L1321.11 158.597L1321.79 162.524L1318.26 160.67L1314.74 162.524L1315.41 158.597L1312.56 155.816L1316.5 155.243L1318.26 151.67Z"
         fill="#EBE717"
@@ -1961,7 +2022,7 @@ export default function HeroIllustration() {
         transition={{
           ease: "easeInOut",
           duration: 2,
-          yoyo: Infinity,
+
           repeat: Infinity,
           delay: 0.5,
           repeatType: "reverse",
@@ -2156,7 +2217,7 @@ export default function HeroIllustration() {
         transition={{
           ease: "easeInOut",
           duration: 2,
-          yoyo: Infinity,
+
           repeat: Infinity,
           delay: 1,
           repeatType: "reverse",
@@ -2544,7 +2605,7 @@ export default function HeroIllustration() {
         transition={{
           duration: 2,
           delay: 0.1,
-          yoyo: Infinity,
+
           ease: "easeInOut",
         }}
         d="M1123.58 50.1755C1123.49 50.316 1123.36 50.4193 1123.2 50.4651C1123.04 50.5108 1122.87 50.4957 1122.72 50.4226C1122.58 50.3495 1122.46 50.2238 1122.4 50.0704C1122.34 49.917 1122.35 49.7472 1122.41 49.5945C1128.64 33.8045 1145.06 -5.03048 1153.86 0.542523C1158.26 3.33052 1158.06 5.75552 1156.23 7.66252C1146 18.3705 1136.33 29.6035 1128.53 42.1905L1123.58 50.1755Z"
@@ -2556,7 +2617,7 @@ export default function HeroIllustration() {
         transition={{
           duration: 2,
           delay: 0.2,
-          yoyo: Infinity,
+
           ease: "easeInOut",
         }}
         d="M1117.67 45.4825C1117.65 45.5868 1117.67 45.6937 1117.73 45.7824C1117.79 45.8711 1117.88 45.9353 1117.98 45.9626C1118.08 45.9899 1118.19 45.9783 1118.28 45.9301C1118.38 45.8818 1118.45 45.8004 1118.49 45.7015C1122.23 35.3265 1130.9 9.33752 1124.22 8.27852C1120.87 7.74952 1119.93 9.01653 1120 10.7285C1120.56 20.3263 1120.12 29.956 1118.68 39.4625L1117.67 45.4825Z"
@@ -2568,7 +2629,7 @@ export default function HeroIllustration() {
         transition={{
           duration: 2,
           delay: 0.3,
-          yoyo: Infinity,
+
           ease: "easeInOut",
         }}
         d="M1127.04 52.4675C1127.02 52.4872 1126.99 52.5028 1126.97 52.5135C1126.94 52.5242 1126.92 52.5297 1126.89 52.5297C1126.86 52.5297 1126.83 52.5242 1126.81 52.5135C1126.78 52.5028 1126.76 52.4872 1126.74 52.4675C1126.72 52.4478 1126.7 52.4245 1126.69 52.3987C1126.68 52.373 1126.68 52.3454 1126.68 52.3175C1126.68 52.2897 1126.68 52.2621 1126.69 52.2363C1126.7 52.2106 1126.72 52.1872 1126.74 52.1675C1130.27 47.9765 1139.31 37.7815 1141.43 40.3955C1142.49 41.7025 1142.18 42.4245 1141.42 42.8205C1137.15 44.967 1133.11 47.5516 1129.38 50.5325L1127.04 52.4675Z"
@@ -2580,7 +2641,7 @@ export default function HeroIllustration() {
         transition={{
           duration: 2,
           delay: 0.4,
-          yoyo: Infinity,
+
           ease: "easeInOut",
         }}
         d="M1114.54 47.7095C1114.57 47.7943 1114.62 47.8672 1114.69 47.9143C1114.77 47.9615 1114.86 47.9794 1114.94 47.9648C1115.03 47.9501 1115.11 47.9039 1115.16 47.835C1115.22 47.7661 1115.25 47.6794 1115.24 47.5915C1114.49 38.3715 1112.07 15.5225 1106.6 17.0365C1103.87 17.7945 1103.59 19.0905 1104.24 20.3735C1108 27.5049 1111.01 35.0083 1113.22 42.7625L1114.54 47.7095Z"
@@ -2592,7 +2653,7 @@ export default function HeroIllustration() {
         transition={{
           duration: 2,
           delay: 0.5,
-          yoyo: Infinity,
+
           ease: "easeInOut",
         }}
         d="M1131.56 57.3695C1131.5 57.4042 1131.42 57.4137 1131.35 57.3963C1131.28 57.3789 1131.22 57.3358 1131.18 57.2754C1131.14 57.2151 1131.12 57.1419 1131.13 57.0703C1131.15 56.9987 1131.18 56.9338 1131.24 56.8885C1137.12 52.2145 1152.01 40.9625 1154.15 45.0445C1155.22 47.0875 1154.61 47.9725 1153.49 48.3005C1147.17 50.0284 1141.05 52.4078 1135.22 55.4005L1131.56 57.3695Z"
@@ -2603,7 +2664,7 @@ export default function HeroIllustration() {
         animate={{ y: -32, x: -20, scale: 3, opacity: 0 }}
         transition={{
           duration: 2,
-          yoyo: Infinity,
+
           ease: "easeInOut",
         }}
         d="M1112.37 48.3565C1112.39 48.3788 1112.41 48.3944 1112.44 48.4003C1112.47 48.4063 1112.5 48.4023 1112.52 48.389C1112.55 48.3757 1112.56 48.3541 1112.57 48.3281C1112.58 48.3021 1112.58 48.2735 1112.57 48.2475C1111.39 45.5025 1108.29 38.7565 1106.77 39.7845C1106.01 40.2985 1106.06 40.7245 1106.39 41.0505C1108.28 42.8451 1109.98 44.8315 1111.45 46.9775L1112.37 48.3565Z"

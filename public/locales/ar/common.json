@@ -74,7 +74,19 @@
     "projects title 2": "Projects" 
   },
   "imprint": {
-    "title": "This is the imprint page."
+    "title": "Impressum",
+    "paragraph 1": "Angaben gemäß § 5 TMG",
+    "paragraph 2": "3elm GmbH",
+    "paragraph 3": "Curschmannstrasse 16",
+    "paragraph 4": "20251 Hamburg",
+    "paragraph 5": "Handelsregister: HRB 176301",
+    "paragraph 6": "Registergericht: Amtsgericht Hamburg",
+    "paragraph 7": "Vertreten durch: Kay Schwarz",
+    "contact title": "Kontakt",
+    "contact paragraph 1": "Telefon: [Telefonnummer]",
+    "contact paragraph 2": "E-Mail: kayschwarz@3elm.com",
+    "contact paragraph 3": "Umsatzsteuer-ID Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE354299714",
+    "contact paragraph 4": "Verbraucherstreitbeilegung/Universalschlichtungsstelle: Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
   },
   "navigation": {
     "work": "Work",
@@ -82,7 +94,7 @@
     "contact": "Contact us"
   },
   "privacy": {
-    "title": "This is the privacy page."
+    "title": "Datenschutzerklärung"
   },
   "work": {
     "title": "This is the work page."

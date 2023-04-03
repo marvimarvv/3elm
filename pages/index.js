@@ -190,9 +190,12 @@ export default function Home() {
           <a
             href="https://www.facebook.com/3elmgmbh"
             target="_blank"
-            className="clip-path-message--left group col-start-1 col-end-2 row-start-1 row-end-2 block h-16 bg-orange transition-colors hover:bg-white active:bg-orange"
+            className="clip-path-message--left group col-start-1 col-end-2 row-start-1 row-end-2 block flex h-16 bg-orange transition-colors hover:bg-white active:bg-orange"
           >
             <FacebookIcon className="h-3/5 pt-2.5 pl-2.5" fill="white" />
+            <span className="hidden pt-3 pl-2.5 text-white group-hover:text-orange group-active:text-white md:inline">
+              3elm
+            </span>
           </a>
           <HeartIcon></HeartIcon>
         </div>
@@ -200,35 +203,47 @@ export default function Home() {
         <a
           href="https://instagram.com/3elmstudio"
           target="_blank"
-          className="clip-path-message--left group col-start-1 col-end-2 row-start-2 row-end-3 h-16 -translate-y-2 translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange"
+          className="clip-path-message--left group col-start-1 col-end-2 row-start-2 row-end-3 flex h-16 -translate-y-2 translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange"
         >
           <InstagramIcon className="h-3/5 pt-2.5 pl-2.5" fill="#E24F27" />
+          <span className="hidden pt-3 pl-2.5 text-darkorange group-active:text-white md:inline">
+            @3elmstudio
+          </span>
         </a>
         <a
           href="https://twitter.com/3elmstudio"
           target="_blank"
-          className="clip-path-message--left group col-start-1 col-end-2 row-start-3 row-end-4 h-16 bg-orange transition-colors hover:bg-white active:bg-orange"
+          className="clip-path-message--left group col-start-1 col-end-2 row-start-3 row-end-4 flex h-16 bg-orange transition-colors hover:bg-white active:bg-orange"
         >
           <TwitterIcon className="h-3/5 pt-2.5 pl-2.5" fill="white" />
+          <span className="hidden pt-3 pl-2.5 text-white group-hover:text-orange group-active:text-white md:inline">
+            @3elmstudio
+          </span>
         </a>
         <div className="clip-path-message--right col-start-3 col-end-4 row-start-1 row-end-2 h-16 bg-orange"></div>
         <a
           href="https://www.youtube.com/@3elmstudio"
           target="_blank"
-          className="clip-path-message--right group col-start-3 col-end-4 row-start-1 row-end-2 h-16 -translate-y-2 -translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange"
+          className="clip-path-message--right group col-start-3 col-end-4 row-start-1 row-end-2 flex h-16 -translate-y-2 -translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange"
         >
+          <span className="ml-auto hidden pt-3 pr-2.5 text-darkorange group-active:text-white md:inline">
+            @3elmstudio
+          </span>
           <YoutubeIcon
-            className="ml-auto h-3/5 w-auto pt-2.5 pr-2.5"
+            className="ml-auto h-3/5 w-auto pt-2.5 pr-2.5 md:ml-0"
             fill="#E24F27"
           />
         </a>
         <a
           href="https://tiktok.com/@3elmstudio"
           target="_blank"
-          className="clip-path-message--right group col-start-3 col-end-4 row-start-2 row-end-3 h-16 bg-orange transition-colors hover:bg-white active:bg-orange"
+          className="clip-path-message--right group col-start-3 col-end-4 row-start-2 row-end-3 flex h-16 bg-orange transition-colors hover:bg-white active:bg-orange"
         >
+          <span className="ml-auto hidden pt-3 pr-2.5 text-white group-hover:text-orange group-active:text-white md:inline">
+            @3elmstudio
+          </span>
           <TiktokIcon
-            className={"ml-auto h-3/5 w-auto pt-2.5 pr-2.5"}
+            className="ml-auto h-3/5 w-auto pt-2.5 pr-2.5 md:ml-0"
             fill="white"
           />
         </a>
@@ -239,10 +254,13 @@ export default function Home() {
         <a
           href="https://www.linkedin.com/company/3elmstudio/"
           target="_blank"
-          className="clip-path-message--right group col-start-3 col-end-4 row-start-3 row-end-4 h-16 -translate-y-2 -translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange"
+          className="clip-path-message--right group col-start-3 col-end-4 row-start-3 row-end-4 flex h-16 -translate-y-2 -translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange"
         >
+          <span className="ml-auto hidden pt-3 pr-2.5 text-darkorange group-active:text-white md:inline">
+            3elm
+          </span>
           <LinkedinIcon
-            className="ml-auto h-3/5 w-auto pt-2.5 pr-2.5"
+            className="ml-auto h-3/5 w-auto pt-2.5 pr-2.5 md:ml-0"
             fill="#E24F27"
           />
         </a>

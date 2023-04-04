@@ -1,4 +1,4 @@
-export default function PipeIllustration() {
+export default function PipeIllustration({ className }) {
   return (
     <svg
       width="1170"
@@ -6,7 +6,7 @@ export default function PipeIllustration() {
       viewBox="0 0 1170 625"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="isolate mb-20 h-full w-full"
+      className={className}
     >
       <path
         opacity="0.17"

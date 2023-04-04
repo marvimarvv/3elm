@@ -12,7 +12,7 @@ export default function Imprint() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section>
+      <section className="px-6 pb-40 sm:px-0">
         <h1 className="text-cohead text-fluid-xl">{t("imprint.title")}</h1>
         <p className="text-fluid-s">{t("imprint.paragraph 1")}</p>
         <p className="text-fluid-s">{t("imprint.paragraph 2")}</p>

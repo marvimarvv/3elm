@@ -61,7 +61,7 @@ export default function Nav({ pageContent }) {
         <Logo className="col-[2/3] row-[1/-1]"></Logo>
         <MobileMenu
           pageContent={pageContent}
-          className="relative z-10 col-[3/-1] row-[1/-1] self-center justify-self-end"
+          className="relative right-4 z-10 col-[3/-1] row-[1/-1] self-center justify-self-end"
         />
       </div>
     </>

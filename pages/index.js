@@ -8,6 +8,7 @@ import GoalsIllustration from "../components/goalsIllustration";
 import Head from "next/head";
 import HeartIcon from "../components/heartIcon";
 import HeroIllustration from "../components/heroIllustration";
+import HeroIllustrationMobile from "../components/heroIllustrationMobile";
 import InstagramIcon from "../components/instagramIcon";
 import LikeIcon from "../components/likeIcon";
 import LinkedinIcon from "../components/linkedinIcon";
@@ -29,7 +30,7 @@ export default function Home() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className="grid">
+      <section className="hidden sm:grid">
         <h1 className="z-10 col-start-1 col-end-2 row-start-1 row-end-1 flex flex-col font-cohead text-fluid-xl font-bold">
           <m.span
             initial={{ y: 10 }}
@@ -89,9 +90,12 @@ export default function Home() {
         >
           {t("home.hero subtitle")}
         </m.h2>
-        <HeroIllustration></HeroIllustration>
+        <HeroIllustration className="rtl:mirror isolate col-start-1 col-end-3 row-start-1 row-end-4 mt-16 ltr:transform-none md:mt-0"></HeroIllustration>
       </section>
-      <section className="border-image-perforation relative -mx-8 my-40 bg-brightorange px-[3vh] pb-[9rem] pt-6">
+      <section>
+        <HeroIllustrationMobile className="h-full w-full sm:hidden" />
+      </section>
+      <section className="border-image-perforation relative my-40 bg-brightorange px-[3vh] pb-[9rem] pt-6 sm:-mx-8">
         <h2 className="text-center font-cohead text-fluid-xl font-bold">
           {t("home.about title")}
         </h2>
@@ -177,7 +181,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="rtl:reverse-rtl mb-40 grid grid-cols-3 items-end gap-y-12 gap-x-6">
+      <section className="rtl:reverse-rtl mb-40 grid grid-cols-3 items-end gap-y-12 gap-x-6 px-6 sm:px-0">
         <h2 className="flex flex-col justify-self-center text-center font-cohead text-fluid-l">
           <span className="text-green">{t("home.socials title 1")}</span>
           <div className="flex justify-between px-2">
@@ -266,7 +270,7 @@ export default function Home() {
         </a>
         <FishIllustration className="col-start-1 col-end-4 row-start-2 row-end-5 h-full w-full"></FishIllustration>
       </section>
-      <section className="-mx-[max(20px,4vw)] mb-40 text-center md:mx-0">
+      <section className="mb-40 text-center sm:-mx-[max(20px,4vw)] md:mx-0">
         <h2 className="mb-6 inline-flex flex-col text-center font-cohead text-fluid-l">
           <span className="text-green">{t("home.projects title 1")}</span>
           <div className="flex justify-between px-2">
@@ -277,7 +281,7 @@ export default function Home() {
         </h2>
         <Carousel />
       </section>
-      <PipeIllustration />
+      <PipeIllustration className="isolate h-full w-full px-4 pb-20 sm:px-0" />
     </Layout>
   );
 }

@@ -22,7 +22,7 @@ export default function Contact() {
         </h1>
         <HeroContact className="-mt-8 h-full w-full sm:ltr:-mr-8 sm:rtl:-ml-8" />
       </section>
-      <div className="mb-40 grid grid-cols-1 gap-20 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-20 px-6 pb-40 sm:px-0 md:grid-cols-2">
         <section className="relative flex flex-col gap-4">
           <span className="absolute bg-brightorange p-4">1</span>
           <h2 className="text-center font-cohead text-fluid-m">

@@ -17,7 +17,7 @@ export default function About() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className="mb-40">
+      <section className="mb-40 px-6 pt-6 sm:px-0 sm:pt-0">
         <h1 className=" mb-7">
           <span className="text-fluid-s block font-cohead">
             {t("about.title top")}
@@ -38,8 +38,8 @@ export default function About() {
         <p className="font-cohead text-fluid-m">{t("about.paragraph 2")}</p>
       </section>
       <CircleScrollAnimation className="relative mb-40 grid h-screen place-items-center overflow-y-clip md:-mx-8" />
-      <section className="border-image-perforation -mx-8 mb-40 grid grid-cols-1 gap-10 bg-brightorange px-[3vh] py-16 md:grid-cols-3">
-        <div class="pl-6 md:col-span-2">
+      <section className="border-image-perforation mb-40 grid grid-cols-1 gap-10 bg-brightorange px-[2vh] py-16 sm:-mx-8 md:grid-cols-3">
+        <div class="md:col-span-2 md:pl-6">
           <h2 className="mb-2 font-cohead text-fluid-l font-bold">
             {t("about.story title")}
           </h2>
@@ -47,7 +47,7 @@ export default function About() {
         </div>
         <StoryIllustration className="h-full w-full" />
       </section>
-      <section className="mb-40">
+      <section className="mb-40 px-6 sm:px-0">
         <h2 className="mb-2 font-cohead text-fluid-xl font-bold text-green">
           {t("about.how title")}
           <span className="text-cyan ltr:ml-3 rtl:mr-3">
@@ -65,7 +65,7 @@ export default function About() {
           {t("about.how button")}
         </a>
       </section>
-      <section className="mb-40 text-center">
+      <section className="px-6 pb-40 text-center sm:px-0">
         <h2 className="mb-6 inline-flex flex-col text-center font-cohead text-fluid-l">
           <CurvedText className="text-green" text="red" />
           <div className="flex justify-between px-2">

@@ -12,8 +12,10 @@ export default function Privacy() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className="mb-40 max-w-5xl">
-        <h1 className="text-cohead text-fluid-xl">{t("privacy.title")}</h1>
+      <section className="max-w-5xl px-6 pb-40 sm:px-0">
+        <h1 className="text-cohead hyphens text-fluid-l">
+          {t("privacy.title")}
+        </h1>
         <p>
           <br />
         </p>

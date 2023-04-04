@@ -1,9 +1,9 @@
 import { motion as m } from "framer-motion";
 
-export default function HeroIllustration() {
+export default function HeroIllustration({ className }) {
   return (
     <svg
-      className="rtl:mirror isolate col-start-1 col-end-3 row-start-1 row-end-4 mt-16 ltr:transform-none md:mt-0"
+      className={className}
       width="100%"
       height="100%"
       viewBox="0 0 1547 1724"
@@ -1296,9 +1296,9 @@ export default function HeroIllustration() {
       </g>
 
       <m.path
-        initial={{ "--outer-tube-offset--inner": "0%" }}
+        initial={{ "--outer-tube-offset-path--inner": "0%" }}
         animate={{
-          "--outer-tube-offset--inner": "100%",
+          "--outer-tube-offset-path--inner": "100%",
           opacity: [0, 1, 1, 0],
         }}
         transition={{
@@ -1309,7 +1309,7 @@ export default function HeroIllustration() {
         }}
         className="outer-tube-offset-path--inner"
         style={{
-          offsetDistance: "var(--outer-tube-offset--inner)",
+          offsetDistance: "var(--outer-tube-offset-path--inner)",
           offsetRotate: "0deg",
         }}
         d="M1286.05 720.581C1290.73 720.581 1294.54 716.781 1294.54 712.093C1294.54 707.406 1290.73 703.605 1286.05 703.605C1281.36 703.605 1277.56 707.406 1277.56 712.093C1277.56 716.781 1281.36 720.581 1286.05 720.581Z"
@@ -1317,24 +1317,30 @@ export default function HeroIllustration() {
       />
       <g class="outer-tube--outer">
         <m.path
-          initial={{ "--outer-tube-offset": "0%" }}
-          animate={{ "--outer-tube-offset": "100%", opacity: [0, 1, 1, 0] }}
+          initial={{ "--outer-tube-offset-path--outer": "0%" }}
+          animate={{
+            "--outer-tube-offset-path--outer": "100%",
+            opacity: [0, 1, 1, 0],
+          }}
           transition={{
             times: [0, 0.05, 0.885, 0.89],
             duration: 16,
             ease: "easeIn",
           }}
-          className="outer-tube-offset-path"
+          className="outer-tube-offset-path--outer"
           style={{
-            offsetDistance: "var(--outer-tube-offset)",
+            offsetDistance: "var(--outer-tube-offset-path--outer)",
             offsetRotate: "0deg",
           }}
           d="M1331.17 674.25C1335.93 674.25 1339.79 670.391 1339.79 665.63C1339.79 660.87 1335.93 657.01 1331.17 657.01C1326.41 657.01 1322.55 660.87 1322.55 665.63C1322.55 670.391 1326.41 674.25 1331.17 674.25Z"
           fill="#6FCBDC"
         />
         <m.path
-          initial={{ "--outer-tube-offset": "0%" }}
-          animate={{ "--outer-tube-offset": "100%", opacity: [0, 1, 1, 0] }}
+          initial={{ "--outer-tube-offset-path--outer": "0%" }}
+          animate={{
+            "--outer-tube-offset-path--outer": "100%",
+            opacity: [0, 1, 1, 0],
+          }}
           transition={{
             times: [0, 0.05, 0.885, 0.89],
             duration: 16,
@@ -1342,17 +1348,20 @@ export default function HeroIllustration() {
             ease: "easeIn",
             delay: 2,
           }}
-          className="outer-tube-offset-path"
+          className="outer-tube-offset-path--outer"
           style={{
-            offsetDistance: "var(--outer-tube-offset)",
+            offsetDistance: "var(--outer-tube-offset-path--outer)",
             offsetRotate: "0deg",
           }}
           d="M1331.17 674.25C1335.93 674.25 1339.79 670.391 1339.79 665.63C1339.79 660.87 1335.93 657.01 1331.17 657.01C1326.41 657.01 1322.55 660.87 1322.55 665.63C1322.55 670.391 1326.41 674.25 1331.17 674.25Z"
           fill="#8CC756"
         />
         <m.path
-          initial={{ "--outer-tube-offset": "0%" }}
-          animate={{ "--outer-tube-offset": "100%", opacity: [0, 1, 1, 0] }}
+          initial={{ "--outer-tube-offset-path--outer": "0%" }}
+          animate={{
+            "--outer-tube-offset-path--outer": "100%",
+            opacity: [0, 1, 1, 0],
+          }}
           transition={{
             times: [0, 0.05, 0.885, 0.89],
             duration: 16,
@@ -1360,17 +1369,20 @@ export default function HeroIllustration() {
             ease: "easeIn",
             delay: 3,
           }}
-          className="outer-tube-offset-path"
+          className="outer-tube-offset-path--outer"
           style={{
-            offsetDistance: "var(--outer-tube-offset)",
+            offsetDistance: "var(--outer-tube-offset-path--outer)",
             offsetRotate: "0deg",
           }}
           d="M1331.17 674.25C1335.93 674.25 1339.79 670.391 1339.79 665.63C1339.79 660.87 1335.93 657.01 1331.17 657.01C1326.41 657.01 1322.55 660.87 1322.55 665.63C1322.55 670.391 1326.41 674.25 1331.17 674.25Z"
           fill="#6FCBDC"
         />
         <m.path
-          initial={{ "--outer-tube-offset": "0%" }}
-          animate={{ "--outer-tube-offset": "100%", opacity: [0, 1, 1, 0] }}
+          initial={{ "--outer-tube-offset-path--outer": "0%" }}
+          animate={{
+            "--outer-tube-offset-path--outer": "100%",
+            opacity: [0, 1, 1, 0],
+          }}
           transition={{
             times: [0, 0.05, 0.885, 0.89],
             duration: 16,
@@ -1378,17 +1390,20 @@ export default function HeroIllustration() {
             ease: "easeIn",
             delay: 5,
           }}
-          className="outer-tube-offset-path"
+          className="outer-tube-offset-path--outer"
           style={{
-            offsetDistance: "var(--outer-tube-offset)",
+            offsetDistance: "var(--outer-tube-offset-path--outer)",
             offsetRotate: "0deg",
           }}
           d="M1331.17 674.25C1335.93 674.25 1339.79 670.391 1339.79 665.63C1339.79 660.87 1335.93 657.01 1331.17 657.01C1326.41 657.01 1322.55 660.87 1322.55 665.63C1322.55 670.391 1326.41 674.25 1331.17 674.25Z"
           fill="#E15027"
         />
         <m.path
-          initial={{ "--outer-tube-offset": "0%" }}
-          animate={{ "--outer-tube-offset": "100%", opacity: [0, 1, 1, 0] }}
+          initial={{ "--outer-tube-offset-path--outer": "0%" }}
+          animate={{
+            "--outer-tube-offset-path--outer": "100%",
+            opacity: [0, 1, 1, 0],
+          }}
           transition={{
             times: [0, 0.05, 0.885, 0.89],
             duration: 16,
@@ -1396,17 +1411,20 @@ export default function HeroIllustration() {
             ease: "easeIn",
             delay: 8,
           }}
-          className="outer-tube-offset-path"
+          className="outer-tube-offset-path--outer"
           style={{
-            offsetDistance: "var(--outer-tube-offset)",
+            offsetDistance: "var(--outer-tube-offset-path--outer)",
             offsetRotate: "0deg",
           }}
           d="M1331.17 674.25C1335.93 674.25 1339.79 670.391 1339.79 665.63C1339.79 660.87 1335.93 657.01 1331.17 657.01C1326.41 657.01 1322.55 660.87 1322.55 665.63C1322.55 670.391 1326.41 674.25 1331.17 674.25Z"
           fill="#8CC756"
         />
         <m.path
-          initial={{ "--outer-tube-offset": "0%" }}
-          animate={{ "--outer-tube-offset": "100%", opacity: [0, 1, 1, 0] }}
+          initial={{ "--outer-tube-offset-path--outer": "0%" }}
+          animate={{
+            "--outer-tube-offset-path--outer": "100%",
+            opacity: [0, 1, 1, 0],
+          }}
           transition={{
             times: [0, 0.05, 0.885, 0.89],
             duration: 16,
@@ -1414,17 +1432,20 @@ export default function HeroIllustration() {
             ease: "easeIn",
             delay: 10,
           }}
-          className="outer-tube-offset-path"
+          className="outer-tube-offset-path--outer"
           style={{
-            offsetDistance: "var(--outer-tube-offset)",
+            offsetDistance: "var(--outer-tube-offset-path--outer)",
             offsetRotate: "0deg",
           }}
           d="M1331.17 674.25C1335.93 674.25 1339.79 670.391 1339.79 665.63C1339.79 660.87 1335.93 657.01 1331.17 657.01C1326.41 657.01 1322.55 660.87 1322.55 665.63C1322.55 670.391 1326.41 674.25 1331.17 674.25Z"
           fill="#6FCBDC"
         />
         <m.path
-          initial={{ "--outer-tube-offset": "0%" }}
-          animate={{ "--outer-tube-offset": "100%", opacity: [0, 1, 1, 0] }}
+          initial={{ "--outer-tube-offset-path--outer": "0%" }}
+          animate={{
+            "--outer-tube-offset-path--outer": "100%",
+            opacity: [0, 1, 1, 0],
+          }}
           transition={{
             times: [0, 0.05, 0.885, 0.89],
             duration: 16,
@@ -1432,17 +1453,20 @@ export default function HeroIllustration() {
             ease: "easeIn",
             delay: 12,
           }}
-          className="outer-tube-offset-path"
+          className="outer-tube-offset-path--outer"
           style={{
-            offsetDistance: "var(--outer-tube-offset)",
+            offsetDistance: "var(--outer-tube-offset-path--outer)",
             offsetRotate: "0deg",
           }}
           d="M1331.17 674.25C1335.93 674.25 1339.79 670.391 1339.79 665.63C1339.79 660.87 1335.93 657.01 1331.17 657.01C1326.41 657.01 1322.55 660.87 1322.55 665.63C1322.55 670.391 1326.41 674.25 1331.17 674.25Z"
           fill="#6FCBDC"
         />
         <m.path
-          initial={{ "--outer-tube-offset": "0%" }}
-          animate={{ "--outer-tube-offset": "100%", opacity: [0, 1, 1, 0] }}
+          initial={{ "--outer-tube-offset-path--outer": "0%" }}
+          animate={{
+            "--outer-tube-offset-path--outer": "100%",
+            opacity: [0, 1, 1, 0],
+          }}
           transition={{
             times: [0, 0.05, 0.885, 0.89],
             duration: 16,
@@ -1450,17 +1474,20 @@ export default function HeroIllustration() {
             ease: "easeIn",
             delay: 14,
           }}
-          className="outer-tube-offset-path"
+          className="outer-tube-offset-path--outer"
           style={{
-            offsetDistance: "var(--outer-tube-offset)",
+            offsetDistance: "var(--outer-tube-offset-path--outer)",
             offsetRotate: "0deg",
           }}
           d="M1331.17 674.25C1335.93 674.25 1339.79 670.391 1339.79 665.63C1339.79 660.87 1335.93 657.01 1331.17 657.01C1326.41 657.01 1322.55 660.87 1322.55 665.63C1322.55 670.391 1326.41 674.25 1331.17 674.25Z"
           fill="#8CC756"
         />
         <m.path
-          initial={{ "--outer-tube-offset": "0%" }}
-          animate={{ "--outer-tube-offset": "100%", opacity: [0, 1, 1, 0] }}
+          initial={{ "--outer-tube-offset-path--outer": "0%" }}
+          animate={{
+            "--outer-tube-offset-path--outer": "100%",
+            opacity: [0, 1, 1, 0],
+          }}
           transition={{
             times: [0, 0.05, 0.885, 0.89],
             duration: 16,
@@ -1468,17 +1495,20 @@ export default function HeroIllustration() {
             ease: "easeIn",
             delay: 16,
           }}
-          className="outer-tube-offset-path"
+          className="outer-tube-offset-path--outer"
           style={{
-            offsetDistance: "var(--outer-tube-offset)",
+            offsetDistance: "var(--outer-tube-offset-path--outer)",
             offsetRotate: "0deg",
           }}
           d="M1331.17 674.25C1335.93 674.25 1339.79 670.391 1339.79 665.63C1339.79 660.87 1335.93 657.01 1331.17 657.01C1326.41 657.01 1322.55 660.87 1322.55 665.63C1322.55 670.391 1326.41 674.25 1331.17 674.25Z"
           fill="#6FCBDC"
         />
         <m.path
-          initial={{ "--outer-tube-offset": "0%" }}
-          animate={{ "--outer-tube-offset": "100%", opacity: [0, 1, 1, 0] }}
+          initial={{ "--outer-tube-offset-path--outer": "0%" }}
+          animate={{
+            "--outer-tube-offset-path--outer": "100%",
+            opacity: [0, 1, 1, 0],
+          }}
           transition={{
             times: [0, 0.05, 0.885, 0.89],
             duration: 16,
@@ -1486,9 +1516,9 @@ export default function HeroIllustration() {
             ease: "easeIn",
             delay: 18,
           }}
-          className="outer-tube-offset-path"
+          className="outer-tube-offset-path--outer"
           style={{
-            offsetDistance: "var(--outer-tube-offset)",
+            offsetDistance: "var(--outer-tube-offset-path--outer)",
             offsetRotate: "0deg",
           }}
           d="M1331.17 674.25C1335.93 674.25 1339.79 670.391 1339.79 665.63C1339.79 660.87 1335.93 657.01 1331.17 657.01C1326.41 657.01 1322.55 660.87 1322.55 665.63C1322.55 670.391 1326.41 674.25 1331.17 674.25Z"
@@ -1569,21 +1599,20 @@ export default function HeroIllustration() {
         fill="#8CC756"
       />
       <m.path
-        initial={{ "--inner-tube-offset--outer": "0%" }}
+        initial={{ "--inner-tube-offset-path--outer": "0%" }}
         animate={{
-          "--inner-tube-offset--outer": "100%",
+          "--inner-tube-offset-path--outer": "100%",
           opacity: [0, 1, 1, 0],
         }}
         transition={{
           times: [0, 0.05, 0.885, 0.89],
           duration: 16,
           delay: 0.2,
-
           ease: "easeIn",
         }}
         className="inner-tube-offset-path--outer"
         style={{
-          offsetDistance: "var(--inner-tube-offset--outer)",
+          offsetDistance: "var(--inner-tube-offset-path--outer)",
           offsetRotate: "0deg",
         }}
         d="M674.981 997.495C679.742 997.495 683.601 993.636 683.601 988.875C683.601 984.115 679.742 980.255 674.981 980.255C670.22 980.255 666.361 984.115 666.361 988.875C666.361 993.636 670.22 997.495 674.981 997.495Z"

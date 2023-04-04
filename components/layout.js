@@ -11,7 +11,7 @@ export default function Layout({ children, home }) {
   return (
     <div
       ref={pageContent}
-      className=" mx-auto max-w-screen-2xl overflow-hidden scroll-smooth px-[max(20px,4vw)] pt-[max(20px,4vw)] font-cotext text-white selection:bg-orange selection:text-white"
+      className=" mx-auto max-w-screen-2xl overflow-hidden scroll-smooth pt-[max(20px,4vw)] font-cotext text-white selection:bg-orange selection:text-white sm:px-[max(20px,4vw)]"
     >
       <Head>
         <link rel="icon" href="/favicon.ico" />
@@ -19,14 +19,14 @@ export default function Layout({ children, home }) {
           name="description"
           content="3elm - arabic scientific content for the world"
         />
-        <meta
+        {/* <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
             siteTitle
           )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
         <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary_large_image" /> */}
       </Head>
       <header>
         <Nav pageContent={pageContent}></Nav>

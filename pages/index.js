@@ -2,6 +2,7 @@ import Layout, { siteTitle } from "../components/layout";
 
 import Carousel from "../components/carousel";
 import DesignIllustration from "../components/designIllustration";
+import Eye from "../components/eye";
 import FacebookIcon from "../components/facebookIcon";
 import FishIllustration from "../components/fishIllustration";
 import GoalsIllustration from "../components/goalsIllustration";
@@ -30,6 +31,7 @@ export default function Home() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <Eye />
       <section className="hidden sm:grid">
         <h1 className="z-10 col-start-1 col-end-2 row-start-1 row-end-1 flex flex-col font-cohead text-fluid-xl font-bold">
           <m.span
@@ -37,7 +39,6 @@ export default function Home() {
             animate={{ y: 20 }}
             transition={{
               duration: 3,
-              yoyo: Infinity,
               ease: "easeInOut",
               repeat: Infinity,
               repeatType: "reverse",
@@ -51,7 +52,6 @@ export default function Home() {
             animate={{ y: 20 }}
             transition={{
               duration: 2.5,
-              yoyo: Infinity,
               ease: "easeInOut",
               repeat: Infinity,
               repeatType: "reverse",
@@ -65,7 +65,6 @@ export default function Home() {
             animate={{ y: 20 }}
             transition={{
               duration: 2.75,
-              yoyo: Infinity,
               ease: "easeInOut",
               repeat: Infinity,
               repeatType: "reverse",

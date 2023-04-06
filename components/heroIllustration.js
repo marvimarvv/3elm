@@ -1799,6 +1799,7 @@ export default function HeroIllustration({ className }) {
         />
       </m.g>
       <m.g
+        className="magnet-lightnings"
         initial={{ opacity: 0 }}
         animate={{ opacity: [0.5, 1, 0, 0.8, 0.3, 1, 0] }}
         transition={{
@@ -2246,7 +2247,6 @@ export default function HeroIllustration({ className }) {
         transition={{
           ease: "easeInOut",
           duration: 2,
-
           repeat: Infinity,
           delay: 1,
           repeatType: "reverse",

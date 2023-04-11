@@ -10,7 +10,7 @@ export default function ContactForm({ className }) {
       name="contact"
       method="POST"
       className={className}
-      action="/pages/contactFormSubmitted"
+      action="/contactFormSubmitted"
     >
       <input type="hidden" name="form-name" value="contact" />
       <p class="hidden">

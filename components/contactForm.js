@@ -5,7 +5,7 @@ export default function ContactForm({ className }) {
 
   return (
     <form
-      data-netlify="true"
+      netlify
       netlify-honeypot="bot-field"
       name="contact"
       method="POST"
@@ -18,15 +18,26 @@ export default function ContactForm({ className }) {
       </p>
       <label>
         {t("contact.form name")}
-        <input type="text" className="mt-1 h-9 w-full p-3 text-darkorange" />
+        <input
+          type="text"
+          name="fullname"
+          className="mt-1 h-9 w-full p-3 text-darkorange"
+        />
       </label>
       <label>
         {t("contact.form email")}
-        <input type="email" className="mt-1 h-9 w-full p-3 text-darkorange" />
+        <input
+          type="email"
+          name="emailaddress"
+          className="mt-1 h-9 w-full p-3 text-darkorange"
+        />
       </label>
       <label className="flex flex-grow flex-col">
         {t("contact.form message")}
-        <textarea className="mt-1 min-h-[10rem] w-full flex-grow resize-none p-3 text-darkorange"></textarea>
+        <textarea
+          name="message"
+          className="mt-1 min-h-[10rem] w-full flex-grow resize-none p-3 text-darkorange"
+        ></textarea>
       </label>
       <button
         type="submit"

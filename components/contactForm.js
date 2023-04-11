@@ -38,3 +38,11 @@ export default function ContactForm({ className }) {
     </form>
   );
 }
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
+}

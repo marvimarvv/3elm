@@ -11,7 +11,7 @@ export default function Layout({ children, home }) {
   return (
     <div
       ref={pageContent}
-      className=" mx-auto max-w-screen-2xl overflow-hidden scroll-smooth pt-[max(20px,4vw)] font-cotext text-white selection:bg-orange selection:text-white sm:px-[max(20px,4vw)]"
+      className=" mx-auto flex min-h-screen max-w-screen-2xl flex-col overflow-hidden scroll-smooth pt-[max(20px,4vw)] font-cotext text-white selection:bg-orange selection:text-white sm:px-[max(20px,4vw)]"
     >
       <Head>
         <link rel="icon" href="/favicon.ico" />
@@ -31,7 +31,9 @@ export default function Layout({ children, home }) {
       <header>
         <Nav pageContent={pageContent}></Nav>
       </header>
-      <main className="relative z-0 mt-[max(20px,4vw)] sm:p-8">{children}</main>
+      <main className="relative z-0 mt-[max(20px,4vw)] flex-grow sm:p-8">
+        {children}
+      </main>
       <Footer></Footer>
     </div>
   );

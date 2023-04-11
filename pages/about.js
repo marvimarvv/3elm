@@ -2,6 +2,7 @@ import Layout, { siteTitle } from "../components/layout";
 
 import CircleScrollAnimation from "../components/circleScrollAnimation";
 import CurvedText from "../components/curvedText";
+import Eye from "../components/eye";
 import Gif from "../public/images/ARABIC.gif";
 import Head from "next/head";
 import Image from "next/image";
@@ -17,7 +18,9 @@ export default function About() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className="mb-40 px-6 pt-6 sm:px-0 sm:pt-0">
+      <Eye />
+      <h1 className="font-cohead text-fluid-xl">Coming soon...</h1>
+      {/* <section className="mb-40 px-6 pt-6 sm:px-0 sm:pt-0">
         <h1 className=" mb-7">
           <span className="text-fluid-s block font-cohead">
             {t("about.title top")}
@@ -74,7 +77,7 @@ export default function About() {
           </div>
           <span className="text-cyan">{t("about.brains title 2")}</span>
         </h2>
-      </section>
+      </section> */}
     </Layout>
   );
 }

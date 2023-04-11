@@ -32,7 +32,8 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <Eye />
-      <section className="hidden sm:grid">
+      <h1 className="inline-block font-cohead text-fluid-xl">Coming soon...</h1>
+      {/* <section className="hidden sm:grid">
         <h1 className="z-10 col-start-1 col-end-2 row-start-1 row-end-1 flex flex-col font-cohead text-fluid-xl font-bold">
           <m.span
             initial={{ y: 10 }}
@@ -280,7 +281,7 @@ export default function Home() {
         </h2>
         <Carousel />
       </section>
-      <PipeIllustration className="isolate h-full w-full px-4 pb-20 sm:px-0" />
+      <PipeIllustration className="isolate h-full w-full px-4 pb-20 sm:px-0" /> */}
     </Layout>
   );
 }

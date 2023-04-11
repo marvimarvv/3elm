@@ -1,6 +1,8 @@
 import Layout, { siteTitle } from "../components/layout";
 
 import BirdIllustration from "../components/birdIllustration";
+import ContactForm from "../components/contactForm";
+import Eye from "../components/eye";
 import FishIllustrationContact from "../components/fishIllustration__contact";
 import Head from "next/head";
 import HeroContact from "../components/heroContact";
@@ -16,14 +18,16 @@ export default function Contact() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className="mb-40 flex flex-col gap-8 sm:mx-0 sm:mt-0 sm:flex-row">
+      {/* <section className="mb-40 flex flex-col gap-8 sm:mx-0 sm:mt-0 sm:flex-row">
         <h1 className="text-cohead center flex flex-col gap-3 self-center border-y-16 border-y-brightorange py-2 text-center text-fluid-l font-bold md:w-[15ch]">
           {t("contact.title")}
         </h1>
         <HeroContact className="-mt-8 h-full w-full sm:ltr:-mr-8 sm:rtl:-ml-8" />
-      </section>
+      </section> */}
+      <Eye />
+      <h1 className="font-cohead text-fluid-xl">Coming soon...</h1>
       <div className="grid grid-cols-1 gap-20 px-6 pb-40 sm:px-0 md:grid-cols-2">
-        <section className="relative flex flex-col gap-4">
+        {/* <section className="relative flex flex-col gap-4">
           <span className="absolute bg-brightorange p-4">1</span>
           <h2 className="text-center font-cohead text-fluid-m">
             {t("contact.enterprise headline")}
@@ -60,34 +64,9 @@ export default function Contact() {
           </h2>
           <BirdIllustration className="w-full" />
           <p>{t("contact.reach text")}</p>
-        </section>
+        </section> */}
         <section className="border-image-perforation  bg-brightorange p-8">
-          <form action="" className="flex h-full flex-col gap-4">
-            <label>
-              {t("contact.form name")}
-              <input
-                type="text"
-                className="mt-1 h-9 w-full p-3 text-darkorange"
-              />
-            </label>
-            <label>
-              {t("contact.form email")}
-              <input
-                type="text"
-                className="mt-1 h-9 w-full p-3 text-darkorange"
-              />
-            </label>
-            <label className="flex flex-grow flex-col">
-              {t("contact.form message")}
-              <textarea
-                type="text"
-                className="mt-1 min-h-[10rem] w-full flex-grow resize-none p-3 text-darkorange"
-              ></textarea>
-            </label>
-            <button className="mt-auto flex cursor-pointer items-center justify-center rounded-full bg-darkorange p-4 transition-all hover:-translate-y-2 active:translate-y-2 active:bg-brightorange">
-              {t("contact.form button")}
-            </button>
-          </form>
+          <ContactForm className="flex h-full flex-col gap-4" />
         </section>
       </div>
     </Layout>

@@ -1586,18 +1586,6 @@ export default function HeroIllustration({ className }) {
         stroke="#EBE717"
         stroke-miterlimit="10"
       />
-      <path
-        d="M757.247 929.992C762.01 929.992 765.871 926.13 765.871 921.368C765.871 916.605 762.01 912.744 757.247 912.744C752.484 912.744 748.623 916.605 748.623 921.368C748.623 926.13 752.484 929.992 757.247 929.992Z"
-        fill="#6FCBDC"
-      />
-      <path
-        d="M786.572 951.252C791.26 951.252 795.06 947.452 795.06 942.764C795.06 938.077 791.26 934.276 786.572 934.276C781.884 934.276 778.084 938.077 778.084 942.764C778.084 947.452 781.884 951.252 786.572 951.252Z"
-        fill="#E15027"
-      />
-      <path
-        d="M735.32 963.016C740.081 963.016 743.94 959.157 743.94 954.396C743.94 949.636 740.081 945.776 735.32 945.776C730.559 945.776 726.7 949.636 726.7 954.396C726.7 959.157 730.559 963.016 735.32 963.016Z"
-        fill="#8CC756"
-      />
       <m.path
         initial={{ "--inner-tube-offset-path--outer": "0%" }}
         animate={{
@@ -1605,7 +1593,7 @@ export default function HeroIllustration({ className }) {
           opacity: [0, 1, 1, 0],
         }}
         transition={{
-          times: [0, 0.05, 0.885, 0.89],
+          times: [0, 0.09, 0.991, 0.994],
           duration: 16,
           delay: 0.2,
           ease: "easeIn",
@@ -1618,29 +1606,265 @@ export default function HeroIllustration({ className }) {
         d="M674.981 997.495C679.742 997.495 683.601 993.636 683.601 988.875C683.601 984.115 679.742 980.255 674.981 980.255C670.22 980.255 666.361 984.115 666.361 988.875C666.361 993.636 670.22 997.495 674.981 997.495Z"
         fill="#6FCBDC"
       />
-      <path
-        d="M701.918 981.334C706.679 981.334 710.538 977.474 710.538 972.714C710.538 967.953 706.679 964.094 701.918 964.094C697.157 964.094 693.298 967.953 693.298 972.714C693.298 977.474 697.157 981.334 701.918 981.334Z"
+      <m.path
+        initial={{ "--inner-tube-offset-path--outer": "0%" }}
+        animate={{
+          "--inner-tube-offset-path--outer": "100%",
+          opacity: [0, 1, 1, 0],
+        }}
+        transition={{
+          times: [0, 0.09, 0.991, 0.994],
+          duration: 16,
+          delay: 4.5,
+          ease: "easeIn",
+        }}
+        className="inner-tube-offset-path--outer"
+        style={{
+          offsetDistance: "var(--inner-tube-offset-path--outer)",
+          offsetRotate: "0deg",
+        }}
+        d="M674.981 997.495C679.742 997.495 683.601 993.636 683.601 988.875C683.601 984.115 679.742 980.255 674.981 980.255C670.22 980.255 666.361 984.115 666.361 988.875C666.361 993.636 670.22 997.495 674.981 997.495Z"
         fill="#E15027"
       />
-      <path
-        d="M771.019 908.884C775.986 908.884 780.013 904.858 780.013 899.89C780.013 894.923 775.986 890.896 771.019 890.896C766.052 890.896 762.025 894.923 762.025 899.89C762.025 904.858 766.052 908.884 771.019 908.884Z"
-        fill="#8CC756"
-      />
-      <path
-        d="M650.199 1502.84C654.96 1502.84 658.819 1498.98 658.819 1494.22C658.819 1489.46 654.96 1485.6 650.199 1485.6C645.438 1485.6 641.579 1489.46 641.579 1494.22C641.579 1498.98 645.438 1502.84 650.199 1502.84Z"
+      <m.path
+        initial={{ "--inner-tube-offset-path--outer": "0%" }}
+        animate={{
+          "--inner-tube-offset-path--outer": "100%",
+          opacity: [0, 1, 1, 0],
+        }}
+        transition={{
+          times: [0, 0.09, 0.991, 0.994],
+          duration: 16,
+          delay: 8,
+          ease: "easeIn",
+        }}
+        className="inner-tube-offset-path--outer"
+        style={{
+          offsetDistance: "var(--inner-tube-offset-path--outer)",
+          offsetRotate: "0deg",
+        }}
+        d="M674.981 997.495C679.742 997.495 683.601 993.636 683.601 988.875C683.601 984.115 679.742 980.255 674.981 980.255C670.22 980.255 666.361 984.115 666.361 988.875C666.361 993.636 670.22 997.495 674.981 997.495Z"
         fill="#6FCBDC"
       />
-      <path
-        d="M650.666 1336.35C655.427 1336.35 659.286 1332.49 659.286 1327.73C659.286 1322.97 655.427 1319.11 650.666 1319.11C645.905 1319.11 642.046 1322.97 642.046 1327.73C642.046 1332.49 645.905 1336.35 650.666 1336.35Z"
+      <m.path
+        initial={{ "--inner-tube-offset-path--outer": "0%" }}
+        animate={{
+          "--inner-tube-offset-path--outer": "100%",
+          opacity: [0, 1, 1, 0],
+        }}
+        transition={{
+          times: [0, 0.09, 0.991, 0.994],
+          duration: 16,
+          delay: 12.5,
+          ease: "easeIn",
+        }}
+        className="inner-tube-offset-path--outer"
+        style={{
+          offsetDistance: "var(--inner-tube-offset-path--outer)",
+          offsetRotate: "0deg",
+        }}
+        d="M674.981 997.495C679.742 997.495 683.601 993.636 683.601 988.875C683.601 984.115 679.742 980.255 674.981 980.255C670.22 980.255 666.361 984.115 666.361 988.875C666.361 993.636 670.22 997.495 674.981 997.495Z"
         fill="#8CC756"
       />
-      <path
-        d="M648.511 1092.8C653.272 1092.8 657.131 1088.94 657.131 1084.18C657.131 1079.42 653.272 1075.56 648.511 1075.56C643.75 1075.56 639.891 1079.42 639.891 1084.18C639.891 1088.94 643.75 1092.8 648.511 1092.8Z"
-        fill="#6FCBDC"
-      />
-      <path
-        d="M648.511 1141.3C653.272 1141.3 657.131 1137.44 657.131 1132.68C657.131 1127.91 653.272 1124.06 648.511 1124.06C643.75 1124.06 639.891 1127.91 639.891 1132.68C639.891 1137.44 643.75 1141.3 648.511 1141.3Z"
+      <m.path
+        initial={{ "--inner-tube-offset-path--outer": "0%" }}
+        animate={{
+          "--inner-tube-offset-path--outer": "100%",
+          opacity: [0, 1, 1, 0],
+        }}
+        transition={{
+          times: [0, 0.09, 0.991, 0.994],
+          duration: 16,
+          delay: 17,
+          ease: "easeIn",
+        }}
+        className="inner-tube-offset-path--outer"
+        style={{
+          offsetDistance: "var(--inner-tube-offset-path--outer)",
+          offsetRotate: "0deg",
+        }}
+        d="M674.981 997.495C679.742 997.495 683.601 993.636 683.601 988.875C683.601 984.115 679.742 980.255 674.981 980.255C670.22 980.255 666.361 984.115 666.361 988.875C666.361 993.636 670.22 997.495 674.981 997.495Z"
         fill="#E15027"
+      />
+      <m.path
+        initial={{ "--inner-tube-offset-path--outer": "0%" }}
+        animate={{
+          "--inner-tube-offset-path--outer": "100%",
+          opacity: [0, 1, 1, 0],
+        }}
+        transition={{
+          times: [0, 0.09, 0.991, 0.994],
+          duration: 16,
+          delay: 23,
+          ease: "easeIn",
+        }}
+        className="inner-tube-offset-path--outer"
+        style={{
+          offsetDistance: "var(--inner-tube-offset-path--outer)",
+          offsetRotate: "0deg",
+        }}
+        d="M674.981 997.495C679.742 997.495 683.601 993.636 683.601 988.875C683.601 984.115 679.742 980.255 674.981 980.255C670.22 980.255 666.361 984.115 666.361 988.875C666.361 993.636 670.22 997.495 674.981 997.495Z"
+        fill="#8CC756"
+      />
+      <m.path
+        initial={{ "--inner-tube-offset-path--outer": "0%" }}
+        animate={{
+          "--inner-tube-offset-path--outer": "100%",
+          opacity: [0, 1, 1, 0],
+        }}
+        transition={{
+          times: [0, 0.09, 0.991, 0.994],
+          duration: 16,
+          delay: 28,
+          ease: "easeIn",
+        }}
+        className="inner-tube-offset-path--outer"
+        style={{
+          offsetDistance: "var(--inner-tube-offset-path--outer)",
+          offsetRotate: "0deg",
+        }}
+        d="M674.981 997.495C679.742 997.495 683.601 993.636 683.601 988.875C683.601 984.115 679.742 980.255 674.981 980.255C670.22 980.255 666.361 984.115 666.361 988.875C666.361 993.636 670.22 997.495 674.981 997.495Z"
+        fill="#E15027"
+      />
+      <m.path
+        initial={{ "--inner-tube-offset-path--outer": "0%" }}
+        animate={{
+          "--inner-tube-offset-path--outer": "100%",
+          opacity: [0, 1, 1, 0],
+        }}
+        transition={{
+          times: [0, 0.09, 0.991, 0.994],
+          duration: 16,
+          delay: 32,
+          ease: "easeIn",
+        }}
+        className="inner-tube-offset-path--outer"
+        style={{
+          offsetDistance: "var(--inner-tube-offset-path--outer)",
+          offsetRotate: "0deg",
+        }}
+        d="M674.981 997.495C679.742 997.495 683.601 993.636 683.601 988.875C683.601 984.115 679.742 980.255 674.981 980.255C670.22 980.255 666.361 984.115 666.361 988.875C666.361 993.636 670.22 997.495 674.981 997.495Z"
+        fill="#6FCBDC"
+      />
+      <m.path
+        initial={{ "--inner-tube-offset-path--inner": "0%" }}
+        animate={{
+          "--inner-tube-offset-path--inner": "100%",
+          opacity: [0, 1, 1, 0],
+        }}
+        transition={{
+          times: [0, 0.09, 0.991, 0.994],
+          duration: 16,
+          delay: 0,
+          ease: "easeIn",
+        }}
+        className="inner-tube-offset-path--inner"
+        style={{
+          offsetDistance: "var(--inner-tube-offset-path--inner)",
+          offsetRotate: "0deg",
+        }}
+        d="M674.981 997.495C679.742 997.495 683.601 993.636 683.601 988.875C683.601 984.115 679.742 980.255 674.981 980.255C670.22 980.255 666.361 984.115 666.361 988.875C666.361 993.636 670.22 997.495 674.981 997.495Z"
+        fill="#6FCBDC"
+      />
+      <m.path
+        initial={{ "--inner-tube-offset-path--inner": "0%" }}
+        animate={{
+          "--inner-tube-offset-path--inner": "100%",
+          opacity: [0, 1, 1, 0],
+        }}
+        transition={{
+          times: [0, 0.09, 0.991, 0.994],
+          duration: 16,
+          delay: 2,
+          ease: "easeIn",
+        }}
+        className="inner-tube-offset-path--inner"
+        style={{
+          offsetDistance: "var(--inner-tube-offset-path--inner)",
+          offsetRotate: "0deg",
+        }}
+        d="M674.981 997.495C679.742 997.495 683.601 993.636 683.601 988.875C683.601 984.115 679.742 980.255 674.981 980.255C670.22 980.255 666.361 984.115 666.361 988.875C666.361 993.636 670.22 997.495 674.981 997.495Z"
+        fill="#E15027"
+      />
+      <m.path
+        initial={{ "--inner-tube-offset-path--inner": "0%" }}
+        animate={{
+          "--inner-tube-offset-path--inner": "100%",
+          opacity: [0, 1, 1, 0],
+        }}
+        transition={{
+          times: [0, 0.09, 0.991, 0.994],
+          duration: 16,
+          delay: 6,
+          ease: "easeIn",
+        }}
+        className="inner-tube-offset-path--inner"
+        style={{
+          offsetDistance: "var(--inner-tube-offset-path--inner)",
+          offsetRotate: "0deg",
+        }}
+        d="M674.981 997.495C679.742 997.495 683.601 993.636 683.601 988.875C683.601 984.115 679.742 980.255 674.981 980.255C670.22 980.255 666.361 984.115 666.361 988.875C666.361 993.636 670.22 997.495 674.981 997.495Z"
+        fill="#8CC756"
+      />
+      <m.path
+        initial={{ "--inner-tube-offset-path--inner": "0%" }}
+        animate={{
+          "--inner-tube-offset-path--inner": "100%",
+          opacity: [0, 1, 1, 0],
+        }}
+        transition={{
+          times: [0, 0.09, 0.991, 0.994],
+          duration: 16,
+          delay: 10,
+          ease: "easeIn",
+        }}
+        className="inner-tube-offset-path--inner"
+        style={{
+          offsetDistance: "var(--inner-tube-offset-path--inner)",
+          offsetRotate: "0deg",
+        }}
+        d="M674.981 997.495C679.742 997.495 683.601 993.636 683.601 988.875C683.601 984.115 679.742 980.255 674.981 980.255C670.22 980.255 666.361 984.115 666.361 988.875C666.361 993.636 670.22 997.495 674.981 997.495Z"
+        fill="#6FCBDC"
+      />
+      <m.path
+        initial={{ "--inner-tube-offset-path--inner": "0%" }}
+        animate={{
+          "--inner-tube-offset-path--inner": "100%",
+          opacity: [0, 1, 1, 0],
+        }}
+        transition={{
+          times: [0, 0.09, 0.991, 0.994],
+          duration: 16,
+          delay: 14,
+          ease: "easeIn",
+        }}
+        className="inner-tube-offset-path--inner"
+        style={{
+          offsetDistance: "var(--inner-tube-offset-path--inner)",
+          offsetRotate: "0deg",
+        }}
+        d="M674.981 997.495C679.742 997.495 683.601 993.636 683.601 988.875C683.601 984.115 679.742 980.255 674.981 980.255C670.22 980.255 666.361 984.115 666.361 988.875C666.361 993.636 670.22 997.495 674.981 997.495Z"
+        fill="#E15027"
+      />
+      <m.path
+        initial={{ "--inner-tube-offset-path--inner": "0%" }}
+        animate={{
+          "--inner-tube-offset-path--inner": "100%",
+          opacity: [0, 1, 1, 0],
+        }}
+        transition={{
+          times: [0, 0.09, 0.991, 0.994],
+          duration: 16,
+          delay: 16,
+          ease: "easeIn",
+        }}
+        className="inner-tube-offset-path--inner"
+        style={{
+          offsetDistance: "var(--inner-tube-offset-path--inner)",
+          offsetRotate: "0deg",
+        }}
+        d="M674.981 997.495C679.742 997.495 683.601 993.636 683.601 988.875C683.601 984.115 679.742 980.255 674.981 980.255C670.22 980.255 666.361 984.115 666.361 988.875C666.361 993.636 670.22 997.495 674.981 997.495Z"
+        fill="#8CC756"
       />
       <path
         opacity="0.92"
@@ -1988,6 +2212,28 @@ export default function HeroIllustration({ className }) {
           fill="#98499B"
         />
       </g>
+      <m.g
+        className="tail"
+        animate={{
+          rotate: [0, -10, 0, 10, 0],
+          transition: {
+            duration: 1.5,
+            ease: "easeInOut",
+            repeat: "reverse",
+            repeatType: Infinity,
+          },
+        }}
+      >
+        <path
+          d="M1129.51 336.165C1128.18 335.729 1127 334.941 1126.09 333.886C1125.18 332.83 1124.57 331.546 1124.33 330.172C1123.4 324.859 1122.18 314.204 1125.03 304.848C1129.03 291.763 1111.07 287.148 1105.5 289.932C1099.93 292.716 1105.48 280.941 1114.41 285.087C1123.33 289.233 1123.57 272.551 1125.03 272.035C1126.5 271.519 1128.51 287.035 1128.51 287.035C1128.51 287.035 1149.74 301.711 1151.81 329.172C1151.9 330.351 1151.6 331.528 1150.94 332.516C1150.29 333.504 1149.33 334.245 1148.21 334.624C1143.58 336.165 1135.62 338.155 1129.51 336.165Z"
+          fill="#B762A6"
+        />
+        <path
+          opacity="0.25"
+          d="M1128.5 287.033C1128.5 287.033 1157.58 314.152 1138.81 336.787C1142.38 336.354 1145.87 335.469 1149.21 334.152C1149.21 334.152 1152.78 332.709 1151.55 326.609C1151.55 326.609 1151.16 307.293 1128.5 287.033Z"
+          fill="#98499B"
+        />
+      </m.g>
       <path
         d="M1297.19 258.601C1321.02 258.601 1340.34 250.783 1340.34 241.141C1340.34 231.498 1321.02 223.681 1297.19 223.681C1273.35 223.681 1254.03 231.498 1254.03 241.141C1254.03 250.783 1273.35 258.601 1297.19 258.601Z"
         stroke="#E15027"

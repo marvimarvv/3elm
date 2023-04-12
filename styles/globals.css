@@ -93,6 +93,16 @@
   .hyphens {
     hyphens: auto;
   }
+
+  .inner-tube-offset-path--outer {
+    offset-path: path("M228.5 0.5C206.834 11.5 157 33 131 31C98.5005 28.5 -7 72.5 1.00006 136L4 626.5");
+    transform: translate(-1.9%, -4.4%);
+  }
+
+  .inner-tube-offset-path--inner {
+    offset-path: path("M163.5 1C80 39 129.5 56.5 100 71C70.7467 85.3787 -5.99998 108.5 2.00008 172L5.00002 662.5");
+    transform: translate(-1.9%, -6.4%);
+  }
   
   .mirror {
     transform: rotateY(180deg);
@@ -106,11 +116,7 @@
     offset-path: path("M1 0.5C26 12.1667 47 37.5 75.5 32.5C104.055 27.4903 168 43 215.5 109C227.735 126 213.5 633.167 213 848.5");
     transform: translate(-1.1%, -0.7%);
   }
-
-  .inner-tube-offset-path--outer {
-    offset-path: path("M599.5,1039.5c0,0-56,24-53,35s11,25-20,43c-30.7,17.8-81.1,32.7-88.8,87.5c-0.1,1-0.2,2.1-0.2,3.1v77.5l4,417");
-  }
-
+   
   .pyramid-offset-path {
     offset-path: path("M466.384 740.057C466.384 740.057 520.901 852.034 662.738 782.117");
   }

@@ -17,11 +17,6 @@ export default function Contact() {
     <Layout>
       <Head>
         <title>{siteTitle}</title>
-        <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-          <input type="text" name="fullname" />
-          <input type="email" name="emailaddress" />
-          <textarea name="message"></textarea>
-        </form>
       </Head>
       {/* <section className="mb-40 flex flex-col gap-8 sm:mx-0 sm:mt-0 sm:flex-row">
         <h1 className="text-cohead center flex flex-col gap-3 self-center border-y-16 border-y-brightorange py-2 text-center text-fluid-l font-bold md:w-[15ch]">

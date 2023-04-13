@@ -4,52 +4,17 @@ export default function ContactForm({ className }) {
   const { t } = useTranslation();
 
   return (
-    <form
-      netlify
-      netlify-honeypot="bot-field"
-      name="contact"
-      method="POST"
-      className={className}
-      action="/contactFormSubmitted"
-    >
-      <input type="hidden" name="form-name" value="contact" />
-      <p class="hidden">
-        <label>
-          Don’t fill this out if you’re human: <input name="bot-field" />
-        </label>
-      </p>
-      <label>
-        {t("contact.form name")}
-        <input
-          type="text"
-          name="fullname"
-          className="mt-1 h-9 w-full p-3 text-darkorange"
-          required
-        />
-      </label>
-      <label>
-        {t("contact.form email")}
-        <input
-          type="email"
-          name="emailaddress"
-          className="mt-1 h-9 w-full p-3 text-darkorange"
-          required
-        />
-      </label>
-      <label className="flex flex-grow flex-col">
-        {t("contact.form message")}
-        <textarea
-          name="message"
-          className="mt-1 min-h-[10rem] w-full flex-grow resize-none p-3 text-darkorange"
-          required
-        ></textarea>
-      </label>
-      <button
-        type="submit"
-        className="mt-auto flex cursor-pointer items-center justify-center rounded-full bg-darkorange p-4 transition-all hover:-translate-y-2 active:translate-y-2 active:bg-brightorange"
-      >
-        {t("contact.form button")}
-      </button>
+    <form method="POST" name="contact-form" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact-form" />
+      <label htmlFor="name">Name *</label>
+      <input id="name" name="name" required type="text" />
+      <label htmlFor="company">Company *</label>
+      <input id="company" name="company" required type="text" />
+      <label htmlFor="email">E-mail Address *</label>
+      <input id="email" type="email" name="email" required />
+      <label htmlFor="message">Message *</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit">Submit</button>
     </form>
   );
 }

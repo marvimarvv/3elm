@@ -26,8 +26,8 @@ export default function Contact() {
       </section> */}
       <Eye />
       <h1 className="font-cohead text-fluid-xl">Coming soon...</h1>
-      <div className="grid grid-cols-1 gap-20 px-6 pb-40 sm:px-0 md:grid-cols-2">
-        {/* <section className="relative flex flex-col gap-4">
+      {/*<div className="grid grid-cols-1 gap-20 px-6 pb-40 sm:px-0 md:grid-cols-2">
+         <section className="relative flex flex-col gap-4">
           <span className="absolute bg-brightorange p-4">1</span>
           <h2 className="text-center font-cohead text-fluid-m">
             {t("contact.enterprise headline")}
@@ -64,11 +64,11 @@ export default function Contact() {
           </h2>
           <BirdIllustration className="w-full" />
           <p>{t("contact.reach text")}</p>
-        </section> */}
+        </section> 
         <section className="border-image-perforation  bg-brightorange p-8">
           <ContactForm className="flex h-full flex-col gap-4" />
         </section>
-      </div>
+      </div>*/}
     </Layout>
   );
 }

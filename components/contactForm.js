@@ -28,7 +28,7 @@ export default function ContactForm({ className }) {
         />
       </div>
       <div>
-        <label htmlFor="email">{t("contact.form message")}</label>
+        <label htmlFor="email">{t("contact.form email")}</label>
         <input
           id="email"
           type="email"

@@ -15,7 +15,7 @@ export default function LikeIcon() {
         viewBox="0 0 41 41"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute -bottom-16"
+        className="absolute -bottom-16 rounded-full bg-deepblue"
         style={{
           transform: isInView ? "scale(1)" : "scale(0.5)",
           opacity: isInView ? 1 : 0,

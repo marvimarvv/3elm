@@ -82,6 +82,12 @@
     clip-path: polygon(3.91% -3.13%, 100% -1px, 100% 77.08%, 8.08% 78.76%, 0.48% 99.03%, 3.68% 54.69%);
   }
 
+  .footer-tube-offset-path--left {
+    offset-path: path("m212.5.08s97.06,578.7,8.97,590.3c-136.01,17.91-95.04,88.66-14.36,88.66h276.83c16.88,0,19.73,46.46,19.73,84.09h500.44");
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+
   .gif-shape-outside-ltr {
     shape-outside: polygon(34.67% 5.21%, 100% 0%, 100.27% 88.90%, 29.07% 89.24%, 16.67% 45.93%);
   }

@@ -14,7 +14,7 @@ export default function HeartIcon() {
         viewBox="0 0 41 41"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute -bottom-8 right-2"
+        className="absolute -bottom-8 right-2 rounded-full bg-deepblue"
         style={{
           transform: isInView ? "scale(1)" : "scale(0.5)",
           opacity: isInView ? 1 : 0,

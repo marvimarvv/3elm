@@ -1,6 +1,7 @@
 import Layout, { siteTitle } from "../components/layout";
 
 import BirdIllustration from "../components/birdIllustration";
+import ContactForm from "../components/contactForm";
 import FishIllustrationContact from "../components/fishIllustration__contact";
 import Head from "next/head";
 import HeroContact from "../components/heroContact";
@@ -62,32 +63,7 @@ export default function Contact() {
           <p>{t("contact.reach text")}</p>
         </section>
         <section className="border-image-perforation  bg-brightorange p-8">
-          <form action="" className="flex h-full flex-col gap-4">
-            <label>
-              {t("contact.form name")}
-              <input
-                type="text"
-                className="mt-1 h-9 w-full p-3 text-darkorange"
-              />
-            </label>
-            <label>
-              {t("contact.form email")}
-              <input
-                type="text"
-                className="mt-1 h-9 w-full p-3 text-darkorange"
-              />
-            </label>
-            <label className="flex flex-grow flex-col">
-              {t("contact.form message")}
-              <textarea
-                type="text"
-                className="mt-1 min-h-[10rem] w-full flex-grow resize-none p-3 text-darkorange"
-              ></textarea>
-            </label>
-            <button className="mt-auto flex cursor-pointer items-center justify-center rounded-full bg-darkorange p-4 transition-all hover:-translate-y-2 active:translate-y-2 active:bg-brightorange">
-              {t("contact.form button")}
-            </button>
-          </form>
+          <ContactForm className="flex h-full flex-col gap-4" />
         </section>
       </div>
     </Layout>

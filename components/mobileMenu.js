@@ -88,7 +88,6 @@ export default function MobileMenu({ className, pageContent }) {
                 >
                   {t("navigation.contact")}
                 </Popover.Button>
-                <div className="h-2 w-2 rounded-full bg-orange"></div>
                 <Popover.Button as={LocaleSwitcher}></Popover.Button>
               </nav>
             </Popover.Panel>

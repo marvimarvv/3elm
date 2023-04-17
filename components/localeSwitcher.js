@@ -14,13 +14,7 @@ export default function LocaleSwitcher({ className }) {
     <span className={className}>
       {otherLocales?.map((locale) => {
         const { pathname, query, asPath } = router;
-        return (
-          <span key={"locale-" + locale}>
-            <Link href={{ pathname, query }} as={asPath} locale={locale}>
-              {locale === "en" ? "English" : locale === "ar" ? "عربى" : null}
-            </Link>
-          </span>
-        );
+        return <span key={"locale-" + locale}></span>;
       })}
     </span>
   );

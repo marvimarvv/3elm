@@ -1,13 +1,6 @@
-import { m, useInView } from "framer-motion";
-
-import { useRef } from "react";
+import { motion as m } from "framer-motion";
 
 export default function PipeIllustration({ className }) {
-  const ball = useRef(null);
-  const ballIsInView = useInView(ball, { once: true });
-  const star = useRef(null);
-  const starIsInView = useInView(star, { once: true });
-
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -108,21 +101,24 @@ export default function PipeIllustration({ className }) {
       />
       <path d="M357.4 676.47c2.6 0 4.8-2.1 4.8-4.8s-2.1-4.8-4.8-4.8-4.8 2.1-4.8 4.8 2.2 4.8 4.8 4.8z" />
       <m.g
-        initial={{
-          "--footer-tube-offset-path--left": "0%",
-        }}
+        initial={{ "--footer-tube-offset-path--left": "5%" }}
         animate={{
           "--footer-tube-offset-path--left": "100%",
+          opacity: [0, 1, 1, 0],
         }}
         transition={{
+          times: [0, 0.05, 0.885, 0.89],
           duration: 16,
           delay: 0.2,
-          ease: "easeInOut",
+          ease: "easeIn",
+          repeat: Infinity,
+          repeatType: "mirror",
         }}
         className="footer-tube-offset-path--left"
+        transform="translate(0,0)"
         style={{
-          offsetRotate: "0deg",
           offsetDistance: "var(--footer-tube-offset-path--left)",
+          offsetRotate: "0deg",
         }}
       >
         <path
@@ -221,22 +217,6 @@ export default function PipeIllustration({ className }) {
         />
         <path d="M939.5 591.57c2.6-1.7 2.4-4.9-.7-6.2-1.3-.6-2.7-.5-3.4 1.3-1.7 4.3-4.6 9.1 1.2 6.5 1-.5 2-1 2.9-1.6z" />
       </g>
-      <m.g>
-        <path
-          ref={star}
-          style={{
-            transform: starIsInView ? "scale(1)" : "scale(0.5)",
-            opacity: starIsInView ? 1 : 0,
-            transition: "all .7s cubic-bezier(.29,-1.08,.69,4)",
-          }}
-          d="M1159.1 489.37c-2.8-13 .4-23.7 10.9-32.3-13.2 2.7-23.6-1.3-31.3-11.4-.4 5.8-.2 11.8-1.3 17.5-1.2 6-5.9 10-10.8 15 13.7-3.2 24.1.8 32.5 11.2z"
-          fill="#e24f27"
-        />
-      </m.g>
-      <path
-        d="M11.5 712.67c6.3 0 11.5-5.1 11.5-11.5s-5.1-11.5-11.5-11.5S0 694.77 0 701.17s5.1 11.5 11.5 11.5z"
-        fill="#f4ff15"
-      />
       <path
         d="M293.8 625.97s-11.7 42.3 0 73.7M270.3 625.97s-11.7 42.3 0 73.7M850.3 625.97s11.7 42.3 0 73.7M873.9 625.97s11.7 42.3 0 73.7"
         fill="none"

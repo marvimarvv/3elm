@@ -13,10 +13,12 @@ import InstagramIcon from "../components/instagramIcon";
 import LikeIcon from "../components/likeIcon";
 import LinkedinIcon from "../components/linkedinIcon";
 import PipeIllustration from "../components/pipeIllustration";
+import RedStarIcon from "../components/redStarIcon";
 import StarIllustration from "../components/starIllustration";
 import TiktokIcon from "../components/tiktokIcon";
 import TwitterIcon from "../components/twitterIcon";
 import ValuesIllustration from "../components/valuesIllustration";
+import YellowBallIcon from "../components/yellowBallIcon";
 import YoutubeIcon from "../components/youtubeIcon";
 import { motion as m } from "framer-motion";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -278,7 +280,15 @@ export default function Home() {
         </h2>
         <Carousel />
       </section>
-      <PipeIllustration className="isolate h-full w-full px-4 pb-20 sm:px-0" />
+      {/* This SVG is wrapped in a div bc of problems in the intersection observer of Chromium, Webkit 
+      They only support the top level, so paths or other elements inside can't be used 
+      https://bugs.chromium.org/p/chromium/issues/detail?id=963246,
+      https://github.com/w3c/IntersectionObserver/issues/376#issuecomment-708088219 */}
+      <div className="relative">
+        <PipeIllustration className="isolate h-full w-full px-4 pb-20 sm:px-0" />
+        <RedStarIcon className="absolute top-1/2 right-4 w-[5%]" />
+        <YellowBallIcon className="absolute left-4 top-2/3 w-[3%]" />
+      </div>
     </Layout>
   );
 }

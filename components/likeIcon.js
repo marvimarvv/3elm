@@ -1,4 +1,4 @@
-import { m, useInView } from "framer-motion";
+import { motion as m, useInView } from "framer-motion";
 
 import { useRef } from "react";
 

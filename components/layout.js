@@ -1,6 +1,7 @@
 import Footer from "./footer";
 import Head from "next/head";
 import Nav from "./nav";
+import { motion as m } from "framer-motion";
 import { useRef } from "react";
 
 export const siteTitle = "3elm";
@@ -9,9 +10,14 @@ export default function Layout({ children, home }) {
   const pageContent = useRef(null);
 
   return (
-    <div
+    <m.div
       ref={pageContent}
       className=" mx-auto max-w-screen-2xl overflow-hidden scroll-smooth pt-[max(20px,4vw)] font-cotext text-white selection:bg-orange selection:text-white sm:px-[max(20px,4vw)]"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        duration: 1,
+      }}
     >
       <Head>
         <link rel="icon" href="/favicon.ico" />
@@ -33,6 +39,6 @@ export default function Layout({ children, home }) {
       </header>
       <main className="relative z-0 mt-[max(20px,4vw)] sm:p-8">{children}</main>
       <Footer></Footer>
-    </div>
+    </m.div>
   );
 }

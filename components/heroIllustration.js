@@ -753,7 +753,6 @@ export default function HeroIllustration({ className }) {
         transition={{
           delay: 2,
           duration: 8,
-
           ease: "easeInOut",
         }}
         className="pyramid-offset-path"

@@ -1,6 +1,5 @@
 import Layout, { siteTitle } from "../components/layout";
 
-import Eye from "../components/eye";
 import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
@@ -14,7 +13,6 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <section>
-        <Eye />
         <h1 className="font-cohead text-fluid-xl">{t("work.title")}</h1>
       </section>
     </Layout>

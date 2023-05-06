@@ -2,7 +2,6 @@ import Layout, { siteTitle } from "../components/layout";
 
 import BirdIllustration from "../components/birdIllustration";
 import ContactForm from "../components/contactForm";
-import Eye from "../components/eye";
 import FishIllustrationContact from "../components/fishIllustration__contact";
 import Head from "next/head";
 import HeroContact from "../components/heroContact";
@@ -24,7 +23,6 @@ export default function Contact() {
         </h1>
         <HeroContact className="-mt-8 h-full w-full sm:ltr:-mr-8 sm:rtl:-ml-8" />
       </section> */}
-      <Eye />
       <h1 className="font-cohead text-fluid-xl">Coming soon...</h1>
       {/*<div className="grid grid-cols-1 gap-20 px-6 pb-40 sm:px-0 md:grid-cols-2">
          <section className="relative flex flex-col gap-4">

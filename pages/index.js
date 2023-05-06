@@ -2,7 +2,6 @@ import Layout, { siteTitle } from "../components/layout";
 
 import Carousel from "../components/carousel";
 import DesignIllustration from "../components/designIllustration";
-import Eye from "../components/eye";
 import FacebookIcon from "../components/facebookIcon";
 import FishIllustration from "../components/fishIllustration";
 import GoalsIllustration from "../components/goalsIllustration";
@@ -31,7 +30,6 @@ export default function Home() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <Eye />
       <h1 className="inline-block font-cohead text-fluid-xl">Coming soon...</h1>
       {/* <section className="hidden sm:grid">
         <h1 className="z-10 col-start-1 col-end-2 row-start-1 row-end-1 flex flex-col font-cohead text-fluid-xl font-bold">

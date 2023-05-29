@@ -1,4 +1,5 @@
 import Layout, { siteTitle } from "../components/layout";
+import { motion as m, stagger, useAnimate, useInView } from "framer-motion";
 
 import Carousel from "../components/carousel";
 import DesignIllustration from "../components/designIllustration";
@@ -20,12 +21,70 @@ import TwitterIcon from "../components/twitterIcon";
 import ValuesIllustration from "../components/valuesIllustration";
 import YellowBallIcon from "../components/yellowBallIcon";
 import YoutubeIcon from "../components/youtubeIcon";
-import { motion as m } from "framer-motion";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useEffect } from "react";
 import { useTranslation } from "next-i18next";
 
 export default function Home() {
   const { t } = useTranslation();
+
+  const [scopeFirst, animateFirst] = useAnimate();
+  const isInViewFirst = useInView(scopeFirst, { amount: 0.5 }, { once: true });
+  const [scopeSecond, animateSecond] = useAnimate();
+  const isInViewSecond = useInView(
+    scopeSecond,
+    { amount: 0.5 },
+    { once: true }
+  );
+  const [scopeThird, animateThird] = useAnimate();
+  const isInViewThird = useInView(scopeThird, { amount: 0.5 }, { once: true });
+  const [scopeFourth, animateFourth] = useAnimate();
+  const isInViewFourth = useInView(
+    scopeFourth,
+    { amount: 0.5 },
+    { once: true }
+  );
+
+  useEffect(() => {
+    animateFirst(
+      ".stagger",
+      isInViewFirst ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 },
+      {
+        duration: 1,
+        transition: "all .7s cubic-bezier(.29,-1.08,.69,4)",
+        delay: isInViewFirst ? stagger(0.3) : 0,
+      }
+    );
+    animateSecond(
+      ".stagger",
+      isInViewSecond
+        ? { opacity: 1, scale: 1, x: 0 }
+        : { opacity: 0, scale: 0.8, x: -40 },
+      {
+        duration: 1,
+        transition: "all .7s cubic-bezier(.29,-1.08,.69,4)",
+        delay: isInViewSecond ? stagger(0.3) : 0,
+      }
+    );
+    animateThird(
+      ".stagger",
+      isInViewThird ? { opacity: 1, y: -20 } : { opacity: 0, y: 0 },
+      {
+        duration: 1,
+        transition: "all .7s cubic-bezier(.29,-1.08,.69,4)",
+        delay: isInViewThird ? stagger(0.1) : 0,
+      }
+    );
+    animateFourth(
+      ".stagger",
+      isInViewFourth ? { opacity: 1, y: -20 } : { opacity: 0, y: 0 },
+      {
+        duration: 1,
+        transition: "all .7s cubic-bezier(.29,-1.08,.69,4)",
+        delay: isInViewFourth ? stagger(0.1) : 0,
+      }
+    );
+  }, [isInViewFirst, isInViewSecond, isInViewThird, isInViewFourth]);
 
   return (
     <Layout home>
@@ -35,39 +94,59 @@ export default function Home() {
       <section className="hidden sm:grid">
         <h1 className="z-10 col-start-1 col-end-2 row-start-1 row-end-1 flex flex-col font-cohead text-fluid-xl font-bold">
           <m.span
-            initial={{ y: 10 }}
-            animate={{ y: 20 }}
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: [10, 20, 10], opacity: 1 }}
             transition={{
-              duration: 3,
-              ease: "easeInOut",
-              repeat: Infinity,
-              repeatType: "reverse",
+              y: {
+                duration: 6,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatType: "reverse",
+              },
+              opacity: {
+                duration: 1,
+                ease: "easeInOut",
+              },
             }}
             className="leading-none text-brightorange"
           >
             {t("home.hero title 1")}
           </m.span>
           <m.span
-            initial={{ y: 10 }}
-            animate={{ y: 20 }}
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: [10, 20, 10], opacity: 1 }}
             transition={{
-              duration: 2.5,
-              ease: "easeInOut",
-              repeat: Infinity,
-              repeatType: "reverse",
+              y: {
+                duration: 5,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatType: "reverse",
+              },
+              opacity: {
+                duration: 1,
+                delay: 0.5,
+                ease: "easeInOut",
+              },
             }}
             className="leading-none text-green"
           >
             {t("home.hero title 2")}
           </m.span>
           <m.span
-            initial={{ y: 10 }}
-            animate={{ y: 20 }}
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: [10, 20, 10], opacity: 1 }}
             transition={{
-              duration: 2.75,
-              ease: "easeInOut",
-              repeat: Infinity,
-              repeatType: "reverse",
+              y: {
+                duration: 5.5,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatType: "reverse",
+              },
+              opacity: {
+                duration: 1,
+                delay: 1,
+                ease: "easeInOut",
+              },
             }}
             className="leading-none text-cyan"
           >
@@ -76,14 +155,20 @@ export default function Home() {
           </m.span>
         </h1>
         <m.h2
-          initial={{ y: 10 }}
-          animate={{ y: 20 }}
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: [10, 20, 10], opacity: 1 }}
           transition={{
-            duration: 3,
-            yoyo: Infinity,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatType: "reverse",
+            y: {
+              duration: 6,
+              ease: "easeInOut",
+              repeat: Infinity,
+              repeatType: "reverse",
+            },
+            opacity: {
+              duration: 1,
+              delay: 1.5,
+              ease: "easeInOut",
+            },
           }}
           className="z-10 col-start-1 col-end-2 row-start-2 row-end-3 text-fluid-m text-white"
         >
@@ -94,17 +179,22 @@ export default function Home() {
       <section>
         <HeroIllustrationMobile className="h-full w-full sm:hidden" />
       </section>
-      <section className="border-image-perforation relative my-40 bg-brightorange px-[3vh] pb-[9rem] pt-6 sm:-mx-8">
-        <h2 className="text-center font-cohead text-fluid-xl font-bold">
-          {t("home.about title")}
-        </h2>
-        <p className="mx-auto max-w-[60ch] text-fluid-m">
-          {t("home.about main")}
-        </p>
-        <StarIllustration></StarIllustration>
-      </section>
-      <section className="mb-40 flex flex-wrap justify-center gap-16">
-        <div className="hover-card relative aspect-square basis-[20rem]">
+      <div ref={scopeFirst}>
+        <section className="stagger border-image-perforation relative my-40 bg-brightorange px-[3vh] pb-[9rem] pt-6 sm:-mx-8">
+          <h2 className="stagger text-center font-cohead text-fluid-xl font-bold">
+            {t("home.about title")}
+          </h2>
+          <p className="stagger mx-auto max-w-[60ch] text-fluid-m">
+            {t("home.about main")}
+          </p>
+          <StarIllustration className="stagger absolute -bottom-16 scale-125 ltr:right-12 rtl:left-12 md:-bottom-12 md:scale-150"></StarIllustration>
+        </section>
+      </div>
+      <section
+        ref={scopeSecond}
+        className="mb-40 flex flex-wrap justify-center gap-16"
+      >
+        <div className="stagger hover-card relative aspect-square basis-[20rem]">
           <div className="hover-card__side hover-card__side--front clip-path-corner--right absolute inset-0 grid place-items-center bg-orange">
             <figgroup className="clip-path-corner--right flex h-[90%] w-[90%] flex-col bg-darkorange">
               <figcaption>
@@ -130,7 +220,7 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div className="hover-card relative aspect-square basis-[20rem]">
+        <div className="stagger hover-card relative aspect-square basis-[20rem]">
           <div className="hover-card__side hover-card__side--front clip-path-corner--right absolute inset-0 grid place-items-center bg-orange">
             <figgroup className="clip-path-corner--right flex h-[90%] w-[90%] flex-col bg-darkorange">
               <figcaption>
@@ -156,7 +246,7 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div className="hover-card relative aspect-square basis-[20rem]">
+        <div className="stagger hover-card relative aspect-square basis-[20rem]">
           <div className="hover-card__side hover-card__side--front clip-path-corner--right absolute inset-0 grid place-items-center bg-orange">
             <figgroup className="clip-path-corner--right flex h-[90%] w-[90%] flex-col bg-darkorange">
               <figcaption>
@@ -180,8 +270,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="rtl:reverse-rtl mb-40 grid grid-cols-3 items-end gap-y-12 gap-x-6 px-6 sm:px-0">
-        <h2 className="flex flex-col justify-self-center text-center font-cohead text-fluid-l">
+      <section
+        ref={scopeThird}
+        className=" rtl:reverse-rtl relative mb-40 grid grid-cols-3 items-end gap-y-12 gap-x-6 px-6 sm:px-0"
+      >
+        <h2 className="stagger flex flex-col justify-self-center text-center font-cohead text-fluid-l">
           <span className="text-green">{t("home.socials title 1")}</span>
           <div className="flex justify-between px-2">
             <div className="h-2 w-2 rounded-full bg-orange"></div>
@@ -189,7 +282,9 @@ export default function Home() {
           </div>
           <span className="text-cyan">{t("home.socials title 2")}</span>
         </h2>
-        <div class="relative col-start-1 col-end-2 row-start-1 row-end-2">
+        <FishIllustration className="stagger col-start-1 col-end-4 row-start-2 row-end-5 h-full w-full"></FishIllustration>
+
+        <div class="stagger relative col-start-1 col-end-2 row-start-1 row-end-2">
           <a
             href="https://www.facebook.com/3elmgmbh"
             target="_blank"
@@ -200,13 +295,12 @@ export default function Home() {
               3elm
             </span>
           </a>
-          <HeartIcon></HeartIcon>
         </div>
-        <div className="clip-path-message--left col-start-1 col-end-2 row-start-2 row-end-3 h-16 bg-orange"></div>
+        <div className="stagger clip-path-message--left col-start-1 col-end-2 row-start-2 row-end-3 h-16 bg-orange"></div>
         <a
           href="https://instagram.com/3elmstudio"
           target="_blank"
-          className="clip-path-message--left group col-start-1 col-end-2 row-start-2 row-end-3 flex h-16 -translate-y-2 translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange"
+          className="stagger2 clip-path-message--left group col-start-1 col-end-2 row-start-2 row-end-3 flex h-16 -translate-y-2 translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange"
         >
           <InstagramIcon className="h-3/5 pt-2.5 pl-2.5" fill="#E24F27" />
           <span className="hidden pt-3 pl-2.5 text-darkorange group-active:text-white md:inline">
@@ -216,18 +310,18 @@ export default function Home() {
         <a
           href="https://twitter.com/3elmstudio"
           target="_blank"
-          className="clip-path-message--left group col-start-1 col-end-2 row-start-3 row-end-4 flex h-16 bg-orange transition-colors hover:bg-white active:bg-orange"
+          className="stagger clip-path-message--left group col-start-1 col-end-2 row-start-3 row-end-4 flex h-16 bg-orange transition-colors hover:bg-white active:bg-orange"
         >
           <TwitterIcon className="h-3/5 pt-2.5 pl-2.5" fill="white" />
           <span className="hidden pt-3 pl-2.5 text-white group-hover:text-orange group-active:text-white md:inline">
             @3elmstudio
           </span>
         </a>
-        <div className="clip-path-message--right col-start-3 col-end-4 row-start-1 row-end-2 h-16 bg-orange"></div>
+        <div className="stagger clip-path-message--right col-start-3 col-end-4 row-start-1 row-end-2 h-16 bg-orange"></div>
         <a
           href="https://www.youtube.com/@3elmstudio"
           target="_blank"
-          className="clip-path-message--right group col-start-3 col-end-4 row-start-1 row-end-2 flex h-16 -translate-y-2 -translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange"
+          className="stagger2 clip-path-message--right group col-start-3 col-end-4 row-start-1 row-end-2 flex h-16 -translate-y-2 -translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange"
         >
           <span className="ml-auto hidden pt-3 pr-2.5 text-darkorange group-active:text-white md:inline">
             @3elmstudio
@@ -240,7 +334,7 @@ export default function Home() {
         <a
           href="https://tiktok.com/@3elmstudio"
           target="_blank"
-          className="clip-path-message--right group col-start-3 col-end-4 row-start-2 row-end-3 flex h-16 bg-orange transition-colors hover:bg-white active:bg-orange"
+          className="stagger clip-path-message--right group col-start-3 col-end-4 row-start-2 row-end-3 flex h-16 bg-orange transition-colors hover:bg-white active:bg-orange"
         >
           <span className="ml-auto hidden pt-3 pr-2.5 text-white group-hover:text-orange group-active:text-white md:inline">
             @3elmstudio
@@ -250,14 +344,13 @@ export default function Home() {
             fill="white"
           />
         </a>
-        <div className="relative col-start-3 col-end-4 row-start-3 row-end-4">
+        <div className="stagger relative col-start-3 col-end-4 row-start-3 row-end-4">
           <div className="clip-path-message--right h-16 bg-orange"></div>
-          <LikeIcon></LikeIcon>
         </div>
         <a
           href="https://www.linkedin.com/company/3elmstudio/"
           target="_blank"
-          className="clip-path-message--right group col-start-3 col-end-4 row-start-3 row-end-4 flex h-16 -translate-y-2 -translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange"
+          className="stagger2 clip-path-message--right group col-start-3 col-end-4 row-start-3 row-end-4 flex h-16 -translate-y-2 -translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange"
         >
           <span className="ml-auto hidden pt-3 pr-2.5 text-darkorange group-active:text-white md:inline">
             3elm
@@ -267,10 +360,15 @@ export default function Home() {
             fill="#E24F27"
           />
         </a>
-        <FishIllustration className="col-start-1 col-end-4 row-start-2 row-end-5 h-full w-full"></FishIllustration>
+        <LikeIcon></LikeIcon>
+        <HeartIcon></HeartIcon>
       </section>
-      <section className="mb-40 text-center sm:-mx-[max(20px,4vw)] md:mx-0">
-        <h2 className="mb-6 inline-flex flex-col text-center font-cohead text-fluid-l">
+
+      <section
+        ref={scopeFourth}
+        className="mb-40 text-center sm:-mx-[max(20px,4vw)] md:mx-0"
+      >
+        <h2 className=" stagger mb-6 inline-flex flex-col text-center font-cohead text-fluid-l">
           <span className="text-green">{t("home.projects title 1")}</span>
           <div className="flex justify-between px-2">
             <div className="h-2 w-2 rounded-full bg-orange"></div>
@@ -278,7 +376,7 @@ export default function Home() {
           </div>
           <span className="text-cyan">{t("home.projects title 2")}</span>
         </h2>
-        <Carousel />
+        <Carousel className="stagger" />
       </section>
       {/* This SVG is wrapped in a div bc of problems in the intersection observer of Chromium, Webkit 
       They only support the top level, so paths or other elements inside can't be used 

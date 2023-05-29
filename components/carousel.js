@@ -9,7 +9,7 @@ import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useEffect, useState } from "react";
 
-export default () => {
+export default ({ className }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   //choose the screen size
@@ -36,6 +36,7 @@ export default () => {
       spaceBetween={0}
       navigation
       loop={true}
+      className={className}
     >
       <SwiperSlide className="video-background aspect-video">
         <div className="grid h-full place-items-center text-fluid-xl">1</div>

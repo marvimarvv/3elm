@@ -1,11 +1,19 @@
+import { motion as m } from "framer-motion";
 export default function HeroContact({ className }) {
   return (
-    <svg
+    <m.svg
       width="669"
       height="923"
       viewBox="0 0 669 923"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      /* initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 100,
+        duration: 2,
+      }} */
       className={className}
     >
       <path
@@ -1615,6 +1623,6 @@ export default function HeroContact({ className }) {
           <stop offset="0.956" stop-color="#662D91" stop-opacity="0" />
         </linearGradient>
       </defs>
-    </svg>
+    </m.svg>
   );
 }

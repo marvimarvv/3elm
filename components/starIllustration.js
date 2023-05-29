@@ -1,6 +1,6 @@
 import { motion as m } from "framer-motion";
 
-export default function StarIllustration() {
+export default function StarIllustration({ className }) {
   return (
     <svg
       width="186"
@@ -8,7 +8,7 @@ export default function StarIllustration() {
       viewBox="0 0 186 186"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="absolute -bottom-16 scale-125 ltr:right-12 rtl:left-12 md:-bottom-12 md:scale-150"
+      className={className}
     >
       <path
         d="M49.1995 10.7951L82.32 47.5305L96.0086 0L106.324 48.3739L141.944 14.0562L126.69 61.107L174.696 49.1966L137.96 82.3171L185.491 96.0057L137.117 106.321L171.435 141.941L124.384 126.687L136.294 174.693L103.174 137.958L89.4853 185.488L79.17 137.114L43.5504 171.432L58.8043 124.381L10.795 136.291L47.5305 103.17L0 89.4819L48.3739 79.1666L14.0562 43.547L61.1069 58.8009L49.1995 10.7951Z"

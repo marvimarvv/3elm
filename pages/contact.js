@@ -1,4 +1,5 @@
 import Layout, { siteTitle } from "../components/layout";
+import { easeOut, motion as m } from "framer-motion";
 
 import BirdIllustration from "../components/birdIllustration";
 import ContactForm from "../components/contactForm";
@@ -18,9 +19,19 @@ export default function Contact() {
         <title>{siteTitle}</title>
       </Head>
       <section className="mb-40 flex flex-col gap-8 sm:mx-0 sm:mt-0 sm:flex-row">
-        <h1 className="text-cohead center flex flex-col gap-3 self-center border-y-16 border-y-brightorange py-2 text-center text-fluid-l font-bold md:w-[15ch]">
+        <m.h1
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 100,
+            duration: 2,
+            ease: easeOut,
+          }}
+          className="text-cohead center flex flex-col gap-3 self-center border-y-16 border-y-brightorange py-2 text-center text-fluid-l font-bold md:w-[15ch]"
+        >
           {t("contact.title")}
-        </h1>
+        </m.h1>
         <HeroContact className="-mt-8 h-full w-full sm:ltr:-mr-8 sm:rtl:-ml-8" />
       </section>
       <div className="grid grid-cols-1 gap-20 px-6 pb-40 sm:px-0 md:grid-cols-2">

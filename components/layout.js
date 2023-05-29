@@ -20,7 +20,7 @@ export default function Layout({ children, home }) {
       }}
     >
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
         <meta
           name="description"
           content="3elm - arabic scientific content for the world"

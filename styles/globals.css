@@ -13,7 +13,7 @@
     perspective: 50rem;
   }
 
-  .hover-card::after {
+  .hover-card-hint::after {
     content: "+";
     position: absolute;
     bottom: -20px;

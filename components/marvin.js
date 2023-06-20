@@ -10,263 +10,1623 @@ export default function Marvin({ className }) {
     <m.div className={className}>
       <svg
         width={276}
-        height={277}
-        viewBox="0 0 276 277"
+        height={280}
+        viewBox="0 0 276 280"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         ref={ref}
         style={{
           transform: isInView
-            ? "translateX(0%) rotate(0deg)"
-            : "translateX(0%) rotate(720deg)",
+            ? "rotate(0deg) scale(1)"
+            : "rotate(720deg) scale(0)",
           opacity: isInView ? 1 : 0,
-          transition: "all 3s cubic-bezier(.43,.2,.54,1.17)",
+          transition: "all 3s cubic-bezier(.43,.2,.54,1.17) .5s",
           width: "100%",
         }}
       >
         <path
-          d="M275.01 127.297c-6.19-75.81-72.66-132.24-148.46-126.05C50.74 7.437-5.69 73.907.5 149.707c1.46 17.91 6.29 34.75 13.82 49.93 24.31 49.05 76.76 80.85 134.65 76.12 49.93-4.08 91.45-34.3 112.22-76.12 10.76-21.67 15.95-46.46 13.84-72.34h-.02z"
+          d="M275.21 130.06C269.02 54.25 202.55 -2.18001 126.75 4.00999C50.94 10.2 -5.48995 76.6699 0.70005 152.47C2.16005 170.38 6.99003 187.22 14.52 202.4C38.83 251.45 91.28 283.25 149.17 278.52C199.1 274.44 240.62 244.22 261.39 202.4C272.15 180.73 277.34 155.94 275.23 130.06H275.21Z"
           fill="#F15A24"
         />
         <path
-          style={{
-            mixBlendMode: "hue",
-          }}
-          opacity={0.5}
-          d="M148.96 275.757c75.81-6.19 132.24-72.66 126.05-148.46-6.19-75.81-72.66-132.24-148.46-126.05-17.91 1.46-34.75 6.29-49.93 13.82C27.57 39.377-4.23 91.827.5 149.717c4.08 49.93 34.3 91.45 76.12 112.22 21.67 10.76 46.46 15.95 72.34 13.84v-.02z"
-          fill="url(#paint0_linear_1_872)"
+          style={{ mixBlendMode: "hue" }}
+          opacity="0.5"
+          d="M149.16 278.52C224.97 272.33 281.4 205.86 275.21 130.06C269.02 54.25 202.55 -2.18001 126.75 4.00999C108.84 5.46999 92 10.3 76.82 17.83C27.77 42.14 -4.02997 94.59 0.700031 152.48C4.78003 202.41 35 243.93 76.82 264.7C98.49 275.46 123.28 280.65 149.16 278.54V278.52Z"
+          fill="url(#paint0_linear_2_872)"
         />
-        <path
-          d="M117.41 151.387s23.26-26.09.54-45.1c-6.78-5.67-15.35-8.84-24.19-9.03-10.22-.22-23.74 2.97-29.08 19.79-2.26 7.11-2.31 14.74-.37 21.94l1.78 6.64s28.83-15.85 51.32 5.76zM152.32 149.007s-22.19-27 1.26-45.08c7-5.4 15.69-8.22 24.53-8.05 10.22.19 23.6 3.92 28.27 20.94 1.97 7.19 1.71 14.82-.5 21.94l-2.05 6.56s-28.18-16.99-51.51 3.7v-.01z"
-          fill="#F15A24"
-          opacity={0.3}
-        />
-        <path
-          d="M144.17.927s-100.06-10.06-138.04 97c0 0 132.46-55.01 264.22 4.44 0 0-22.22-95.75-126.18-101.44z"
-          fill="#00002A"
-        />
-        <path
-          d="M109.05 60.767c11.7-1.58 34.39-3.67 56.92-.23 4.32.66 8.22-2.69 8.22-7.06v-.15c0-3.17-2.08-5.97-5.12-6.87-9.68-2.86-32.42-7.44-62.73.28-3.17.81-5.4 3.66-5.4 6.94 0 4.33 3.81 7.67 8.11 7.09z"
-          fill="#F15A24"
-        />
-        <path
-          d="M109.05 60.767c11.7-1.58 34.39-3.67 56.92-.23 4.32.66 8.22-2.69 8.22-7.06v-.15c0-3.17-2.08-5.97-5.12-6.87-9.68-2.86-32.42-7.44-62.73.28-3.17.81-5.4 3.66-5.4 6.94 0 4.33 3.81 7.67 8.11 7.09z"
-          fill="#F15A24"
-        />
-        <path
-          d="M64.72 142.427c5.01 17.05 16.66 24.01 33.71 19 17.05-5.01 33.82-19.11 28.81-36.16-5.01-17.05-27.21-26.8-44.26-21.79-17.05 5.01-23.27 21.9-18.25 38.95h-.01z"
-          fill="#fff"
-          stroke="#00002A"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M96.22 139.407c10.035 0 18.17-8.135 18.17-18.17 0-10.035-8.135-18.17-18.17-18.17-10.035 0-18.17 8.135-18.17 18.17 0 10.035 8.135 18.17 18.17 18.17z"
-          fill="#58753C"
-        />
-        <path
-          d="M82.26 118.597a4.29 4.29 0 100-8.58 4.29 4.29 0 000 8.58z"
-          fill="#fff"
-        />
-        <path
-          d="M206.57 139.357c-5.01 17.05-16.66 24.01-33.71 19-17.05-5.01-33.82-19.11-28.81-36.16 5.01-17.05 27.21-26.8 44.26-21.79 17.05 5.01 23.27 21.9 18.25 38.95h.01z"
-          fill="#fff"
-          stroke="#00002A"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M175.07 136.337c10.035 0 18.17-8.135 18.17-18.17 0-10.035-8.135-18.17-18.17-18.17-10.035 0-18.17 8.135-18.17 18.17 0 10.035 8.135 18.17 18.17 18.17z"
-          fill="#58753C"
-        />
-        <path
-          d="M189.03 115.527a4.29 4.29 0 100-8.58 4.29 4.29 0 000 8.58z"
-          fill="#fff"
-        />
-        <path
-          d="M162.02 103.227s14.45-11.16 35.85 2.29c0 0 10.68 6.87 10.43 21.38 0 0 4.02-27.16-29.44-29.36-4.96-.33-9.92.98-14.15 3.58-1.08.66-2.04 1.38-2.69 2.11zM108.82 106.237s-14.45-11.16-35.85 2.29c0 0-10.68 6.87-10.43 21.38 0 0-4.02-27.16 29.44-29.36 4.96-.33 9.92.98 14.15 3.58 1.08.66 2.04 1.38 2.69 2.11zM164.4 91.097c.5 1.1 1.79 1.58 2.96 1.85 6.08 1.4 12.41.05 18.6-.76 6.19-.81 12.93-.96 18.16 2.44.66.43 1.46.93 2.17.58.32-.16.54-.46.67-.79.53-1.29-.16-2.83-1.27-3.69-1.1-.86-2.51-1.2-3.88-1.49-2.96-.64-41.47-6.96-37.42 1.87l.01-.01zM103.39 91.647c-.5 1.1-1.79 1.58-2.96 1.85-6.08 1.4-12.41.05-18.6-.76-6.19-.81-12.93-.96-18.16 2.44-.66.43-1.46.93-2.17.58-.32-.16-.54-.46-.67-.79-.53-1.29.16-2.83 1.27-3.69 1.11-.86 2.51-1.2 3.88-1.49 2.96-.64 41.47-6.96 37.42 1.87l-.01-.01z"
-          fill="#00002A"
-        />
-        <path
-          d="M112.48 69.437a2.32 2.32 0 100-4.64 2.32 2.32 0 000 4.64zM122.19 69.057a2.31 2.31 0 100-4.62 2.31 2.31 0 000 4.62z"
-          fill="#F15A24"
-        />
-        <path
-          d="M6.55 180.437s13.23-14.15 20.14-16.01c0 0-10.55-43.45 0-73.56l-20.56 7.06s-13.7 31.71.42 82.52v-.01z"
-          fill="url(#paint1_linear_1_872)"
-        />
-        <path
-          d="M162.08 89.037l.4 4.04M159.68 89.327l.41 4.04M107.49 88.837l-.06 4.06M105.07 88.857l-.05 4.06M137.73 205.847c14.116 0 25.56-11.444 25.56-25.56 0-14.117-11.444-25.56-25.56-25.56-14.116 0-25.56 11.443-25.56 25.56 0 14.116 11.444 25.56 25.56 25.56z"
-          stroke="#00002A"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M137.73 190.427c5.6 0 10.14-4.54 10.14-10.14 0-5.6-4.54-10.14-10.14-10.14-5.6 0-10.14 4.54-10.14 10.14 0 5.6 4.54 10.14 10.14 10.14zM112.39 183.587s-1.45 27.74 29.79 22.13c0 0-23.84 3.64-29.79-22.13z"
-          fill="#00002A"
-        />
-        <path
-          d="M122.53 152.777l-.06 4.06M118.73 154.917l-1.35 3.83M148.55 150.187l.05 4.06M152.34 152.327l1.36 3.82M106.39 172.227l-.06 4.06M102.59 174.367l-1.35 3.82M94.21 172.497l2.85 2.89M93.06 176.687l1.77 3.66M86.64 172.357l-.05 4.06M82.85 174.497l-1.36 3.83M74.46 172.627l2.85 2.89M73.31 176.827l1.77 3.65M73.19 189.257l-.08 6.36M67.26 192.607l-2.12 5.99M54.14 189.677l4.46 4.53M52.34 196.247l2.76 5.73M42.28 189.467l-.08 6.36M36.34 192.817l-2.12 5.99M23.22 189.887l4.46 4.53M21.42 196.457l2.77 5.73M33.76 209.427l.05 4.06M37.55 203.887l1.35 3.83M45.93 202.017l-2.85 2.89M47.08 206.217l-1.77 3.65M53.51 209.557l.05 4.06M57.3 211.697l1.35 3.83M65.68 209.827l-2.85 2.89M66.83 214.027l-1.77 3.65M39.88 216.357l.08 6.36M48.64 216.477l2.13 5.99M71.46 222.027l-4.46 4.53M73.26 228.607l-2.76 5.72M100.67 181.967l-.08 6.36M94.73 185.317l-2.12 5.99M81.61 182.387l4.46 4.53M79.81 188.957l2.77 5.73M72.25 205.617l1.35 3.83M80.63 203.747l-2.85 2.89M81.78 207.947l-1.77 3.65M60.08 236.547l.08 6.35M66.02 239.887l2.12 5.99M79.14 236.957l-4.46 4.53M80.94 243.537l-2.77 5.72M149.75 229.607l-2.13 3.46M141.95 226.017l2.18 3.43M139.95 229.877l.95 3.94M134.58 224.287l-.91 3.96M130.42 225.577l-2.13 3.45M122.62 221.977l2.18 3.43M120.61 225.837l.96 3.95M117.87 237.967l-1.42 6.2M111.36 239.987l-3.33 5.41M99.15 234.357l3.41 5.36M96.01 240.397l1.5 6.18M94.34 253.657l-.8 3.98M97.6 256.547l.52 4.02M106.19 256.487l-3.4 2.22M106.42 260.827l-2.49 3.2M146.27 236.637l-1.42 6.2M139.76 238.657l-3.34 5.41M127.55 233.027l3.4 5.37M124.4 239.077l1.5 6.17M125.99 255.217l.52 4.03M134.58 255.157l-3.39 2.23M134.82 259.507l-2.5 3.2M34.68 182.647l-1.76 3.66M105.18 206.217l1.77 3.65M230.29 179.467l.08 6.35M236.23 182.807l2.12 5.99M249.35 179.877l-4.46 4.53M251.15 186.457l-2.77 5.72M249.98 199.757l-.05 4.06M246.19 201.897l-1.36 3.83M237.81 200.027l2.85 2.89M236.66 204.227l1.77 3.65M232.02 212.237l4.46 4.52M230.22 218.807l2.77 5.72M202.82 172.177l.08 6.35M208.75 175.517l2.13 5.99M163.3 205.717l-4.46 4.53M223.68 179.167l-2.77 5.72M218.72 194.607l-1.36 3.83M210.33 192.737l2.85 2.89M153.73 219.817l2.14 3.45M161.53 216.217l-2.17 3.43M163.54 220.077l-.96 3.95M168.91 214.487l.9 3.96M173.06 215.777l2.14 3.45M180.86 212.177l-2.17 3.43M182.87 216.037l-.95 3.95M185.61 228.167l1.42 6.2M192.12 230.187l3.34 5.41M204.33 224.557l-3.4 5.37M207.48 230.597l-1.5 6.18M209.14 243.857l.81 3.98M205.89 246.747l-.52 4.02M197.3 246.687l3.4 2.22M197.06 251.037l2.5 3.2M157.22 226.847l1.42 6.19M163.73 228.857l3.34 5.41M175.94 223.227l-3.41 5.37M179.08 229.277l-1.49 6.17M177.49 245.417l-.51 4.03M168.91 245.357l3.39 2.23M168.67 249.707l2.5 3.2M184.05 183.717l-1.77 3.65M203.79 183.847l-1.76 3.65M203.91 196.277l.09 6.36M176.44 188.987l.08 6.36M182.38 192.337l2.12 5.99M195.5 189.407l-4.46 4.53M197.3 195.977l-2.77 5.73M192.34 211.427l-1.36 3.83M178.3 201.877l2.85 2.9M92.03 213.827l-1.77 3.65M111.77 213.957l-1.76 3.66M84.42 219.107l.08 6.35M90.36 222.447l2.12 5.99M103.48 219.517l-4.46 4.53M105.28 226.097l-2.77 5.72M85.4 230.777l-1.77 3.65M48.43 226.617l-.81 3.98M51.59 229.087l.57 4.45M60.28 224.197l-3.4 2.22M60.51 228.537l-2.5 3.2M164.67 261.347l-3.34 5.4M152.46 255.717l3.4 5.36M87.91 248.237l-1.77 3.66M156.78 240.877l-4.46 4.53M158.58 247.447l-2.77 5.72M226.08 198.887l-1.77 3.66M218.47 204.167l.09 6.36M224.41 207.517l2.12 5.99M220.33 217.057l2.85 2.89M175.76 169.987l-1.77 3.66M170.86 202.037l-1.77 3.66M168.15 175.267l.08 6.36M174.09 178.617l2.12 5.99M187.21 175.687l-4.46 4.53M208.84 206.347l-1.77 3.66M201.23 211.627l.08 6.36M207.17 214.977l2.12 5.99M188.64 243.927l-1.77 3.65M181.03 249.197l.08 6.36M215.25 229.917l2.12 6M130.26 213.427l-2.17 3.43M132.27 217.297l-.95 3.94M137.64 211.707l.9 3.95M141.8 212.987l2.13 3.46M149.6 209.397l-2.18 3.43M151.6 213.257l-.95 3.94M112.86 223.937l-2.17 3.43M114.87 227.797l-.96 3.95M60.89 176.617l-.05 4.06M57.1 178.747l-1.35 3.83M48.72 176.877l2.85 2.9M47.57 181.077l1.77 3.66M99.98 193.967l-1.77 3.66M92.37 199.247l.09 6.36M98.31 202.597l2.12 5.99M122.34 212.997l-4.46 4.53M118.47 251.267l-4.46 4.52M120.26 257.837l-2.76 5.72"
-          stroke="#00002A"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          opacity={0.3}
-        />
-        <path
-          d="M137.83 137.447s-7.79 7.96-8.48 13.81c0 0 4.66-.69 9.57-3.02"
-          stroke="#00002A"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          style={{
-            mixBlendMode: "multiply",
-          }}
-          opacity={0.48}
-          d="M72.78 135.567c-3.33-11.32-1.7-22.56 4.75-30.31-12.9 6.71-17.27 21.67-12.83 36.77 5.01 17.05 16.66 24.01 33.71 19 8.1-2.38 16.13-6.82 21.8-12.64-4.24 2.68-8.97 4.78-13.72 6.18-17.05 5.01-28.7-1.95-33.71-19z"
-          fill="url(#paint2_linear_1_872)"
-        />
-        <path
-          style={{
-            mixBlendMode: "multiply",
-          }}
-          opacity={0.48}
-          d="M198.52 133.487c3.33-11.32 1.7-22.56-4.75-30.31 12.9 6.71 17.27 21.67 12.83 36.77-5.01 17.05-16.66 24.01-33.71 19-8.1-2.38-16.13-6.82-21.8-12.64 4.24 2.68 8.97 4.78 13.72 6.18 17.05 5.01 28.7-1.95 33.71-19z"
-          fill="url(#paint3_linear_1_872)"
-        />
-        <path
-          d="M249.35 93.827s9.39 38.28-.97 70.67c0 0 13.36 9.17 19.08 20.38 0 0 16.22-40.5 2.89-82.52l-21-8.54v.01z"
-          fill="url(#paint4_linear_1_872)"
-        />
-        <mask
-          id="a"
-          style={{
-            maskType: "luminance",
-          }}
-          maskUnits="userSpaceOnUse"
-          x={163}
-          y={180}
-          width={81}
-          height={66}
-        >
+        <g style={{ mixBlendMode: "multiply" }} opacity="0.3">
           <path
-            d="M223.18 245.957s-22.38-28.46-44.5-36.11c-1.4-.49-2.45-1.73-2.55-3.22-.08-1.18.42-2.52 2.47-3.56 0 0-1.88-5.53 4.01-5.51 0 0-2.62-3.36 3.5-6.47 0 0-9.99-4.2-20.91-5.48-2.42-.28-2.91-3.56-.68-4.52.28-.12.59-.24.93-.34 0 0 22.23.95 47.8 16.51 0 0 7.58-2.03 16.86 10.01 0 0 10.67 14.62 13.72 19.82 0 0-9.31 12.74-20.66 18.87h.01z"
-            fill="#fff"
-          />
-        </mask>
-        <g mask="url(#a)">
-          <path
-            d="M14.31 188.247c-28.8-70.39 4.92-150.81 75.32-179.6 70.39-28.8 150.81 4.92 179.6 75.32 6.81 16.64 10.12 33.83 10.28 50.77.53 54.75-31.84 106.84-85.6 128.83-46.36 18.97-97.07 10.81-134.52-17.08-19.41-14.45-35.25-34.21-45.08-58.24z"
+            d="M117.6 154.15C117.6 154.15 140.86 128.06 118.14 109.05C111.36 103.38 102.79 100.21 93.9501 100.02C83.7301 99.8 70.21 102.99 64.87 119.81C62.61 126.92 62.5601 134.55 64.5001 141.75L66.2801 148.39C66.2801 148.39 95.11 132.54 117.6 154.15Z"
             fill="#F15A24"
           />
+        </g>
+        <g style={{ mixBlendMode: "multiply" }} opacity="0.3">
           <path
-            style={{
-              mixBlendMode: "hue",
-            }}
-            opacity={0.5}
-            d="M269.23 83.957c28.8 70.39-4.92 150.81-75.32 179.6-70.39 28.8-150.81-4.92-179.6-75.32-6.81-16.64-10.12-33.83-10.28-50.77-.53-54.75 31.84-106.84 85.6-128.83 46.36-18.97 97.07-10.81 134.52 17.08 19.41 14.45 35.25 34.21 45.08 58.24z"
-            fill="url(#paint5_linear_1_872)"
-          />
-          <path
-            d="M14.31 188.247c-28.8-70.39 4.92-150.81 75.32-179.6 70.39-28.8 150.81 4.92 179.6 75.32 6.81 16.64 10.12 33.83 10.28 50.77.53 54.75-31.84 106.84-85.6 128.83-46.36 18.97-97.07 10.81-134.52-17.08-19.41-14.45-35.25-34.21-45.08-58.24z"
+            d="M152.52 151.77C152.52 151.77 130.33 124.77 153.78 106.69C160.78 101.29 169.47 98.47 178.31 98.64C188.53 98.83 201.91 102.56 206.58 119.58C208.55 126.77 208.29 134.4 206.08 141.52L204.03 148.08C204.03 148.08 175.85 131.09 152.52 151.78V151.77Z"
             fill="#F15A24"
-          />
-          <path
-            style={{
-              mixBlendMode: "hue",
-            }}
-            opacity={0.5}
-            d="M269.23 83.957c28.8 70.39-4.92 150.81-75.32 179.6-70.39 28.8-150.81-4.92-179.6-75.32-6.81-16.64-10.12-33.83-10.28-50.77-.53-54.75 31.84-106.84 85.6-128.83 46.36-18.97 97.07-10.81 134.52 17.08 19.41 14.45 35.25 34.21 45.08 58.24z"
-            fill="url(#paint6_linear_1_872)"
           />
         </g>
         <path
-          d="M223.14 245.927s-22.38-28.46-44.5-36.11c-1.4-.49-2.45-1.73-2.55-3.22-.08-1.18.42-2.52 2.47-3.56 0 0-1.88-5.53 4.01-5.51 0 0-2.62-3.36 3.5-6.47 0 0-9.99-4.2-20.91-5.48-2.42-.28-2.91-3.56-.68-4.52.28-.12.59-.24.93-.34 0 0 22.23.95 47.8 16.51 0 0 7.58-2.03 16.86 10.01 0 0 10.67 14.62 13.72 19.82M182.57 197.537l5.97 2.8M178.55 203.047s7.36 2.88 9.97 3.8M213.21 197.237l7.82 5.88M186.07 191.077s7.15 2.94 10.96 5.08"
-          stroke="#00002A"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          d="M92.26 8.82002C60.4 20.06 21.87 45.06 6.32004 100.6C6.32004 100.6 138.78 45.69 270.54 105.04C270.54 105.04 269.64 99.88 266.76 91.79C259.71 71.99 240.78 34.66 194.04 12.69C162.22 -2.26998 125.41 -2.88999 92.25 8.81001L92.26 8.82002Z"
+          fill="#00002A"
         />
         <path
-          d="M131.1 68.887a2.32 2.32 0 100-4.64 2.32 2.32 0 000 4.64z"
+          d="M109.25 63.53C120.95 61.95 143.64 59.86 166.17 63.3C170.49 63.96 174.39 60.61 174.39 56.24V56.09C174.39 52.92 172.31 50.1199 169.27 49.2199C159.59 46.3599 136.85 41.78 106.54 49.5C103.37 50.31 101.14 53.16 101.14 56.44C101.14 60.77 104.95 64.11 109.25 63.53Z"
+          fill="#F15A24"
+        />
+        <path
+          d="M109.25 63.53C120.95 61.95 143.64 59.86 166.17 63.3C170.49 63.96 174.39 60.61 174.39 56.24V56.09C174.39 52.92 172.31 50.1199 169.27 49.2199C159.59 46.3599 136.85 41.78 106.54 49.5C103.37 50.31 101.14 53.16 101.14 56.44C101.14 60.77 104.95 64.11 109.25 63.53Z"
+          fill="#F15A24"
+        />
+        <path
+          d="M64.91 145.19C69.92 162.24 81.57 169.2 98.62 164.19C115.67 159.18 132.44 145.08 127.43 128.03C122.42 110.98 100.22 101.23 83.17 106.24C66.12 111.25 59.9 128.14 64.92 145.19H64.91Z"
+          fill="white"
+          stroke="#00002A"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M96.41 142.17C106.445 142.17 114.58 134.035 114.58 124C114.58 113.965 106.445 105.83 96.41 105.83C86.375 105.83 78.24 113.965 78.24 124C78.24 134.035 86.375 142.17 96.41 142.17Z"
+          fill="#58753C"
+        />
+        <path
+          d="M82.4601 121.36C84.8294 121.36 86.75 119.439 86.75 117.07C86.75 114.701 84.8294 112.78 82.4601 112.78C80.0908 112.78 78.17 114.701 78.17 117.07C78.17 119.439 80.0908 121.36 82.4601 121.36Z"
+          fill="white"
+        />
+        <path
+          d="M206.77 142.12C201.76 159.17 190.11 166.13 173.06 161.12C156.01 156.11 139.24 142.01 144.25 124.96C149.26 107.91 171.46 98.16 188.51 103.17C205.56 108.18 211.78 125.07 206.76 142.12H206.77Z"
+          fill="white"
+          stroke="#00002A"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M175.27 139.1C185.305 139.1 193.44 130.965 193.44 120.93C193.44 110.895 185.305 102.76 175.27 102.76C165.235 102.76 157.1 110.895 157.1 120.93C157.1 130.965 165.235 139.1 175.27 139.1Z"
+          fill="#58753C"
+        />
+        <path
+          d="M189.22 118.29C191.589 118.29 193.51 116.369 193.51 114C193.51 111.631 191.589 109.71 189.22 109.71C186.851 109.71 184.93 111.631 184.93 114C184.93 116.369 186.851 118.29 189.22 118.29Z"
+          fill="white"
+        />
+        <path
+          d="M162.22 105.99C162.22 105.99 176.67 94.83 198.07 108.28C198.07 108.28 208.75 115.15 208.5 129.66C208.5 129.66 212.52 102.5 179.06 100.3C174.1 99.97 169.14 101.28 164.91 103.88C163.83 104.54 162.87 105.26 162.22 105.99Z"
+          fill="#00002A"
+        />
+        <path
+          d="M109.02 109C109.02 109 94.57 97.84 73.17 111.29C73.17 111.29 62.49 118.16 62.74 132.67C62.74 132.67 58.72 105.51 92.18 103.31C97.14 102.98 102.1 104.29 106.33 106.89C107.41 107.55 108.37 108.27 109.02 109Z"
+          fill="#00002A"
+        />
+        <path
+          d="M164.59 93.86C165.09 94.96 166.38 95.44 167.55 95.71C173.63 97.11 179.96 95.76 186.15 94.95C192.34 94.14 199.08 93.99 204.31 97.39C204.97 97.82 205.77 98.3199 206.48 97.9699C206.8 97.8099 207.02 97.51 207.15 97.18C207.68 95.89 206.99 94.35 205.88 93.49C204.77 92.63 203.37 92.29 202 92C199.04 91.36 160.53 85.04 164.58 93.87L164.59 93.86Z"
+          fill="#00002A"
+        />
+        <path
+          d="M103.58 94.4099C103.08 95.5099 101.79 95.99 100.62 96.26C94.5401 97.66 88.2101 96.31 82.0201 95.5C75.8301 94.69 69.09 94.54 63.86 97.94C63.2 98.37 62.4001 98.87 61.6901 98.52C61.3701 98.36 61.1501 98.06 61.0201 97.73C60.4901 96.44 61.18 94.9 62.29 94.0399C63.4 93.1799 64.8 92.84 66.17 92.55C69.13 91.91 107.64 85.59 103.59 94.42L103.58 94.4099Z"
+          fill="#00002A"
+        />
+        <path
+          d="M112.68 72.2C113.961 72.2 115 71.1613 115 69.88C115 68.5987 113.961 67.56 112.68 67.56C111.399 67.56 110.36 68.5987 110.36 69.88C110.36 71.1613 111.399 72.2 112.68 72.2Z"
+          fill="#F15A24"
+        />
+        <path
+          d="M122.38 71.82C123.656 71.82 124.69 70.7858 124.69 69.51C124.69 68.2342 123.656 67.2 122.38 67.2C121.104 67.2 120.07 68.2342 120.07 69.51C120.07 70.7858 121.104 71.82 122.38 71.82Z"
+          fill="#F15A24"
+        />
+        <path
+          d="M6.75004 183.2C6.75004 183.2 19.9801 169.05 26.8901 167.19C26.8901 167.19 16.3401 123.74 26.8901 93.63L6.33002 100.69C6.33002 100.69 -7.36996 132.4 6.75004 183.21V183.2Z"
+          fill="url(#paint1_linear_2_872)"
+        />
+        <path
+          d="M162.27 91.8L162.67 95.84"
+          stroke="#00002A"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M159.88 92.09L160.28 96.13"
+          stroke="#00002A"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M107.68 91.6L107.63 95.66"
+          stroke="#00002A"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M105.27 91.62L105.22 95.68"
+          stroke="#00002A"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M137.92 208.61C152.036 208.61 163.48 197.166 163.48 183.05C163.48 168.934 152.036 157.49 137.92 157.49C123.804 157.49 112.36 168.934 112.36 183.05C112.36 197.166 123.804 208.61 137.92 208.61Z"
+          stroke="#00002A"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M137.92 193.19C143.52 193.19 148.06 188.65 148.06 183.05C148.06 177.45 143.52 172.91 137.92 172.91C132.32 172.91 127.78 177.45 127.78 183.05C127.78 188.65 132.32 193.19 137.92 193.19Z"
+          fill="#00002A"
+        />
+        <path
+          d="M112.58 186.35C112.58 186.35 111.13 214.09 142.37 208.48C142.37 208.48 118.53 212.12 112.58 186.35Z"
+          fill="#00002A"
+        />
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M122.72 155.54L122.67 159.6"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M118.93 157.68L117.57 161.51"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M148.74 152.95L148.8 157.01"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M152.54 155.09L153.89 158.91"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M106.58 174.99L106.53 179.05"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M102.79 177.12L101.43 180.95"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M94.41 175.26L97.26 178.15"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M93.26 179.45L95.0201 183.11"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M86.83 175.12L86.7801 179.18"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M83.04 177.26L81.69 181.09"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M74.66 175.39L77.51 178.28"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M73.51 179.59L75.2801 183.24"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M73.39 192.02L73.31 198.38"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M67.45 195.37L65.33 201.36"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M54.33 192.44L58.79 196.97"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M52.5301 199.01L55.3 204.74"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M42.47 192.23L42.39 198.59"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M36.54 195.58L34.42 201.57"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M23.42 192.65L27.88 197.18"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M21.62 199.22L24.38 204.94"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M33.95 212.19L34 216.25"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M37.74 206.65L39.1 210.48"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M46.13 204.78L43.2801 207.67"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M47.2801 208.98L45.51 212.63"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M53.7 212.32L53.75 216.38"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M57.49 214.46L58.85 218.29"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M65.87 212.59L63.0301 215.48"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M67.0201 216.79L65.26 220.44"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M40.08 219.12L40.16 225.48"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M48.8401 219.23L50.9601 225.23"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M71.66 224.79L67.2 229.32"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M73.4601 231.36L70.69 237.09"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M100.86 184.73L100.78 191.09"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M94.93 188.08L92.81 194.07"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M81.8 185.15L86.26 189.68"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M80.01 191.72L82.7701 197.45"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M72.44 208.38L73.8 212.21"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M80.83 206.51L77.98 209.4"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M81.97 210.71L80.2101 214.36"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M60.2801 239.31L60.36 245.66"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M66.2101 242.65L68.3401 248.64"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M79.3401 239.72L74.88 244.25"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M81.13 246.29L78.37 252.02"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M149.95 232.37L147.82 235.83"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M142.15 228.78L144.32 232.21"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M140.14 232.64L141.1 236.58"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M134.78 227.05L133.87 231.01"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M130.62 228.34L128.48 231.79"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M122.82 224.74L124.99 228.17"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M120.81 228.6L121.76 232.55"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M118.07 240.73L116.65 246.93"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M111.56 242.75L108.22 248.16"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M99.35 237.12L102.75 242.48"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M96.2 243.16L97.7 249.34"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M94.54 256.42L93.73 260.4"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M97.79 259.3L98.31 263.33"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M106.38 259.25L102.99 261.47"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M106.62 263.59L104.12 266.79"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M146.46 239.4L145.04 245.6"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M139.95 241.42L136.61 246.83"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M127.74 235.79L131.15 241.16"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M124.6 241.83L126.1 248.01"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M126.19 257.98L126.7 262"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M134.78 257.92L131.38 260.15"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M135.01 262.27L132.51 265.47"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M34.88 185.41L33.11 189.07"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M105.38 208.98L107.15 212.63"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M230.49 182.23L230.57 188.58"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M236.42 185.57L238.55 191.56"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M249.55 182.64L245.09 187.17"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M251.34 189.22L248.58 194.94"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M250.18 202.52L250.12 206.58"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M246.38 204.66L245.03 208.49"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M238 202.79L240.85 205.68"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M236.85 206.99L238.62 210.64"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M232.22 214.99L236.68 219.52"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M230.42 221.57L233.19 227.29"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M203.01 174.94L203.09 181.29"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M208.95 178.28L211.07 184.27"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M163.49 208.48L159.03 213.01"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M223.87 181.93L221.1 187.65"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M218.91 197.37L217.55 201.2"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M210.53 195.5L213.38 198.39"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M153.93 222.58L156.06 226.03"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M161.73 218.98L159.55 222.41"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M163.74 222.84L162.78 226.79"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M169.1 217.25L170.01 221.21"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M173.26 218.54L175.39 221.99"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M181.06 214.94L178.88 218.37"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M183.07 218.8L182.11 222.75"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M185.81 230.93L187.23 237.13"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M192.32 232.95L195.66 238.36"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M204.53 227.32L201.12 232.69"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M207.67 233.36L206.17 239.54"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M209.34 246.62L210.15 250.6"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M206.08 249.51L205.57 253.53"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M197.49 249.45L200.89 251.67"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M197.26 253.79L199.76 256.99"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M157.42 229.61L158.84 235.8"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M163.92 231.62L167.26 237.03"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M176.13 225.99L172.73 231.36"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M179.28 232.04L177.78 238.21"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M177.69 248.18L177.17 252.21"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M169.1 248.12L172.5 250.35"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M168.86 252.47L171.36 255.67"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M184.24 186.47L182.47 190.13"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M203.99 186.61L202.22 190.26"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M204.11 199.04L204.19 205.4"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M176.63 191.75L176.72 198.11"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M182.57 195.1L184.69 201.09"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M195.69 192.17L191.23 196.7"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M197.49 198.74L194.73 204.47"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M192.53 214.19L191.18 218.02"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M178.49 204.64L181.34 207.54"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M92.22 216.59L90.45 220.24"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M111.97 216.72L110.2 220.37"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M84.61 221.87L84.69 228.22"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M90.55 225.21L92.67 231.2"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M103.67 222.28L99.2101 226.81"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M105.47 228.85L102.7 234.58"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M85.5901 233.54L83.82 237.19"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M48.63 229.38L47.82 233.36"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M51.7801 231.85L52.36 236.3"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M60.47 226.96L57.07 229.18"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M60.7101 231.3L58.2101 234.5"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M164.86 264.1L161.52 269.51"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M152.65 258.47L156.06 263.84"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M88.1 251L86.3401 254.66"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M156.97 243.64L152.51 248.17"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M158.77 250.21L156.01 255.93"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M226.28 201.65L224.51 205.31"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M218.67 206.93L218.75 213.29"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M224.61 210.28L226.73 216.27"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M220.53 219.82L223.38 222.71"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M175.95 172.75L174.18 176.41"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M171.06 204.8L169.29 208.46"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M168.35 178.03L168.43 184.39"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M174.28 181.38L176.4 187.37"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M187.4 178.45L182.94 182.98"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M209.03 209.11L207.26 212.77"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M201.43 214.39L201.51 220.75"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M207.36 217.74L209.48 223.73"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M188.83 246.68L187.06 250.34"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M181.23 251.96L181.31 258.32"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M215.44 232.68L217.56 238.68"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M130.46 216.19L128.28 219.62"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M132.47 220.05L131.51 224"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M137.83 214.46L138.74 218.42"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M141.99 215.75L144.12 219.21"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M149.79 212.16L147.61 215.58"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M151.8 216.02L150.84 219.96"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M113.06 226.7L110.88 230.13"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M115.06 230.56L114.11 234.51"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M61.0901 179.38L61.04 183.44"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M57.3 181.51L55.94 185.34"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M48.91 179.64L51.76 182.54"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M47.76 183.84L49.5301 187.5"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M100.18 196.73L98.41 200.39"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M92.57 202.01L92.6501 208.37"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M98.51 205.36L100.63 211.35"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M122.54 215.76L118.08 220.29"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M118.66 254.03L114.2 258.55"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <g style={{ mixBlendMode: "overlay" }} opacity="0.3">
+          <path
+            d="M120.46 260.6L117.69 266.32"
+            stroke="#00002A"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </g>
+        <path
+          d="M138.03 140.21C138.03 140.21 130.24 148.17 129.55 154.02C129.55 154.02 134.21 153.33 139.12 151"
+          stroke="#00002A"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          style={{ mixBlendMode: "multiply" }}
+          opacity="0.48"
+          d="M72.97 138.33C69.64 127.01 71.27 115.77 77.72 108.02C64.82 114.73 60.45 129.69 64.89 144.79C69.9 161.84 81.55 168.8 98.6 163.79C106.7 161.41 114.73 156.97 120.4 151.15C116.16 153.83 111.43 155.93 106.68 157.33C89.63 162.34 77.98 155.38 72.97 138.33Z"
+          fill="url(#paint2_linear_2_872)"
+        />
+        <path
+          style={{ mixBlendMode: "multiply" }}
+          opacity="0.48"
+          d="M198.71 136.25C202.04 124.93 200.41 113.69 193.96 105.94C206.86 112.65 211.23 127.61 206.79 142.71C201.78 159.76 190.13 166.72 173.08 161.71C164.98 159.33 156.95 154.89 151.28 149.07C155.52 151.75 160.25 153.85 165 155.25C182.05 160.26 193.7 153.3 198.71 136.25Z"
+          fill="url(#paint3_linear_2_872)"
+        />
+        <path
+          d="M249.55 96.59C249.55 96.59 258.94 134.87 248.58 167.26C248.58 167.26 261.94 176.43 267.66 187.64C267.66 187.64 283.88 147.14 270.55 105.12L249.55 96.58V96.59Z"
+          fill="url(#paint4_linear_2_872)"
+        />
+        <mask
+          id="mask0_2_872"
+          style={{ maskType: "luminance" }}
+          maskUnits="userSpaceOnUse"
+          x="163"
+          y="183"
+          width="82"
+          height="66"
+        >
+          <path
+            d="M223.38 248.72C223.38 248.72 201 220.26 178.88 212.61C177.48 212.12 176.43 210.88 176.33 209.39C176.25 208.21 176.75 206.87 178.8 205.83C178.8 205.83 176.92 200.3 182.81 200.32C182.81 200.32 180.19 196.96 186.31 193.85C186.31 193.85 176.32 189.65 165.4 188.37C162.98 188.09 162.49 184.81 164.72 183.85C165 183.73 165.31 183.61 165.65 183.51C165.65 183.51 187.88 184.46 213.45 200.02C213.45 200.02 221.03 197.99 230.31 210.03C230.31 210.03 240.98 224.65 244.03 229.85C244.03 229.85 234.72 242.59 223.37 248.72H223.38Z"
+            fill="white"
+          />
+        </mask>
+        <g mask="url(#mask0_2_872)">
+          <path
+            d="M14.51 191.01C-14.29 120.62 19.43 40.2 89.83 11.41C160.22 -17.39 240.64 16.33 269.43 86.73C276.24 103.37 279.55 120.56 279.71 137.5C280.24 192.25 247.87 244.34 194.11 266.33C147.75 285.3 97.04 277.14 59.59 249.25C40.18 234.8 24.34 215.04 14.51 191.01Z"
+            fill="#F15A24"
+          />
+          <path
+            style={{ mixBlendMode: "hue" }}
+            opacity="0.5"
+            d="M269.43 86.7199C298.23 157.11 264.51 237.53 194.11 266.32C123.72 295.12 43.3 261.4 14.51 191C7.70004 174.36 4.39004 157.17 4.23004 140.23C3.70004 85.4799 36.07 33.39 89.83 11.4C136.19 -7.57 186.9 0.589951 224.35 28.4799C243.76 42.93 259.6 62.6899 269.43 86.7199Z"
+            fill="url(#paint5_linear_2_872)"
+          />
+          <path
+            d="M14.51 191.01C-14.29 120.62 19.43 40.2 89.83 11.41C160.22 -17.39 240.64 16.33 269.43 86.73C276.24 103.37 279.55 120.56 279.71 137.5C280.24 192.25 247.87 244.34 194.11 266.33C147.75 285.3 97.04 277.14 59.59 249.25C40.18 234.8 24.34 215.04 14.51 191.01Z"
+            fill="#F15A24"
+          />
+          <path
+            style={{ mixBlendMode: "hue" }}
+            opacity="0.5"
+            d="M269.43 86.7199C298.23 157.11 264.51 237.53 194.11 266.32C123.72 295.12 43.3 261.4 14.51 191C7.70004 174.36 4.39004 157.17 4.23004 140.23C3.70004 85.4799 36.07 33.39 89.83 11.4C136.19 -7.57 186.9 0.589951 224.35 28.4799C243.76 42.93 259.6 62.6899 269.43 86.7199Z"
+            fill="url(#paint6_linear_2_872)"
+          />
+        </g>
+        <path
+          d="M223.33 248.69C223.33 248.69 200.95 220.23 178.83 212.58C177.43 212.09 176.38 210.85 176.28 209.36C176.2 208.18 176.7 206.84 178.75 205.8C178.75 205.8 176.87 200.27 182.76 200.29C182.76 200.29 180.14 196.93 186.26 193.82C186.26 193.82 176.27 189.62 165.35 188.34C162.93 188.06 162.44 184.78 164.67 183.82C164.95 183.7 165.26 183.58 165.6 183.48C165.6 183.48 187.83 184.43 213.4 199.99C213.4 199.99 220.98 197.96 230.26 210C230.26 210 240.93 224.62 243.98 229.82"
+          stroke="#00002A"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M182.76 200.3L188.73 203.1"
+          stroke="#00002A"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M178.75 205.81C178.75 205.81 186.11 208.69 188.72 209.61"
+          stroke="#00002A"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M213.4 199.99L221.22 205.88"
+          stroke="#00002A"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M186.26 193.84C186.26 193.84 193.41 196.78 197.22 198.92"
+          stroke="#00002A"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M131.3 71.65C132.581 71.65 133.62 70.6113 133.62 69.33C133.62 68.0487 132.581 67.01 131.3 67.01C130.019 67.01 128.98 68.0487 128.98 69.33C128.98 70.6113 130.019 71.65 131.3 71.65Z"
           fill="#F15A24"
         />
         <defs>
           <linearGradient
-            id="paint0_linear_1_872"
-            x1={137.76}
-            y1={0.776742}
-            x2={137.76}
-            y2={276.217}
+            id="paint0_linear_2_872"
+            x1="137.95"
+            y1="3.54999"
+            x2="137.95"
+            y2="278.99"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#F15A24" stopOpacity={0} />
-            <stop offset={1} stopColor="#662D91" />
+            <stop stop-color="#F15A24" stop-opacity="0" />
+            <stop offset="1" stop-color="#662D91" />
           </linearGradient>
           <linearGradient
-            id="paint1_linear_1_872"
-            x1={13.43}
-            y1={180.437}
-            x2={13.43}
-            y2={90.8668}
+            id="paint1_linear_2_872"
+            x1="13.62"
+            y1="183.2"
+            x2="13.62"
+            y2="93.63"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#F15A24" stopOpacity={0} />
-            <stop offset={0.99} stopColor="#FF0" />
+            <stop stop-color="#F15A24" stop-opacity="0" />
+            <stop offset="0.99" stop-color="#FFFF00" />
           </linearGradient>
           <linearGradient
-            id="paint2_linear_1_872"
-            x1={63.02}
-            y1={133.947}
-            x2={120.21}
-            y2={133.947}
+            id="paint2_linear_2_872"
+            x1="63.21"
+            y1="136.7"
+            x2="120.41"
+            y2="136.7"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#F15A24" stopOpacity={0} />
-            <stop offset={1} stopColor="#662D91" />
+            <stop stop-color="#F15A24" stop-opacity="0" />
+            <stop offset="1" stop-color="#662D91" />
           </linearGradient>
           <linearGradient
-            id="paint3_linear_1_872"
-            x1={208.28}
-            y1={131.857}
-            x2={151.08}
-            y2={131.857}
+            id="paint3_linear_2_872"
+            x1="208.47"
+            y1="134.62"
+            x2="151.28"
+            y2="134.62"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#F15A24" stopOpacity={0} />
-            <stop offset={1} stopColor="#662D91" />
+            <stop stop-color="#F15A24" stop-opacity="0" />
+            <stop offset="1" stop-color="#662D91" />
           </linearGradient>
           <linearGradient
-            id="paint4_linear_1_872"
-            x1={262}
-            y1={184.887}
-            x2={262}
-            y2={93.8268}
+            id="paint4_linear_2_872"
+            x1="262.19"
+            y1="187.65"
+            x2="262.19"
+            y2="96.59"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#F15A24" stopOpacity={0} />
-            <stop offset={0.99} stopColor="#FF0" />
+            <stop stop-color="#F15A24" stop-opacity="0" />
+            <stop offset="0.99" stop-color="#FFFF00" />
           </linearGradient>
           <linearGradient
-            id="paint5_linear_1_872"
-            x1={79.3559}
-            y1={13.2928}
-            x2={204.06}
-            y2={258.886}
+            id="paint5_linear_2_872"
+            x1="79.5488"
+            y1="16.0589"
+            x2="204.253"
+            y2="261.652"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#F15A24" stopOpacity={0} />
-            <stop offset={1} stopColor="#662D91" />
+            <stop stop-color="#F15A24" stop-opacity="0" />
+            <stop offset="1" stop-color="#662D91" />
           </linearGradient>
           <linearGradient
-            id="paint6_linear_1_872"
-            x1={79.3559}
-            y1={13.2928}
-            x2={204.06}
-            y2={258.886}
+            id="paint6_linear_2_872"
+            x1="79.5488"
+            y1="16.0589"
+            x2="204.253"
+            y2="261.652"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#F15A24" stopOpacity={0} />
-            <stop offset={1} stopColor="#662D91" />
+            <stop stop-color="#F15A24" stop-opacity="0" />
+            <stop offset="1" stop-color="#662D91" />
           </linearGradient>
         </defs>
       </svg>

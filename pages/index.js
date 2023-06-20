@@ -29,21 +29,13 @@ export default function Home() {
   const { t } = useTranslation();
 
   const [scopeFirst, animateFirst] = useAnimate();
-  const isInViewFirst = useInView(scopeFirst, { amount: 0.5 }, { once: true });
+  const isInViewFirst = useInView(scopeFirst, { amount: 0.5, once: true });
   const [scopeSecond, animateSecond] = useAnimate();
-  const isInViewSecond = useInView(
-    scopeSecond,
-    { amount: 0.5 },
-    { once: true }
-  );
+  const isInViewSecond = useInView(scopeSecond, { amount: 0.5, once: true });
   const [scopeThird, animateThird] = useAnimate();
-  const isInViewThird = useInView(scopeThird, { amount: 0.5 }, { once: true });
+  const isInViewThird = useInView(scopeThird, { amount: 0.5, once: true });
   const [scopeFourth, animateFourth] = useAnimate();
-  const isInViewFourth = useInView(
-    scopeFourth,
-    { amount: 0.5 },
-    { once: true }
-  );
+  const isInViewFourth = useInView(scopeFourth, { amount: 0.5, once: true });
 
   useEffect(() => {
     animateFirst(
@@ -187,14 +179,16 @@ export default function Home() {
           <p className="stagger mx-auto max-w-[60ch] text-fluid-m">
             {t("home.about main")}
           </p>
-          <StarIllustration className="stagger absolute -bottom-16 scale-125 ltr:right-12 rtl:left-12 md:-bottom-12 md:scale-150"></StarIllustration>
+          <div className="stagger">
+            <StarIllustration className="absolute -bottom-16 scale-125 ltr:right-12 rtl:left-12 md:-bottom-12 md:scale-150"></StarIllustration>
+          </div>
         </section>
       </div>
       <section
         ref={scopeSecond}
         className="mb-40 flex flex-wrap justify-center gap-16"
       >
-        <div className="stagger hover-card relative aspect-square basis-[20rem]">
+        <div className="stagger hover-card hover-card-hint relative aspect-square basis-[20rem]">
           <div className="hover-card__side hover-card__side--front clip-path-corner--right absolute inset-0 grid place-items-center bg-orange">
             <figgroup className="clip-path-corner--right flex h-[90%] w-[90%] flex-col bg-darkorange">
               <figcaption>
@@ -220,7 +214,7 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div className="stagger hover-card relative aspect-square basis-[20rem]">
+        <div className="stagger hover-card hover-card-hint relative aspect-square basis-[20rem]">
           <div className="hover-card__side hover-card__side--front clip-path-corner--right absolute inset-0 grid place-items-center bg-orange">
             <figgroup className="clip-path-corner--right flex h-[90%] w-[90%] flex-col bg-darkorange">
               <figcaption>
@@ -246,7 +240,7 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div className="stagger hover-card relative aspect-square basis-[20rem]">
+        <div className="stagger hover-card hover-card-hint relative aspect-square basis-[20rem]">
           <div className="hover-card__side hover-card__side--front clip-path-corner--right absolute inset-0 grid place-items-center bg-orange">
             <figgroup className="clip-path-corner--right flex h-[90%] w-[90%] flex-col bg-darkorange">
               <figcaption>

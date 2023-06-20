@@ -9,18 +9,18 @@ export default function Kay({ className }) {
   return (
     <m.div className={className}>
       <svg
-        width={277}
-        height={292}
+        width="277"
+        height="292"
         viewBox="0 0 277 292"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         ref={ref}
         style={{
           transform: isInView
-            ? "translateX(0%) rotate(0deg)"
-            : "translateX(0%) rotate(720deg)",
+            ? "rotate(0deg) scale(1)"
+            : "rotate(720deg) scale(0)",
           opacity: isInView ? 1 : 0,
-          transition: "all 3s cubic-bezier(.43,.2,.54,1.17)",
+          transition: "all 3s cubic-bezier(.43,.2,.54,1.17) .5s",
           width: "100%",
         }}
       >

@@ -51,7 +51,6 @@ export default function HeroIllustrationMobile({ className }) {
       </defs>
       <g style={{ isolation: "isolate" }}>
         <g data-name="Layer 1">
-          <path fill="#e24f27" d="M424.74 653.53H484.74V713.53H424.74z"></path>
           <circle
             cx="214.37"
             cy="392.21"
@@ -90,16 +89,7 @@ export default function HeroIllustrationMobile({ className }) {
             <path fill="#e24f27" d="M365 234.13H409.98V279.11H365z"></path>
             <path d="M369.65 244.57c-.21-.49-.31-1.06-.31-1.74s.1-1.26.31-1.74.5-.85.89-1.12c.39-.26.85-.39 1.39-.39s1 .13 1.39.39c.39.26.68.63.89 1.12.21.48.31 1.06.31 1.74s-.1 1.25-.31 1.74-.5.86-.89 1.12-.85.39-1.39.39-1-.13-1.39-.39-.68-.63-.89-1.12zm3.78-1.74c0-.72-.13-1.28-.4-1.69-.27-.41-.63-.61-1.1-.61s-.84.2-1.1.61c-.27.4-.4.97-.4 1.69s.13 1.28.4 1.69c.27.4.63.61 1.1.61s.83-.2 1.1-.61c.27-.41.4-.97.4-1.69zM378.01 245.92h-1.04v-4.96l-1.43 1.04c-.31-.12-.47-.3-.47-.55 0-.22.14-.43.42-.62l1.08-.75c.32-.22.61-.33.86-.33.11 0 .22.01.32.04.11.03.19.07.25.12v6.01z"></path>
           </m.g>
-          <path
-            fill="#c24427"
-            d="M448.48 672.29L448.48 695.14 448.48 703.72 456.02 703.45 463.83 713.53 484.74 713.53 484.56 675.72 472.09 664.52 469.03 664.52 456.91 664.89 456.87 672.34 448.48 672.29"
-          ></path>
-          <path
-            fill="none"
-            stroke="#fff"
-            strokeMiterlimit="10"
-            d="M456.87 672.34L456.91 664.89 465.55 664.89"
-          ></path>
+
           <path
             fill="#e24f27"
             d="M371.72 1151.54c0-30.83-23.26-55.82-51.96-55.82s-51.96 24.99-51.96 55.82l-.18 79.18h103.95l.15-79.18z"
@@ -475,9 +465,63 @@ export default function HeroIllustrationMobile({ className }) {
             fill="#fff"
             opacity="0.1"
           ></circle>
-          <circle cx="568.16" cy="464.08" r="5" fill="#fff"></circle>
-          <circle cx="553.18" cy="449.19" r="2.97" fill="#fff"></circle>
-          <circle cx="571.64" cy="443.65" r="2.43" fill="#fff"></circle>
+          <m.circle
+            className="bubble"
+            initial={{
+              y: 10,
+              opacity: 1,
+            }}
+            animate={{
+              y: -10,
+              opacity: 0,
+              transition: {
+                duration: 15,
+                ease: "easeInOut",
+              },
+            }}
+            cx="568.16"
+            cy="464.08"
+            r="5"
+            fill="#fff"
+          ></m.circle>
+          <m.circle
+            className="bubble"
+            initial={{
+              y: 10,
+              opacity: 1,
+            }}
+            animate={{
+              y: -10,
+              opacity: 0,
+              transition: {
+                duration: 15,
+                ease: "easeInOut",
+              },
+            }}
+            cx="553.18"
+            cy="449.19"
+            r="2.97"
+            fill="#fff"
+          ></m.circle>
+          <m.circle
+            className="bubble"
+            initial={{
+              y: 10,
+              opacity: 1,
+            }}
+            animate={{
+              y: -10,
+              opacity: 0,
+              transition: {
+                duration: 15,
+                ease: "easeInOut",
+              },
+            }}
+            cx="571.64"
+            cy="443.65"
+            r="2.43"
+            fill="#fff"
+          ></m.circle>
           <path fill="#e24f27" d="M535.16 223.08H543.16V227H535.16z"></path>
           <path fill="#e24f27" d="M550.16 223.08H558.16V227H550.16z"></path>
           <path fill="#e24f27" d="M566.16 223.08H574.16V227H566.16z"></path>
@@ -565,15 +609,15 @@ export default function HeroIllustrationMobile({ className }) {
           ></path>
           <m.g
             className="fish-eyeball-right"
-            initial={{ scale: 1 }}
+            initial={{ scaleY: 1, y: 0 }}
             animate={{
-              scale: [1, 0.8, 1],
-              rotate: [0, 5, -5, 0],
+              scaleY: [0, 1],
+              y: [2, 0],
               transition: {
-                duration: 1,
+                duration: 0.2,
                 ease: "easeInOut",
                 repeat: Infinity,
-                repeatDelay: 2,
+                repeatDelay: 3,
               },
             }}
           >
@@ -583,29 +627,36 @@ export default function HeroIllustrationMobile({ className }) {
               d="M331.04 769.82c-5.75-2.09-8.71-8.44-6.62-14.19.4-1.09.94-2.07 1.61-2.94a11.042 11.042 0 00-3.61 4.94c-2.09 5.75.87 12.1 6.62 14.19 4.66 1.7 9.72.07 12.58-3.68-2.91 2.26-6.87 3.03-10.58 1.68z"
               opacity="0.16"
             ></path>
+            <circle
+              className="fish-pupil-right"
+              cx="331.67"
+              cy="757.46"
+              r="5.09"
+              fill="#00002a"
+            ></circle>
+            <circle cx="327.32" cy="757.03" r="2.01" fill="#fff"></circle>
           </m.g>
           <m.circle
-            className="fish-right-pupil"
-            initial={{ scale: 1 }}
+            initial={{ scaleY: 0 }}
             animate={{
-              scale: [1, 0.8, 1],
-              rotate: [0, 5, -5, 0],
+              scaleY: [1, 0],
               transition: {
-                duration: 1,
+                duration: 0.2,
                 ease: "easeInOut",
                 repeat: Infinity,
-                repeatDelay: 2,
+                repeatDelay: 3,
               },
             }}
-            cx="331.67"
-            cy="757.46"
-            r="5.09"
-            fill="#00002a"
+            className="fish-lid-right"
+            cx="332.83"
+            cy="761.41"
+            r="11.07"
+            fill="#65f8f4"
           ></m.circle>
+
           <circle cx="305.66" cy="760.95" r="11.07" fill="#fff"></circle>
           <circle cx="306.86" cy="758.11" r="5.09" fill="#00002a"></circle>
           <circle cx="302.67" cy="756.93" r="2.01" fill="#fff"></circle>
-          <circle cx="327.32" cy="757.03" r="2.01" fill="#fff"></circle>
           <path
             fill="#e24f27"
             d="M257.53 498.93H268.84999999999997V511.43H257.53z"
@@ -766,7 +817,6 @@ export default function HeroIllustrationMobile({ className }) {
             fill="#c24427"
             d="M67.48 248.72l-5.5 5.4v38.47l26.5.13 6.5-4.5s-5.01 1.26-9.25-11.62c0 0-11.86 3.47-14.55-1.71 0 0-3.23-4.56 5.54-14.37 0 0-11.01-10.22-5.12-16.02l-4.11 4.21z"
           ></path>
-          <path fill="#e24f27" d="M411.98 454.22H456.98V499.22H411.98z"></path>
           <path fill="#e24f27" d="M60.48 416.72H130.48V425.22H60.48z"></path>
           <path fill="#e24f27" d="M61.54 516.12H131.54V524.62H61.54z"></path>
           <path
@@ -805,8 +855,44 @@ export default function HeroIllustrationMobile({ className }) {
             strokeMiterlimit="10"
             d="M87.98 454.08L94.43 454.08"
           ></path>
-          <circle cx="98.43" cy="461.15" r="2.42" fill="#fff"></circle>
-          <circle cx="91.27" cy="445.4" r="1.67" fill="#fff"></circle>
+          <m.circle
+            className="bubble"
+            initial={{
+              y: 10,
+              opacity: 1,
+            }}
+            animate={{
+              y: -10,
+              opacity: 0,
+              transition: {
+                duration: 15,
+                ease: "easeInOut",
+              },
+            }}
+            cx="98.43"
+            cy="461.15"
+            r="2.42"
+            fill="#fff"
+          ></m.circle>
+          <m.circle
+            className="bubble"
+            initial={{
+              y: 10,
+              opacity: 1,
+            }}
+            animate={{
+              y: -10,
+              opacity: 0,
+              transition: {
+                duration: 15,
+                ease: "easeInOut",
+              },
+            }}
+            cx="91.27"
+            cy="445.4"
+            r="1.67"
+            fill="#fff"
+          ></m.circle>
           <path
             fill="#6cff6a"
             d="M87.98 474.86L102.98 478.08 102.98 484.08 87.98 480.99 87.98 474.86z"
@@ -837,22 +923,10 @@ export default function HeroIllustrationMobile({ className }) {
             fill="#e24f27"
             d="M92.56 620.95H171.82999999999998V700.22H92.56z"
           ></path>
-          <path
-            fill="#e24f27"
-            stroke="#e24f27"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M193.69 709.46H218.2V733.97H193.69z"
-          ></path>
           <g fill="#fff">
             <path d="M98.64 631.17c-.21-.49-.31-1.06-.31-1.74s.1-1.26.31-1.74.5-.85.89-1.12c.39-.26.85-.39 1.39-.39s1 .13 1.39.39c.39.26.68.63.89 1.12.21.48.31 1.06.31 1.74s-.1 1.25-.31 1.74-.5.86-.89 1.12c-.39.26-.85.39-1.39.39s-1-.13-1.39-.39c-.39-.26-.68-.63-.89-1.12zm3.78-1.74c0-.72-.13-1.28-.4-1.69-.27-.41-.63-.61-1.1-.61s-.83.2-1.1.61c-.27.4-.4.97-.4 1.69s.13 1.28.4 1.69c.27.4.63.61 1.1.61s.84-.2 1.1-.61c.27-.41.4-.97.4-1.69zM108.45 630.22h.3c.35 0 .53.15.53.46 0 .08-.01.17-.04.27-.03.09-.06.17-.09.22h-.69v1.36h-1.04v-1.36h-1.73c-.49 0-.85-.08-1.09-.24-.24-.16-.36-.41-.36-.76 0-.29.08-.61.23-.96.15-.35.36-.69.61-1.02s.54-.64.85-.92c.31-.28.63-.5.95-.67s.62-.25.9-.25c.12 0 .24.01.36.04s.22.06.3.11v3.72zm-2.95-.94c-.13.23-.19.43-.19.6 0 .13.04.21.13.27s.24.08.45.08h1.52v-2.84c-.25.13-.49.29-.74.5-.25.21-.47.44-.68.68s-.37.48-.5.72z"></path>
           </g>
-          <g fill="#fff">
-            <path d="M416.43 463.54c-.21-.49-.31-1.06-.31-1.74s.1-1.26.31-1.74.5-.85.89-1.12c.39-.26.85-.39 1.39-.39s1 .13 1.39.39c.39.26.68.63.89 1.12.21.48.31 1.06.31 1.74s-.1 1.25-.31 1.74-.5.86-.89 1.12-.85.39-1.39.39-1-.13-1.39-.39c-.39-.26-.68-.63-.89-1.12zm3.78-1.74c0-.72-.13-1.28-.4-1.69-.27-.41-.63-.61-1.1-.61s-.83.2-1.1.61c-.27.4-.4.97-.4 1.69s.13 1.28.4 1.69c.27.4.63.61 1.1.61s.84-.2 1.1-.61c.27-.41.4-.97.4-1.69zM426.18 464.15c-.2.28-.47.5-.81.66-.35.16-.76.24-1.22.24a5.177 5.177 0 01-1.68-.3c-.26-.09-.48-.2-.66-.31l.45-.79c.23.14.5.25.82.34.32.09.63.13.95.13.43 0 .76-.09 1-.26s.37-.42.37-.73-.12-.53-.36-.68c-.24-.16-.59-.23-1.04-.23h-.57a.551.551 0 01-.09-.23.93.93 0 01-.04-.27c0-.31.19-.47.57-.47h.18c.4 0 .71-.08.93-.25.22-.17.34-.39.34-.66s-.12-.51-.35-.67c-.23-.16-.52-.23-.88-.23s-.69.07-.97.22-.46.33-.55.54c-.16-.02-.29-.09-.4-.19s-.16-.23-.16-.38c0-.07.01-.15.04-.23s.08-.16.15-.24c.17-.19.44-.34.79-.45.35-.11.73-.17 1.13-.17.46 0 .86.07 1.2.22s.6.34.78.59.27.54.27.87-.09.61-.27.87c-.18.25-.43.46-.75.61.35.11.63.3.83.55.2.25.3.57.3.93s-.1.69-.29.97z"></path>
-          </g>
-          <g fill="#fff">
-            <path d="M428.88 663.34c-.21-.49-.31-1.07-.31-1.74s.1-1.26.31-1.74.5-.86.89-1.12.85-.39 1.39-.39 1 .13 1.39.39c.39.26.68.63.89 1.12s.31 1.06.31 1.74-.1 1.25-.31 1.74-.5.86-.89 1.12c-.39.26-.85.39-1.39.39s-1-.13-1.39-.39c-.39-.26-.68-.63-.89-1.12zm3.79-1.74c0-.72-.13-1.28-.4-1.69-.27-.41-.63-.61-1.1-.61s-.84.2-1.1.61c-.27.41-.4.97-.4 1.69s.13 1.28.4 1.69c.27.41.63.61 1.1.61s.83-.2 1.1-.61c.27-.41.4-.97.4-1.69zM434.77 659.13c.02-.41.24-.61.66-.61h2.66c.35 0 .53.15.53.46 0 .17-.04.34-.14.49h-2.76l-.05 1.47c.14-.02.29-.03.46-.04.17-.01.33-.02.46-.02.72 0 1.28.17 1.69.51s.61.81.61 1.41c0 .43-.1.79-.3 1.1-.2.31-.48.55-.85.71-.37.17-.8.25-1.29.25-.26 0-.54-.02-.82-.07-.28-.05-.54-.11-.78-.19s-.42-.16-.56-.25l.4-.8c.23.12.49.22.77.29.29.07.58.11.86.11.46 0 .82-.09 1.08-.28.26-.19.39-.45.39-.8s-.14-.63-.42-.82c-.28-.19-.69-.29-1.22-.29-.24 0-.5.02-.79.05-.29.04-.52.08-.72.14l.11-2.82z"></path>
-          </g>
+
           <path
             fill="#be8f63"
             d="M378.98 928.96L395.98 965.22 378.98 965.22 378.98 928.96z"
@@ -1120,10 +1194,6 @@ export default function HeroIllustrationMobile({ className }) {
             stroke="#e24f27"
             strokeMiterlimit="10"
           ></circle>
-          <path fill="#e24f27" d="M150.98 914.22H210.98V974.22H150.98z"></path>
-          <g fill="#fff">
-            <path d="M155.11 924.03c-.21-.49-.31-1.06-.31-1.74s.1-1.26.31-1.74.5-.85.89-1.12c.39-.26.85-.39 1.39-.39s1 .13 1.39.39c.39.26.68.63.89 1.12.21.48.31 1.06.31 1.74s-.1 1.25-.31 1.74-.5.86-.89 1.12c-.39.26-.85.39-1.39.39s-1-.13-1.39-.39c-.39-.26-.68-.63-.89-1.12zm3.78-1.74c0-.72-.13-1.28-.4-1.69-.27-.41-.63-.61-1.1-.61s-.84.2-1.1.61c-.27.4-.4.97-.4 1.69s.13 1.28.4 1.69c.27.4.63.61 1.1.61s.83-.2 1.1-.61c.27-.41.4-.97.4-1.69zM162.68 921.4c.21-.12.47-.18.8-.18.4 0 .75.09 1.07.26s.56.41.75.72c.18.31.27.66.27 1.06a2.232 2.232 0 01-1.16 1.98c-.36.2-.78.3-1.25.3s-.86-.09-1.22-.28c-.36-.19-.65-.45-.86-.78s-.31-.71-.31-1.14c0-.35.08-.72.24-1.09.16-.38.41-.79.76-1.24l1.27-1.66c.16-.2.35-.31.59-.31s.46.09.64.26l-1.58 2.1zm1.46 2.88c.25-.25.38-.57.38-.96s-.12-.72-.38-.96-.58-.37-.99-.37-.73.12-.99.37c-.25.25-.38.57-.38.96s.13.72.38.96c.26.25.58.37.99.37s.74-.12.99-.37z"></path>
-          </g>
           <circle cx="128.98" cy="1053.22" r="7" fill="#e24f27"></circle>
           <circle cx="162.98" cy="1053.22" r="7" fill="#e24f27"></circle>
           <circle cx="196.98" cy="1053.22" r="7" fill="#e24f27"></circle>
@@ -1834,87 +1904,133 @@ export default function HeroIllustrationMobile({ className }) {
           <circle cx="66.67" cy="287.15" r="2" fill="#00002a"></circle>
           <circle cx="120.67" cy="233.15" r="2" fill="#00002a"></circle>
           <circle cx="120.67" cy="288.15" r="2" fill="#00002a"></circle>
-          <ellipse
-            cx="320.5"
-            cy="1226"
-            fill="#c24427"
-            rx="13.5"
-            ry="2"
-          ></ellipse>
-          <circle cx="320.48" cy="1209.72" r="16.5" fill="#e24f27"></circle>
-          <ellipse
-            cx="292.98"
-            cy="1193.72"
-            fill="#c24427"
-            rx="13.5"
-            ry="2"
-          ></ellipse>
-          <circle cx="293.48" cy="1177.72" r="16.5" fill="#6cff6a"></circle>
-          <ellipse
-            cx="351.98"
-            cy="1196.72"
-            fill="#c24427"
-            rx="13.5"
-            ry="2"
-          ></ellipse>
-          <circle cx="352.48" cy="1181.72" r="16.5" fill="#0ff"></circle>
-          <circle
-            cx="283.76"
-            cy="1176.41"
-            r="4.12"
-            fill="#fff"
-            transform="rotate(-45 283.762 1176.402)"
-          ></circle>
-          <circle cx="284.98" cy="1176.11" r="2" fill="#00002a"></circle>
-          <circle cx="283.53" cy="1175.66" r="0.95" fill="#fff"></circle>
-          <circle cx="292.8" cy="1176.87" r="4.13" fill="#fff"></circle>
-          <circle cx="359.69" cy="1180.15" r="4.39" fill="#fff"></circle>
-          <circle cx="348.84" cy="1180.52" r="4.39" fill="#fff"></circle>
-          <circle
-            cx="315.2"
-            cy="1207.91"
-            r="3.97"
-            fill="#fff"
-            transform="rotate(-1.48 316.165 1211.3)"
-          ></circle>
-          <circle
-            cx="325.03"
-            cy="1207.99"
-            r="3.97"
-            fill="#fff"
-            transform="rotate(-1.48 325.843 1211.426)"
-          ></circle>
-          <circle cx="293.98" cy="1176.11" r="2" fill="#00002a"></circle>
-          <circle cx="350.76" cy="1179.86" r="2" fill="#00002a"></circle>
-          <circle cx="360.76" cy="1179.87" r="2" fill="#00002a"></circle>
-          <circle
-            cx="316.23"
-            cy="1208.41"
-            r="2.21"
-            fill="#00002a"
-            transform="rotate(-12.62 316.068 1207.988)"
-          ></circle>
-          <circle
-            cx="326.2"
-            cy="1208.48"
-            r="2.21"
-            fill="#00002a"
-            transform="rotate(-6.83 326.346 1208.975)"
-          ></circle>
-          <circle cx="349.23" cy="1180.07" r="0.8" fill="#fff"></circle>
-          <circle cx="359.1" cy="1180.19" r="0.8" fill="#fff"></circle>
-          <circle
-            cx="324.19"
-            cy="1208.93"
-            r="1.19"
-            fill="#fff"
-            transform="rotate(-81.56 324.184 1208.925)"
-          ></circle>
-          <path
-            fill="#00002a"
-            d="M325.53 1214c.27 0 .49.24.46.51a5.676 5.676 0 01-5.65 5.16c-2.96 0-5.39-2.27-5.65-5.16-.02-.27.19-.51.46-.51h10.37z"
-          ></path>
-          <circle cx="354" cy="1190" r="3" fill="#00002a"></circle>
+          <m.g
+            className="red-ball"
+            initial={{ scale: 1 }}
+            animate={{ scale: 1.5 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 3,
+              repeat: Infinity,
+              delay: 1.5,
+              repeatType: "reverse",
+            }}
+          >
+            <ellipse
+              cx="320.5"
+              cy="1226"
+              fill="#c24427"
+              rx="13.5"
+              ry="2"
+            ></ellipse>
+            <circle cx="320.48" cy="1209.72" r="16.5" fill="#e24f27"></circle>
+            <circle
+              cx="315.2"
+              cy="1207.91"
+              r="3.97"
+              fill="#fff"
+              transform="rotate(-1.48 316.165 1211.3)"
+            ></circle>
+            <circle
+              cx="325.03"
+              cy="1207.99"
+              r="3.97"
+              fill="#fff"
+              transform="rotate(-1.48 325.843 1211.426)"
+            ></circle>
+            <circle
+              cx="316.23"
+              cy="1208.41"
+              r="2.21"
+              fill="#00002a"
+              transform="rotate(-12.62 316.068 1207.988)"
+            ></circle>
+            <circle
+              cx="326.2"
+              cy="1208.48"
+              r="2.21"
+              fill="#00002a"
+              transform="rotate(-6.83 326.346 1208.975)"
+            ></circle>
+            <circle
+              cx="324.19"
+              cy="1208.93"
+              r="1.19"
+              fill="#fff"
+              transform="rotate(-81.56 324.184 1208.925)"
+            ></circle>
+            <path
+              fill="#00002a"
+              d="M325.53 1214c.27 0 .49.24.46.51a5.676 5.676 0 01-5.65 5.16c-2.96 0-5.39-2.27-5.65-5.16-.02-.27.19-.51.46-.51h10.37z"
+            ></path>
+            <circle
+              cx="314.22"
+              cy="1208.43"
+              r="1.34"
+              fill="#fff"
+              transform="rotate(-87.34 314.247 1208.445)"
+            ></circle>
+          </m.g>
+          <m.g
+            className="green-ball"
+            initial={{ scale: 1 }}
+            animate={{ scale: 1.2 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 3,
+              repeat: Infinity,
+              delay: 1,
+              repeatType: "reverse",
+            }}
+          >
+            <ellipse
+              cx="292.98"
+              cy="1193.72"
+              fill="#c24427"
+              rx="13.5"
+              ry="2"
+            ></ellipse>
+            <circle cx="293.48" cy="1177.72" r="16.5" fill="#6cff6a"></circle>
+            <circle
+              cx="283.76"
+              cy="1176.41"
+              r="4.12"
+              fill="#fff"
+              transform="rotate(-45 283.762 1176.402)"
+            ></circle>
+            <circle cx="284.98" cy="1176.11" r="2" fill="#00002a"></circle>
+            <circle cx="283.53" cy="1175.66" r="0.95" fill="#fff"></circle>
+            <circle cx="292.8" cy="1176.87" r="4.13" fill="#fff"></circle>
+            <circle cx="293.98" cy="1176.11" r="2" fill="#00002a"></circle>
+          </m.g>
+          <m.g
+            className="blue-ball"
+            initial={{ scale: 1 }}
+            animate={{ scale: 1.3 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 3,
+              repeat: Infinity,
+              delay: 0.5,
+              repeatType: "reverse",
+            }}
+          >
+            <ellipse
+              cx="351.98"
+              cy="1196.72"
+              fill="#c24427"
+              rx="13.5"
+              ry="2"
+            ></ellipse>
+            <circle cx="352.48" cy="1181.72" r="16.5" fill="#0ff"></circle>
+            <circle cx="359.69" cy="1180.15" r="4.39" fill="#fff"></circle>
+            <circle cx="348.84" cy="1180.52" r="4.39" fill="#fff"></circle>
+            <circle cx="350.76" cy="1179.86" r="2" fill="#00002a"></circle>
+            <circle cx="360.76" cy="1179.87" r="2" fill="#00002a"></circle>
+            <circle cx="349.23" cy="1180.07" r="0.8" fill="#fff"></circle>
+            <circle cx="359.1" cy="1180.19" r="0.8" fill="#fff"></circle>
+            <circle cx="354" cy="1190" r="3" fill="#00002a"></circle>
+          </m.g>
           <path fill="#f94056" d="M378.48 965.5L378.98 929"></path>
           <path
             fill="#c24427"
@@ -1944,40 +2060,6 @@ export default function HeroIllustrationMobile({ className }) {
               d="M116.59 607.18L109.87 620.49 117.95 625.59 113.66 634.59 122.41 624.49 114.56 618.45 116.59 607.18z"
             ></path>
           </m.g>
-          <path
-            fill="#c24427"
-            d="M413.98 489.22l5 9.72 38 .28v-27.07l-8.44-13.07s-5.35 3.26-3.46 10.2c0 0 2.94 9.94 1.92 16.94 0 0 1.54 7.81-10.24 6.91l-22.78-3.91z"
-          ></path>
-          <ellipse
-            cx="433.98"
-            cy="489.22"
-            fill="#0ff"
-            rx="20"
-            ry="7.64"
-          ></ellipse>
-          <path
-            fill="#ff3ffd"
-            d="M443.46 492.19a5.595 5.595 0 003.44-4.61c.4-3.9-.06-11.42-1.82-18.3-2.75-10.76 9.19-13.54 13.37-11.82 4.18 1.72-.46-6.51-6.7-3.05-6.25 3.47-7.29-8.6-8.37-8.9-.6-.16-1.06 3.19-1.36 6.25s-1.48 5.63-3.46 7.78c-4.29 4.67-11.55 14.65-11.6 28.73 0 1.77 1.17 3.33 2.89 3.77 3.42.88 9.29 1.91 13.62.15z"
-          ></path>
-          <path
-            fill="#98499b"
-            d="M440.64 457.56s-18.65 20.15-3.88 35.57c0 0-4.54-.2-7.67-1.37 0 0-2.66-.86-2.08-5.34 0 0-1.72-13.01 13.63-28.86z"
-            opacity="0.3"
-          ></path>
-          <ellipse
-            cx="421.48"
-            cy="487.72"
-            fill="#fff"
-            rx="2.5"
-            ry="1.5"
-          ></ellipse>
-          <ellipse
-            cx="424.54"
-            cy="492.22"
-            fill="#fff"
-            rx="1.67"
-            ry="1"
-          ></ellipse>
           <m.g
             className="block"
             initial={{ y: 0 }}
@@ -2015,56 +2097,76 @@ export default function HeroIllustrationMobile({ className }) {
               d="M173.98 493.99v-27.78h10v27.78c0 .22-10 0-10 0z"
             ></path>
           </m.g>
-          <path
-            fill="none"
-            stroke="#fff"
-            strokeMiterlimit="10"
-            d="M452.49 672.22L452.49 667.12 446.17 667.12"
-          ></path>
-          <circle cx="445.21" cy="667.02" r="1.73" fill="#0ff"></circle>
-          <path
-            fill="none"
-            stroke="#fff"
-            strokeMiterlimit="10"
-            d="M468.98 675.72L477.71 675.72 477.71 681.67"
-          ></path>
-          <circle cx="477.95" cy="681.82" r="2.21" fill="#0ff"></circle>
-          <path
-            fill="none"
-            stroke="#fff"
-            strokeMiterlimit="10"
-            d="M469.76 690.86L475.73 690.86"
-          ></path>
-          <circle cx="477.78" cy="691.25" r="2.21" fill="#0ff"></circle>
-          <path
-            fill="none"
-            stroke="#fff"
-            strokeMiterlimit="10"
-            d="M463.4 695L463.4 703.39 457.44 703.39"
-          ></path>
-          <circle cx="457.29" cy="703.62" r="2.21" fill="#0ff"></circle>
-          <path
-            fill="none"
-            stroke="#fff"
-            strokeMiterlimit="10"
-            d="M448.25 695.44L448.25 701.41"
-          ></path>
-          <circle cx="447.87" cy="703.45" r="2.21" fill="#0ff"></circle>
-          <path
-            fill="none"
-            stroke="#fff"
-            strokeMiterlimit="10"
-            d="M441.12 677.09L432.38 677.09 432.38 683.04"
-          ></path>
-          <circle cx="432.15" cy="683.19" r="2.21" fill="#0ff"></circle>
-          <path
-            fill="none"
-            stroke="#fff"
-            strokeMiterlimit="10"
-            d="M440.89 691.33L435.98 691.33"
-          ></path>
-          <circle cx="434.3" cy="691.64" r="1.82" fill="#0ff"></circle>
-          <circle cx="467.63" cy="664.52" r="1.85" fill="#0ff"></circle>
+          <m.g
+            className="block"
+            initial={{ y: 0 }}
+            animate={{ y: -10 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 2,
+              repeat: Infinity,
+              delay: 4,
+              repeatType: "reverse",
+            }}
+          >
+            <path
+              fill="#e24f27"
+              d="M411.98 454.22H456.98V499.22H411.98z"
+            ></path>
+            <g fill="#fff">
+              <path d="M416.43 463.54c-.21-.49-.31-1.06-.31-1.74s.1-1.26.31-1.74.5-.85.89-1.12c.39-.26.85-.39 1.39-.39s1 .13 1.39.39c.39.26.68.63.89 1.12.21.48.31 1.06.31 1.74s-.1 1.25-.31 1.74-.5.86-.89 1.12-.85.39-1.39.39-1-.13-1.39-.39c-.39-.26-.68-.63-.89-1.12zm3.78-1.74c0-.72-.13-1.28-.4-1.69-.27-.41-.63-.61-1.1-.61s-.83.2-1.1.61c-.27.4-.4.97-.4 1.69s.13 1.28.4 1.69c.27.4.63.61 1.1.61s.84-.2 1.1-.61c.27-.41.4-.97.4-1.69zM426.18 464.15c-.2.28-.47.5-.81.66-.35.16-.76.24-1.22.24a5.177 5.177 0 01-1.68-.3c-.26-.09-.48-.2-.66-.31l.45-.79c.23.14.5.25.82.34.32.09.63.13.95.13.43 0 .76-.09 1-.26s.37-.42.37-.73-.12-.53-.36-.68c-.24-.16-.59-.23-1.04-.23h-.57a.551.551 0 01-.09-.23.93.93 0 01-.04-.27c0-.31.19-.47.57-.47h.18c.4 0 .71-.08.93-.25.22-.17.34-.39.34-.66s-.12-.51-.35-.67c-.23-.16-.52-.23-.88-.23s-.69.07-.97.22-.46.33-.55.54c-.16-.02-.29-.09-.4-.19s-.16-.23-.16-.38c0-.07.01-.15.04-.23s.08-.16.15-.24c.17-.19.44-.34.79-.45.35-.11.73-.17 1.13-.17.46 0 .86.07 1.2.22s.6.34.78.59.27.54.27.87-.09.61-.27.87c-.18.25-.43.46-.75.61.35.11.63.3.83.55.2.25.3.57.3.93s-.1.69-.29.97z"></path>
+            </g>
+            <path
+              fill="#c24427"
+              d="M413.98 489.22l5 9.72 38 .28v-27.07l-8.44-13.07s-5.35 3.26-3.46 10.2c0 0 2.94 9.94 1.92 16.94 0 0 1.54 7.81-10.24 6.91l-22.78-3.91z"
+            ></path>
+            <ellipse
+              cx="433.98"
+              cy="489.22"
+              fill="#0ff"
+              rx="20"
+              ry="7.64"
+            ></ellipse>
+            <m.g
+              className="tail"
+              animate={{
+                rotate: [0, -10, 0, 10, 0],
+                transition: {
+                  duration: 1.5,
+                  ease: "easeInOut",
+                  repeat: "reverse",
+                  repeatType: Infinity,
+                  repeatDelay: 10,
+                  origin: "bottom",
+                },
+              }}
+            >
+              <path
+                fill="#ff3ffd"
+                d="M443.46 492.19a5.595 5.595 0 003.44-4.61c.4-3.9-.06-11.42-1.82-18.3-2.75-10.76 9.19-13.54 13.37-11.82 4.18 1.72-.46-6.51-6.7-3.05-6.25 3.47-7.29-8.6-8.37-8.9-.6-.16-1.06 3.19-1.36 6.25s-1.48 5.63-3.46 7.78c-4.29 4.67-11.55 14.65-11.6 28.73 0 1.77 1.17 3.33 2.89 3.77 3.42.88 9.29 1.91 13.62.15z"
+              ></path>
+              <path
+                fill="#98499b"
+                d="M440.64 457.56s-18.65 20.15-3.88 35.57c0 0-4.54-.2-7.67-1.37 0 0-2.66-.86-2.08-5.34 0 0-1.72-13.01 13.63-28.86z"
+                opacity="0.3"
+              ></path>
+            </m.g>
+            <ellipse
+              cx="421.48"
+              cy="487.72"
+              fill="#fff"
+              rx="2.5"
+              ry="1.5"
+            ></ellipse>
+            <ellipse
+              cx="424.54"
+              cy="492.22"
+              fill="#fff"
+              rx="1.67"
+              ry="1"
+            ></ellipse>
+          </m.g>
+
           <path
             fill="#e24f27"
             d="M417.48 133.72H425.48V136.72H417.48z"
@@ -2090,7 +2192,20 @@ export default function HeroIllustrationMobile({ className }) {
             d="M214.48 102.72H222.48V105.72H214.48z"
             transform="rotate(-90 218.475 104.215)"
           ></path>
-          <path fill="#e24f27" d="M412.35 838.2H429.98V855.83H412.35z"></path>
+          <m.path
+            className="block"
+            initial={{ y: 0 }}
+            animate={{ y: -10 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 3,
+              repeat: Infinity,
+              delay: 1.5,
+              repeatType: "reverse",
+            }}
+            fill="#e24f27"
+            d="M412.35 838.2H429.98V855.83H412.35z"
+          ></m.path>
           <path
             fill="none"
             stroke="#e24f27"
@@ -2109,22 +2224,42 @@ export default function HeroIllustrationMobile({ className }) {
             d="M422.98 133.59h82.65c9.68 0 17.53 7.85 17.53 17.53v73.46"
           ></path>
           <path fill="#e24f27" d="M519.16 223.08H527.16V227H519.16z"></path>
-          <path
-            fill="#fff"
-            d="M181.98 922.61L158.88 965.22 204.98 965.48 181.98 922.61z"
-          ></path>
-          <path
-            fill="#f4ff15"
-            d="M177.02 931.74L186.88 931.74 181.98 922.61 177.02 931.74z"
-          ></path>
-          <path
-            fill="#c24427"
-            d="M158.88 965.22L211 974 210.48 934.72 181.98 922.61 204.98 965.48 158.88 965.22z"
-          ></path>
-          <path
-            fill="#00002a"
-            d="M180.48 951.72L183.48 951.72 184.98 957.67 179.5 957.67 180.48 951.72z"
-          ></path>
+          <m.g
+            className="block"
+            initial={{ y: 0 }}
+            animate={{ y: -10 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 3,
+              repeat: Infinity,
+              delay: 1.5,
+              repeatType: "reverse",
+            }}
+          >
+            <path
+              fill="#e24f27"
+              d="M150.98 914.22H210.98V974.22H150.98z"
+            ></path>
+            <g fill="#fff">
+              <path d="M155.11 924.03c-.21-.49-.31-1.06-.31-1.74s.1-1.26.31-1.74.5-.85.89-1.12c.39-.26.85-.39 1.39-.39s1 .13 1.39.39c.39.26.68.63.89 1.12.21.48.31 1.06.31 1.74s-.1 1.25-.31 1.74-.5.86-.89 1.12c-.39.26-.85.39-1.39.39s-1-.13-1.39-.39c-.39-.26-.68-.63-.89-1.12zm3.78-1.74c0-.72-.13-1.28-.4-1.69-.27-.41-.63-.61-1.1-.61s-.84.2-1.1.61c-.27.4-.4.97-.4 1.69s.13 1.28.4 1.69c.27.4.63.61 1.1.61s.83-.2 1.1-.61c.27-.41.4-.97.4-1.69zM162.68 921.4c.21-.12.47-.18.8-.18.4 0 .75.09 1.07.26s.56.41.75.72c.18.31.27.66.27 1.06a2.232 2.232 0 01-1.16 1.98c-.36.2-.78.3-1.25.3s-.86-.09-1.22-.28c-.36-.19-.65-.45-.86-.78s-.31-.71-.31-1.14c0-.35.08-.72.24-1.09.16-.38.41-.79.76-1.24l1.27-1.66c.16-.2.35-.31.59-.31s.46.09.64.26l-1.58 2.1zm1.46 2.88c.25-.25.38-.57.38-.96s-.12-.72-.38-.96-.58-.37-.99-.37-.73.12-.99.37c-.25.25-.38.57-.38.96s.13.72.38.96c.26.25.58.37.99.37s.74-.12.99-.37z"></path>
+            </g>
+            <path
+              fill="#fff"
+              d="M181.98 922.61L158.88 965.22 204.98 965.48 181.98 922.61z"
+            ></path>
+            <path
+              fill="#f4ff15"
+              d="M177.02 931.74L186.88 931.74 181.98 922.61 177.02 931.74z"
+            ></path>
+            <path
+              fill="#c24427"
+              d="M158.88 965.22L211 974 210.48 934.72 181.98 922.61 204.98 965.48 158.88 965.22z"
+            ></path>
+            <path
+              fill="#00002a"
+              d="M180.48 951.72L183.48 951.72 184.98 957.67 179.5 957.67 180.48 951.72z"
+            ></path>
+          </m.g>
           <path
             fill="none"
             stroke="#e24f27"
@@ -2141,19 +2276,39 @@ export default function HeroIllustrationMobile({ className }) {
             d="M417.48 102.72H425.48V105.72H417.48z"
             transform="rotate(-90 421.475 104.215)"
           ></path>
-          <path fill="#fff" d="M197.48 713.72H214.48V730.72H197.48z"></path>
-          <path
-            fill="#ebe717"
-            d="M197.48 713.72L205.98 722.22 214.48 713.72 197.48 713.72z"
-          ></path>
-          <path
-            fill="#ebe717"
-            d="M205.98 722.22L197.48 730.72 214.48 730.72 205.98 722.22z"
-          ></path>
-          <path
-            fill="#c24427"
-            d="M197.48 730.72L193.69 733.97 218.2 733.97 218.2 709.46 214.48 713.72 214.48 730.72 197.48 730.72z"
-          ></path>
+          <m.g
+            className="block"
+            initial={{ y: 0 }}
+            animate={{ y: -10 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 3,
+              repeat: Infinity,
+              delay: 1.5,
+              repeatType: "reverse",
+            }}
+          >
+            <path
+              fill="#e24f27"
+              stroke="#e24f27"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M193.69 709.46H218.2V733.97H193.69z"
+            ></path>
+            <path fill="#fff" d="M197.48 713.72H214.48V730.72H197.48z"></path>
+            <path
+              fill="#ebe717"
+              d="M197.48 713.72L205.98 722.22 214.48 713.72 197.48 713.72z"
+            ></path>
+            <path
+              fill="#ebe717"
+              d="M205.98 722.22L197.48 730.72 214.48 730.72 205.98 722.22z"
+            ></path>
+            <path
+              fill="#c24427"
+              d="M197.48 730.72L193.69 733.97 218.2 733.97 218.2 709.46 214.48 713.72 214.48 730.72 197.48 730.72z"
+            ></path>
+          </m.g>
           <path
             fill="none"
             stroke="#e24f27"
@@ -2172,21 +2327,40 @@ export default function HeroIllustrationMobile({ className }) {
             transform="rotate(90 127.985 232.215)"
           ></path>
           <path fill="#e24f27" d="M111.98 224.22H119.98V228H111.98z"></path>
-          <path
-            fill="#daa975"
-            d="M502.63 945.57L506.93 931.44 509.81 932.28 505.85 945.71 502.63 945.57z"
-          ></path>
-          <circle cx="509.98" cy="928.16" r="5" fill="#e24f27"></circle>
-          <path
-            fill="#e24f27"
-            d="M493.41 941.27H517.9200000000001V965.78H493.41z"
-          ></path>
-          <path fill="#f4ff15" d="M497.98 946.22H512.98V961.22H497.98z"></path>
-          <path fill="#e24f27" d="M502.98 951.22H507.98V956.22H502.98z"></path>
-          <path
-            fill="#c24427"
-            d="M497.98 961.22L503.97 965.78 517.92 965.78 517.3 949.63 512.98 946.22 512.98 961.22 497.98 961.22z"
-          ></path>
+          <m.g
+            className="block"
+            initial={{ y: 0 }}
+            animate={{ y: -10 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 3,
+              repeat: Infinity,
+              delay: 2.5,
+              repeatType: "reverse",
+            }}
+          >
+            <path
+              fill="#daa975"
+              d="M502.63 945.57L506.93 931.44 509.81 932.28 505.85 945.71 502.63 945.57z"
+            ></path>
+            <circle cx="509.98" cy="928.16" r="5" fill="#e24f27"></circle>
+            <path
+              fill="#e24f27"
+              d="M493.41 941.27H517.9200000000001V965.78H493.41z"
+            ></path>
+            <path
+              fill="#f4ff15"
+              d="M497.98 946.22H512.98V961.22H497.98z"
+            ></path>
+            <path
+              fill="#e24f27"
+              d="M502.98 951.22H507.98V956.22H502.98z"
+            ></path>
+            <path
+              fill="#c24427"
+              d="M497.98 961.22L503.97 965.78 517.92 965.78 517.3 949.63 512.98 946.22 512.98 961.22 497.98 961.22z"
+            ></path>
+          </m.g>
           <ellipse
             cx="343.48"
             cy="784.97"
@@ -2360,18 +2534,41 @@ export default function HeroIllustrationMobile({ className }) {
             strokeMiterlimit="10"
             d="M146.22 637.28H156.39V650.01H146.22z"
           ></path>
-          <ellipse
+          <m.ellipse
+            initial={{
+              opacity: 1,
+            }}
+            animate={{
+              opacity: 0,
+              transition: {
+                duration: 5,
+                ease: "easeInOut",
+              },
+            }}
             cx="530.5"
             cy="469.5"
             fill="#00e95c"
             rx="3.5"
             ry="10.5"
             transform="rotate(-75.42 530.492 469.5)"
-          ></ellipse>
-          <path
+          ></m.ellipse>
+          <m.path
+            className="bubble"
+            initial={{
+              y: 10,
+              opacity: 1,
+            }}
+            animate={{
+              y: -10,
+              opacity: 0,
+              transition: {
+                duration: 15,
+                ease: "easeInOut",
+              },
+            }}
             fill="#fff"
             d="M538.81 471.59c1.18-4.54-1.54-9.18-6.09-10.37s-9.18 1.54-10.37 6.09a23.89 23.89 0 0014.77 4.35l1.69-.07z"
-          ></path>
+          ></m.path>
           <circle
             cx="546"
             cy="353.5"
@@ -3922,110 +4119,126 @@ export default function HeroIllustrationMobile({ className }) {
             d="M316.14 657.05H323.64V692.05H316.14z"
             transform="rotate(-90 319.89 674.55)"
           ></path>
-          <path
-            fill="#ffb031"
-            d="M333.3 562.89s-9.32-34.48-2.49-36.39c0 0 8.98-1.96 5.69 36.01l-3.2.38z"
-          ></path>
-          <circle cx="319.5" cy="587.77" r="33.73" fill="#ffb031"></circle>
-          <circle cx="312.62" cy="583.47" r="8.95" fill="#fff"></circle>
-          <circle cx="334.95" cy="582.51" r="8.95" fill="#fff"></circle>
-          <path
-            fill="#dd5b12"
-            stroke="#dd5b12"
-            strokeMiterlimit="10"
-            d="M297.9 580.96a34 34 0 016.94-23.55c-12.03 5.94-19.85 18.9-18.68 33.19 1.52 18.57 17.62 32.34 35.97 30.76 9.66-.83 18.01-5.76 23.54-12.94a33.04 33.04 0 01-11.8 3.3c-18.35 1.58-34.46-12.19-35.97-30.76z"
-            opacity="0.56"
-          ></path>
-          <path
-            fill="#ffb031"
-            d="M312.75 559.95c-31.31-18.43-33.41-9.76-33.41-9.76-.99 5.46 20.28 10.75 29.57 12.78"
-          ></path>
-          <path
-            fill="#00002a"
-            stroke="#00002a"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="0.3"
-            d="M284.15 555.28s-5.37-5.03 1.3-7.13c0 0-6.83-.57-6.01 3.1 0 0 .74 2.23 4.71 4.03zM328.34 533.05s2.18-7.03 6.98-1.95c0 0-2.47-6.39-5.41-4.05 0 0-1.69 1.64-1.57 5.99z"
-          ></path>
-          <path
-            fill="#dd5b12"
-            d="M328.34 533.05l2.96 8.36c1.16 5 4.96 13.97 5.19 16.84s-1.81-.76-1.81-.76l-6.34-24.44z"
-            opacity="0.56"
-          ></path>
-          <path
-            fill="#ffb031"
-            d="M311.39 560.07c-12.58-8.73-29.09-21.61-25.85-27.14 0 0 7-10.33 38.67 28.01"
-          ></path>
-          <path
-            fill="#dd5b12"
-            d="M306.64 542.27l-.47-.41a90.48 90.48 0 00-11.42-8.44l26.49 25.63c.08.08.21-.04.13-.13l-14.72-16.66z"
-            opacity="0.56"
-          ></path>
-          <path
-            fill="#ffb031"
-            d="M323.85 561.21c-8.34-8.71-32.76-35.26-26.73-41.37 0 0 9.93-8.96 33.2 41.36"
-          ></path>
-          <path
-            fill="#00002a"
-            stroke="#00002a"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="0.3"
-            d="M298.73 529.9s-2.32-10.45 7.41-7.5c0 0-7.74-6.29-9.76-1.2 0 0-.95 3.29 2.35 8.7z"
-          ></path>
-          <path
-            fill="#dd5b12"
-            d="M316.3 535.23a53.638 53.638 0 00-8.94-11.81l-1.49-1.49 21.03 37.55c.09.16.33.04.25-.13l-10.85-24.12z"
-            opacity="0.56"
-          ></path>
-          <path
-            fill="#00002a"
-            stroke="#00002a"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="0.3"
-            d="M294.57 533.26s-14.42-5.89-7.54 6.1l1.51 1.92s-1.92-3.63.07-6.36c1.08-1.24 2.9-2.13 5.97-1.66z"
-          ></path>
-          <path
-            fill="#ffb031"
-            d="M329.15 562.47c-6.07-11.47-21.32-41.98-14.07-46.12 0 0 11.79-5.86 20.59 47.54"
-          ></path>
-          <path
-            fill="#00002a"
-            stroke="#00002a"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="0.3"
-            d="M313.64 526.21s.91-10.67 9.31-4.94c0 0-5.5-8.31-8.95-4.06 0 0-1.89 2.85-.36 9z"
-          ></path>
-          <path
-            fill="#00002a"
-            d="M332.52 573.85c-2.13 1.72-3.38 5.28-3.09 8.21.46 4.61 4.57 7.98 9.18 7.52.43-.04.85-.13 1.26-.23a8.397 8.397 0 01-4.44 1.82c-4.61.46-8.2-2.99-9.18-7.52-.89-4.09 2.32-8.79 6.26-9.8zM312.85 589.28c-4.84-1.67-7.34-6.73-5.58-11.3.39-1 .95-1.89 1.64-2.66-2.25.94-4.1 2.7-5.01 5.05-1.76 4.58.73 9.64 5.58 11.3 3.79 1.3 7.87.14 10.33-2.61-2.13.89-4.6 1.03-6.95.22z"
-            opacity="0.08"
-          ></path>
-          <circle cx="335.36" cy="585.13" r="5.17" fill="#00002a"></circle>
-          <circle cx="331.14" cy="583.53" r="2.55" fill="#fff"></circle>
-          <path
-            fill="#f4ff15"
-            d="M326.73 592.07c3.06-.4 6.81-2.04 7.88-.28.83 1.37 1.55 3.87-2.7 6-2.48 1.24-5.28 1.66-8.03 1.27l-2.6-.37c-7.34-1.23-6.88-3.99-6.17-5.37.32-.63 1.11-.76 2.08-.7 3.19.2 6.39.02 9.54-.56z"
-          ></path>
-          <path
-            fill="none"
-            stroke="#db832c"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M318.42 595.47s8.53 1.96 13.68-.9"
-          ></path>
-          <circle cx="314.16" cy="586.87" r="4.87" fill="#00002a"></circle>
-          <circle cx="309.63" cy="585.01" r="2.4" fill="#fff"></circle>
-          <path
-            fill="#ffb031"
-            stroke="#db832c"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M304.4 588.61s11.52 1.59 12.6 11.04M344.88 587.18s-10.73 2.55-11.45 11.47"
-          ></path>
+          <m.g
+            className="bird"
+            initial={{ scale: 1 }}
+            animate={{
+              scale: [1.2, 0.8, 1],
+              transition: {
+                duration: 3,
+                bounce: 0.8,
+                type: "spring",
+                repeat: "reverse",
+                repeatType: Infinity,
+                repeatDelay: 6,
+              },
+            }}
+          >
+            <path
+              fill="#ffb031"
+              d="M333.3 562.89s-9.32-34.48-2.49-36.39c0 0 8.98-1.96 5.69 36.01l-3.2.38z"
+            ></path>
+            <circle cx="319.5" cy="587.77" r="33.73" fill="#ffb031"></circle>
+            <circle cx="312.62" cy="583.47" r="8.95" fill="#fff"></circle>
+            <circle cx="334.95" cy="582.51" r="8.95" fill="#fff"></circle>
+            <path
+              fill="#dd5b12"
+              stroke="#dd5b12"
+              strokeMiterlimit="10"
+              d="M297.9 580.96a34 34 0 016.94-23.55c-12.03 5.94-19.85 18.9-18.68 33.19 1.52 18.57 17.62 32.34 35.97 30.76 9.66-.83 18.01-5.76 23.54-12.94a33.04 33.04 0 01-11.8 3.3c-18.35 1.58-34.46-12.19-35.97-30.76z"
+              opacity="0.56"
+            ></path>
+            <path
+              fill="#ffb031"
+              d="M312.75 559.95c-31.31-18.43-33.41-9.76-33.41-9.76-.99 5.46 20.28 10.75 29.57 12.78"
+            ></path>
+            <path
+              fill="#00002a"
+              stroke="#00002a"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="0.3"
+              d="M284.15 555.28s-5.37-5.03 1.3-7.13c0 0-6.83-.57-6.01 3.1 0 0 .74 2.23 4.71 4.03zM328.34 533.05s2.18-7.03 6.98-1.95c0 0-2.47-6.39-5.41-4.05 0 0-1.69 1.64-1.57 5.99z"
+            ></path>
+            <path
+              fill="#dd5b12"
+              d="M328.34 533.05l2.96 8.36c1.16 5 4.96 13.97 5.19 16.84s-1.81-.76-1.81-.76l-6.34-24.44z"
+              opacity="0.56"
+            ></path>
+            <path
+              fill="#ffb031"
+              d="M311.39 560.07c-12.58-8.73-29.09-21.61-25.85-27.14 0 0 7-10.33 38.67 28.01"
+            ></path>
+            <path
+              fill="#dd5b12"
+              d="M306.64 542.27l-.47-.41a90.48 90.48 0 00-11.42-8.44l26.49 25.63c.08.08.21-.04.13-.13l-14.72-16.66z"
+              opacity="0.56"
+            ></path>
+            <path
+              fill="#ffb031"
+              d="M323.85 561.21c-8.34-8.71-32.76-35.26-26.73-41.37 0 0 9.93-8.96 33.2 41.36"
+            ></path>
+            <path
+              fill="#00002a"
+              stroke="#00002a"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="0.3"
+              d="M298.73 529.9s-2.32-10.45 7.41-7.5c0 0-7.74-6.29-9.76-1.2 0 0-.95 3.29 2.35 8.7z"
+            ></path>
+            <path
+              fill="#dd5b12"
+              d="M316.3 535.23a53.638 53.638 0 00-8.94-11.81l-1.49-1.49 21.03 37.55c.09.16.33.04.25-.13l-10.85-24.12z"
+              opacity="0.56"
+            ></path>
+            <path
+              fill="#00002a"
+              stroke="#00002a"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="0.3"
+              d="M294.57 533.26s-14.42-5.89-7.54 6.1l1.51 1.92s-1.92-3.63.07-6.36c1.08-1.24 2.9-2.13 5.97-1.66z"
+            ></path>
+            <path
+              fill="#ffb031"
+              d="M329.15 562.47c-6.07-11.47-21.32-41.98-14.07-46.12 0 0 11.79-5.86 20.59 47.54"
+            ></path>
+            <path
+              fill="#00002a"
+              stroke="#00002a"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="0.3"
+              d="M313.64 526.21s.91-10.67 9.31-4.94c0 0-5.5-8.31-8.95-4.06 0 0-1.89 2.85-.36 9z"
+            ></path>
+            <path
+              fill="#00002a"
+              d="M332.52 573.85c-2.13 1.72-3.38 5.28-3.09 8.21.46 4.61 4.57 7.98 9.18 7.52.43-.04.85-.13 1.26-.23a8.397 8.397 0 01-4.44 1.82c-4.61.46-8.2-2.99-9.18-7.52-.89-4.09 2.32-8.79 6.26-9.8zM312.85 589.28c-4.84-1.67-7.34-6.73-5.58-11.3.39-1 .95-1.89 1.64-2.66-2.25.94-4.1 2.7-5.01 5.05-1.76 4.58.73 9.64 5.58 11.3 3.79 1.3 7.87.14 10.33-2.61-2.13.89-4.6 1.03-6.95.22z"
+              opacity="0.08"
+            ></path>
+            <circle cx="335.36" cy="585.13" r="5.17" fill="#00002a"></circle>
+            <circle cx="331.14" cy="583.53" r="2.55" fill="#fff"></circle>
+            <path
+              fill="#f4ff15"
+              d="M326.73 592.07c3.06-.4 6.81-2.04 7.88-.28.83 1.37 1.55 3.87-2.7 6-2.48 1.24-5.28 1.66-8.03 1.27l-2.6-.37c-7.34-1.23-6.88-3.99-6.17-5.37.32-.63 1.11-.76 2.08-.7 3.19.2 6.39.02 9.54-.56z"
+            ></path>
+            <path
+              fill="none"
+              stroke="#db832c"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M318.42 595.47s8.53 1.96 13.68-.9"
+            ></path>
+            <circle cx="314.16" cy="586.87" r="4.87" fill="#00002a"></circle>
+            <circle cx="309.63" cy="585.01" r="2.4" fill="#fff"></circle>
+            <path
+              fill="#ffb031"
+              stroke="#db832c"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M304.4 588.61s11.52 1.59 12.6 11.04M344.88 587.18s-10.73 2.55-11.45 11.47"
+            ></path>
+          </m.g>
           <path
             fill="#fff"
             d="M256.68 511.09H382.68V635.5899999999999H256.68z"
@@ -4119,25 +4332,105 @@ export default function HeroIllustrationMobile({ className }) {
             d="M382.57 529.49L394.94 518.79 395.07 507.31 382.57 518.4 382.57 529.49z"
             opacity="0.16"
           ></path>
-          <path
-            fill="#fff"
-            d="M468.98 695.14L440.98 695.14 440.98 672.29 448.48 672.29 468.98 672.29 468.98 695.14z"
-          ></path>
-          <path fill="#ebe717" d="M447.98 678H461.98V689.42H447.98z"></path>
-          <path
-            fill="#ff5933"
-            stroke="#ff5933"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M461.98 678L468.98 672.29 468.98 695.14 461.98 689.43 461.98 678z"
-          ></path>
-          <path
-            fill="#ff5933"
-            stroke="#ff5933"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M440.98 695.14L447.98 689.43 447.98 678 440.98 672.29 440.98 695.14z"
-          ></path>
+          <m.g
+            className="block"
+            initial={{ y: 0 }}
+            animate={{ y: -10 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 2,
+              repeat: Infinity,
+              delay: 4,
+              repeatType: "reverse",
+            }}
+          >
+            <path
+              fill="#e24f27"
+              d="M424.74 653.53H484.74V713.53H424.74z"
+            ></path>
+            <path
+              fill="#c24427"
+              d="M448.48 672.29L448.48 695.14 448.48 703.72 456.02 703.45 463.83 713.53 484.74 713.53 484.56 675.72 472.09 664.52 469.03 664.52 456.91 664.89 456.87 672.34 448.48 672.29"
+            ></path>
+            <g fill="#fff">
+              <path d="M428.88 663.34c-.21-.49-.31-1.07-.31-1.74s.1-1.26.31-1.74.5-.86.89-1.12.85-.39 1.39-.39 1 .13 1.39.39c.39.26.68.63.89 1.12s.31 1.06.31 1.74-.1 1.25-.31 1.74-.5.86-.89 1.12c-.39.26-.85.39-1.39.39s-1-.13-1.39-.39c-.39-.26-.68-.63-.89-1.12zm3.79-1.74c0-.72-.13-1.28-.4-1.69-.27-.41-.63-.61-1.1-.61s-.84.2-1.1.61c-.27.41-.4.97-.4 1.69s.13 1.28.4 1.69c.27.41.63.61 1.1.61s.83-.2 1.1-.61c.27-.41.4-.97.4-1.69zM434.77 659.13c.02-.41.24-.61.66-.61h2.66c.35 0 .53.15.53.46 0 .17-.04.34-.14.49h-2.76l-.05 1.47c.14-.02.29-.03.46-.04.17-.01.33-.02.46-.02.72 0 1.28.17 1.69.51s.61.81.61 1.41c0 .43-.1.79-.3 1.1-.2.31-.48.55-.85.71-.37.17-.8.25-1.29.25-.26 0-.54-.02-.82-.07-.28-.05-.54-.11-.78-.19s-.42-.16-.56-.25l.4-.8c.23.12.49.22.77.29.29.07.58.11.86.11.46 0 .82-.09 1.08-.28.26-.19.39-.45.39-.8s-.14-.63-.42-.82c-.28-.19-.69-.29-1.22-.29-.24 0-.5.02-.79.05-.29.04-.52.08-.72.14l.11-2.82z"></path>
+            </g>
+            <path
+              fill="none"
+              stroke="#fff"
+              strokeMiterlimit="10"
+              d="M456.87 672.34L456.91 664.89 465.55 664.89"
+            ></path>
+            <path
+              fill="#fff"
+              d="M468.98 695.14L440.98 695.14 440.98 672.29 448.48 672.29 468.98 672.29 468.98 695.14z"
+            ></path>
+            <path fill="#ebe717" d="M447.98 678H461.98V689.42H447.98z"></path>
+            <path
+              fill="#ff5933"
+              stroke="#ff5933"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M461.98 678L468.98 672.29 468.98 695.14 461.98 689.43 461.98 678z"
+            ></path>
+            <path
+              fill="#ff5933"
+              stroke="#ff5933"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M440.98 695.14L447.98 689.43 447.98 678 440.98 672.29 440.98 695.14z"
+            ></path>
+            <path
+              fill="none"
+              stroke="#fff"
+              strokeMiterlimit="10"
+              d="M452.49 672.22L452.49 667.12 446.17 667.12"
+            ></path>
+            <circle cx="445.21" cy="667.02" r="1.73" fill="#0ff"></circle>
+            <path
+              fill="none"
+              stroke="#fff"
+              strokeMiterlimit="10"
+              d="M468.98 675.72L477.71 675.72 477.71 681.67"
+            ></path>
+            <circle cx="477.95" cy="681.82" r="2.21" fill="#0ff"></circle>
+            <path
+              fill="none"
+              stroke="#fff"
+              strokeMiterlimit="10"
+              d="M469.76 690.86L475.73 690.86"
+            ></path>
+            <circle cx="477.78" cy="691.25" r="2.21" fill="#0ff"></circle>
+            <path
+              fill="none"
+              stroke="#fff"
+              strokeMiterlimit="10"
+              d="M463.4 695L463.4 703.39 457.44 703.39"
+            ></path>
+            <circle cx="457.29" cy="703.62" r="2.21" fill="#0ff"></circle>
+            <path
+              fill="none"
+              stroke="#fff"
+              strokeMiterlimit="10"
+              d="M448.25 695.44L448.25 701.41"
+            ></path>
+            <circle cx="447.87" cy="703.45" r="2.21" fill="#0ff"></circle>
+            <path
+              fill="none"
+              stroke="#fff"
+              strokeMiterlimit="10"
+              d="M441.12 677.09L432.38 677.09 432.38 683.04"
+            ></path>
+            <circle cx="432.15" cy="683.19" r="2.21" fill="#0ff"></circle>
+            <path
+              fill="none"
+              stroke="#fff"
+              strokeMiterlimit="10"
+              d="M440.89 691.33L435.98 691.33"
+            ></path>
+            <circle cx="434.3" cy="691.64" r="1.82" fill="#0ff"></circle>
+            <circle cx="467.63" cy="664.52" r="1.85" fill="#0ff"></circle>
+          </m.g>
           <path
             fill="#00002a"
             d="M303.62 769.48c-5.75-2.09-8.71-8.44-6.62-14.19.4-1.09.94-2.07 1.61-2.94a11.042 11.042 0 00-3.61 4.94c-2.09 5.75.87 12.1 6.62 14.19 4.66 1.7 9.72.07 12.58-3.68-2.91 2.26-6.87 3.03-10.58 1.68z"
@@ -4195,9 +4488,21 @@ export default function HeroIllustrationMobile({ className }) {
             d="M304.69 736.34s6.31 3.26 12.6-.15c2.63-1.42 5.41-2.53 8.36-3.02s6.53-.88 7.81-.31c0 0-14.08-7.18-28.77 3.47z"
             opacity="0.11"
           ></path>
-          <g fill="#c290c0">
+          <m.g
+            className="fish-fin"
+            initial={{ rotateZ: 0, originX: 0, originY: 0 }}
+            animate={{
+              rotateZ: [0, -10, 10, -10, 0],
+            }}
+            transition={{
+              repeat: Infinity,
+              ease: "linear",
+              duration: 6,
+            }}
+            fill="#c290c0"
+          >
             <path d="M330.58 720.55c-3.74-2.27-8.26-2.91-12.47-1.73-3.12.88-6.79 2.62-10.55 5.98 0 0-4.83 4.68-8.3 9.52-.69.96 0 2.29 1.19 2.27 3.2-.05 8.68-.45 13.05-2.33 4-1.72 8.27-2.76 12.63-2.89.68-.02 1.38-.03 2.09-.03 2.2 0 4.39.18 6.57.46 1.86.24 5.43.42 6.82-1.4 0 0 3.26-1.94-2.86-4.91l-8.16-4.94zM299.13 735.46s17.36-18.54 32.98-9.31"></path>
-          </g>
+          </m.g>
           <path
             fill="#fff"
             d="M255.6 698.48H381.6V822.98H255.6z"
@@ -4306,13 +4611,6 @@ export default function HeroIllustrationMobile({ className }) {
             strokeLinejoin="round"
             d="M205.62 752s.04 9.34 0 19M213.04 751.51s.04 9.46 0 19.25M424.1 751.25s.04 9.34 0 19M431.52 750.75s.04 9.46 0 19.25M154.11 565.62s.04 9.34 0 19M161.53 565.12s.04 9.46 0 19.25M467.91 565s.02 9.48 0 19.3M475.32 564.81s.04 9.46 0 19.25M457.47 822.5s9.48-.02 19.3 0M458.27 815.09s9.46-.04 19.25 0M549.99 920.33s9.48-.02 19.3 0M550.8 912.92s9.46-.04 19.25 0M68.97 918.52s9.48-.02 19.3 0M69 911.11s9.33-.09 19 0"
           ></path>
-          <circle
-            cx="314.22"
-            cy="1208.43"
-            r="1.34"
-            fill="#fff"
-            transform="rotate(-87.34 314.247 1208.445)"
-          ></circle>
           <path
             fill="#be8f63"
             d="M258.98 1028.96L258.98 928.96 378.98 928.96 378.49 1028.96 258.98 1028.96z"

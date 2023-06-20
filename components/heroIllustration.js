@@ -2026,7 +2026,6 @@ export default function HeroIllustration({ className }) {
         animate={{ y: 20 }}
         transition={{
           duration: 4,
-
           ease: "easeInOut",
           repeat: Infinity,
           repeatType: "reverse",
@@ -2992,7 +2991,6 @@ export default function HeroIllustration({ className }) {
         transition={{
           duration: 2,
           delay: 0.5,
-
           ease: "easeInOut",
         }}
         d="M1131.56 57.3695C1131.5 57.4042 1131.42 57.4137 1131.35 57.3963C1131.28 57.3789 1131.22 57.3358 1131.18 57.2754C1131.14 57.2151 1131.12 57.1419 1131.13 57.0703C1131.15 56.9987 1131.18 56.9338 1131.24 56.8885C1137.12 52.2145 1152.01 40.9625 1154.15 45.0445C1155.22 47.0875 1154.61 47.9725 1153.49 48.3005C1147.17 50.0284 1141.05 52.4078 1135.22 55.4005L1131.56 57.3695Z"

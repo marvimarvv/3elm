@@ -64,7 +64,7 @@ export default function InfiniteLoopSlider() {
   );
 
   return (
-    <div className="tag-list flex flex-col overflow-hidden bg-darkorange py-4 font-cohead text-black rtl:flex-row-reverse">
+    <div className="tag-list flex flex-col overflow-hidden bg-darkorange py-4 font-cohead text-white rtl:flex-row-reverse">
       {[...new Array(ROWS)].map((_, i) => (
         <InfiniteLoopSlider
           key={i}

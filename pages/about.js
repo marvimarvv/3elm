@@ -89,7 +89,7 @@ export default function About() {
   }, [isInViewFirst, isInViewSecond, isInViewThird, isInViewFourth]);
 
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>{siteTitle}</title>
       </Head>
@@ -118,7 +118,7 @@ export default function About() {
       <CircleScrollAnimation className="relative mb-40 grid h-screen place-items-center overflow-y-clip md:-mx-8" />
       <div ref={scopeSecond}>
         <section className="stagger border-image-perforation mb-40 grid grid-cols-1 gap-10 bg-brightorange px-[2vh] py-16 sm:-mx-8 md:grid-cols-3">
-          <div class="md:col-span-2 md:pl-6">
+          <div className="md:col-span-2 md:pl-6">
             <h2 className="stagger mb-2 font-cohead text-fluid-l font-bold">
               {t("about.story title")}
             </h2>
@@ -162,7 +162,7 @@ export default function About() {
           </div>
           <span className="stagger text-cyan">{t("about.brains title 2")}</span>
         </h2>
-        <div class="flex max-w-6xl flex-col items-center gap-y-10 lg:flex-row lg:flex-wrap">
+        <div className="flex max-w-6xl flex-col items-center gap-y-10 lg:flex-row lg:flex-wrap">
           <div className="lg:align hover-card relative shrink-0 basis-1/3 self-start lg:self-center">
             <Kiro className="hover-card__side hover-card__side--front origin-center lg:px-4" />
             <KiroBack className="hover-card__side hover-card__side--back absolute inset-0 flex origin-center flex-col items-center lg:px-4 lg:px-4"></KiroBack>

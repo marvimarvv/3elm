@@ -38,7 +38,13 @@ export default function Layout({ children, home }) {
       <header>
         <Nav pageContent={pageContent}></Nav>
       </header>
-      <main className="relative z-0 mt-[max(20px,4vw)] sm:p-8">{children}</main>
+      <main
+        className={`relative z-0 mt-[max(20px,4vw)] sm:p-8 ${
+          home ? "sm:pb-0" : ""
+        }`}
+      >
+        {children}
+      </main>
       <Footer></Footer>
     </m.div>
   );

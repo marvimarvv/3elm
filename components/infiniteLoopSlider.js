@@ -74,7 +74,7 @@ export default function InfiniteLoopSlider() {
           {shuffle(TAGS)
             .slice(0, TAGS_PER_ROW)
             .map((tag) => (
-              <Tag text={tag} key={tag} />
+              <Tag text={tag} key={i} />
             ))}
         </InfiniteLoopSlider>
       ))}

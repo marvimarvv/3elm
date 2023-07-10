@@ -33,6 +33,7 @@ export default function HeroContact({ className }) {
     ["0deg", "5.5deg"]
   );
 
+  // TODO: Remove
   console.log(reflectionsRotation);
 
   return (

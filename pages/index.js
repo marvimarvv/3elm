@@ -10,6 +10,7 @@ import Head from "next/head";
 import HeartIcon from "../components/heartIcon";
 import HeroIllustration from "../components/heroIllustration";
 import HeroIllustrationMobile from "../components/heroIllustrationMobile";
+import HoverCardDesignBack from "../components/hoverCardDesignBack";
 import InstagramIcon from "../components/instagramIcon";
 import LikeIcon from "../components/likeIcon";
 import LinkedinIcon from "../components/linkedinIcon";
@@ -202,15 +203,18 @@ export default function Home() {
             </figgroup>
           </div>
           <div className="hover-card__side hover-card__side--back clip-path-corner--left absolute inset-0 flex items-center justify-center bg-orange p-4">
-            <ul
-              role="list"
-              className="flex h-full list-disc flex-col justify-evenly p-8 marker:text-deepblue"
-            >
-              <li>{t("home.card 1 point 1")}</li>
-              <li>{t("home.card 1 point 2")}</li>
-              <li>{t("home.card 1 point 3")}</li>
-              <li>{t("home.card 1 point 4")}</li>
-              <li>{t("home.card 1 point 5")}</li>
+            <ul role="list" className="flex h-full flex-col justify-evenly">
+              <li className="rotate-12 text-4xl">{t("home.card 1 point 1")}</li>
+              <li className="-ml-5 -rotate-6 text-lg">
+                {t("home.card 1 point 2")}
+              </li>
+              <li className="ml-8 -rotate-6 text-4xl">
+                {t("home.card 1 point 3")}
+              </li>
+              <li className="text-2xl">{t("home.card 1 point 4")}</li>
+              <li className="rotate-[15deg] self-end text-xl">
+                {t("home.card 1 point 5")}
+              </li>
             </ul>
           </div>
         </div>
@@ -227,15 +231,16 @@ export default function Home() {
               </figure>
             </figgroup>
           </div>
-          <div className="hover-card__side hover-card__side--back clip-path-corner--left absolute inset-0 flex h-full items-center justify-center bg-orange p-4">
+          <div className="hover-card__side hover-card__side--back clip-path-corner--left absolute inset-0 h-full items-center justify-center bg-orange p-4">
+            <HoverCardDesignBack className="-mt-8"></HoverCardDesignBack>
             <ul
               role="list"
-              className="flex h-full list-disc flex-col justify-evenly p-8 marker:text-deepblue"
+              className="list-square flex flex-col items-center pt-6 text-center text-sm font-light"
             >
               <li>{t("home.card 2 point 1")}</li>
               <li>{t("home.card 2 point 2")}</li>
               <li>{t("home.card 2 point 3")}</li>
-              <li>{t("home.card 2 point 4")}</li>
+              <li className="list-item-width-80">{t("home.card 2 point 4")}</li>
               <li>{t("home.card 2 point 5")}</li>
             </ul>
           </div>
@@ -377,7 +382,7 @@ export default function Home() {
       https://bugs.chromium.org/p/chromium/issues/detail?id=963246,
       https://github.com/w3c/IntersectionObserver/issues/376#issuecomment-708088219 */}
       <div className="relative">
-        <PipeIllustration className="isolate h-full w-full px-4 pb-20 sm:px-0" />
+        <PipeIllustration className="isolate -mb-[2.5%] h-full w-full px-4 sm:px-0" />
         <RedStarIcon className="absolute top-1/2 right-4 w-[5%]" />
         <YellowBallIcon className="absolute left-4 top-2/3 w-[3%]" />
       </div>

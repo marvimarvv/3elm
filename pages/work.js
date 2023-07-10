@@ -8,7 +8,7 @@ export default function Home() {
   const { t } = useTranslation();
 
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>{siteTitle}</title>
       </Head>

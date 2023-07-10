@@ -51,71 +51,76 @@ export default function PipeIllustration({ className }) {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <path
-        d="M962.1 469.87c13.8 0 25-11.2 25-25s-11.2-25-25-25-25 11.2-25 25 11.2 25 25 25z"
-        fill="#6cff6a"
-      />
-      <path
-        d="M962.1 469.87c13.8 0 25-11.2 25-25s-11.2-25-25-25-25 11.2-25 25 11.2 25 25 25z"
-        fill="#6cff6a"
-      />
-      <path
-        d="M948.2 467.77a6.7 6.7 0 100-13.4 6.7 6.7 0 000 13.4zM964.2 471.27a6.7 6.7 0 100-13.4 6.7 6.7 0 000 13.4z"
-        fill="#fff"
-      />
-      <path
-        d="M948.4 466.67c1.7 0 3.1-1.4 3.1-3.1s-1.4-3.1-3.1-3.1-3.1 1.4-3.1 3.1c0 1.7 1.4 3.1 3.1 3.1zM963.1 469.17c1.7 0 3.1-1.4 3.1-3.1s-1.4-3.1-3.1-3.1-3.1 1.4-3.1 3.1c0 1.8 1.4 3.1 3.1 3.1z"
-        stroke="#fff"
-        strokeMiterlimit={10}
-      />
-      <path
-        d="M962.1 469.87c13.8 0 25-11.2 25-25s-11.2-25-25-25-25 11.2-25 25 11.2 25 25 25z"
-        fill="#6cff6a"
-      />
-      <path
-        d="M962.1 469.87c13.8 0 25-11.2 25-25s-11.2-25-25-25-25 11.2-25 25 11.2 25 25 25z"
-        fill="#6cff6a"
-      />
-      <path
-        d="M948.2 467.77a6.7 6.7 0 100-13.4 6.7 6.7 0 000 13.4zM964.2 471.27a6.7 6.7 0 100-13.4 6.7 6.7 0 000 13.4z"
-        fill="#fff"
-      />
-      <path
-        d="M948.4 466.67c1.7 0 3.1-1.4 3.1-3.1s-1.4-3.1-3.1-3.1-3.1 1.4-3.1 3.1c0 1.7 1.4 3.1 3.1 3.1zM963.1 469.17c1.7 0 3.1-1.4 3.1-3.1s-1.4-3.1-3.1-3.1-3.1 1.4-3.1 3.1c0 1.8 1.4 3.1 3.1 3.1z"
-        stroke="#fff"
-        strokeMiterlimit={10}
-      />
-      <path
-        d="M355.5 696.87c11.7 0 21.3-9.5 21.3-21.3s-9.5-21.3-21.3-21.3-21.3 9.5-21.3 21.3 9.6 21.3 21.3 21.3z"
-        fill="#74dde1"
-      />
-      <path
-        d="M358.4 665.37c2.7 0 5-2.2 5-5s-2.2-5-5-5-5 2.2-5 5 2.2 5 5 5zM346.9 669.37c2.7 0 5-2.2 5-5s-2.2-5-5-5-5 2.2-5 5 2.2 5 5 5z"
-        fill="#fff"
-      />
-      <path
-        d="M357.3 661.27c1.3 0 2.3-1 2.3-2.3s-1-2.3-2.3-2.3-2.3 1-2.3 2.3 1 2.3 2.3 2.3zM346.9 665.27c1.3 0 2.3-1 2.3-2.3s-1-2.3-2.3-2.3-2.3 1-2.3 2.3 1.1 2.3 2.3 2.3z"
-        stroke="#fff"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path d="M357.4 676.47c2.6 0 4.8-2.1 4.8-4.8s-2.1-4.8-4.8-4.8-4.8 2.1-4.8 4.8 2.2 4.8 4.8 4.8z" />
       <m.g
-        initial={{ "--footer-tube-offset-path--left": "5%" }}
         animate={{
-          "--footer-tube-offset-path--left": "100%",
-          opacity: [0, 1, 1, 0],
+          "--footer-tube-offset-path--left": ["0%", "30%", "70%", "93%"],
+          opacity: [0, 1],
+          rotateZ: [0, -360, 360, 720],
         }}
         transition={{
-          times: [0, 0.05, 0.885, 0.89],
-          duration: 16,
-          delay: 0.2,
-          ease: "easeIn",
-          repeat: Infinity,
-          repeatType: "mirror",
+          "--footer-tube-offset-path--left": {
+            ease: ["linear", "linear", "easeOut"],
+            duration: 12,
+            times: [0, 0.2, 0.4, 1],
+            delay: 2,
+          },
+          opacity: {
+            times: [0, 0.1],
+            duration: 12,
+            delay: 2,
+          },
+          rotateZ: {
+            duration: 12,
+            times: [0, 0.25, 0.4, 1],
+            ease: ["linear", "linear", "easeOut"],
+            delay: 2,
+          },
         }}
         className="footer-tube-offset-path--left"
-        transform="translate(0,0)"
+        style={{
+          offsetDistance: "var(--footer-tube-offset-path--left)",
+          offsetRotate: "0deg",
+        }}
+      >
+        <path
+          d="M355.5 696.87c11.7 0 21.3-9.5 21.3-21.3s-9.5-21.3-21.3-21.3-21.3 9.5-21.3 21.3 9.6 21.3 21.3 21.3z"
+          fill="#74dde1"
+        />
+        <path
+          d="M358.4 665.37c2.7 0 5-2.2 5-5s-2.2-5-5-5-5 2.2-5 5 2.2 5 5 5zM346.9 669.37c2.7 0 5-2.2 5-5s-2.2-5-5-5-5 2.2-5 5 2.2 5 5 5z"
+          fill="#fff"
+        />
+        <path
+          d="M357.3 661.27c1.3 0 2.3-1 2.3-2.3s-1-2.3-2.3-2.3-2.3 1-2.3 2.3 1 2.3 2.3 2.3zM346.9 665.27c1.3 0 2.3-1 2.3-2.3s-1-2.3-2.3-2.3-2.3 1-2.3 2.3 1.1 2.3 2.3 2.3z"
+          stroke="#fff"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path d="M357.4 676.47c2.6 0 4.8-2.1 4.8-4.8s-2.1-4.8-4.8-4.8-4.8 2.1-4.8 4.8 2.2 4.8 4.8 4.8z" />
+      </m.g>
+      <m.g
+        animate={{
+          "--footer-tube-offset-path--left": ["0%", "30%", "70%", "90%"],
+          opacity: [0, 1],
+          rotateZ: [0, -360, 360, 720],
+        }}
+        transition={{
+          "--footer-tube-offset-path--left": {
+            ease: ["linear", "linear", "easeOut"],
+            duration: 12,
+            times: [0, 0.2, 0.4, 1],
+          },
+          opacity: {
+            times: [0, 0.1],
+            duration: 12,
+          },
+          rotateZ: {
+            duration: 12,
+            times: [0, 0.25, 0.4, 1],
+            ease: ["linear", "linear", "easeOut"],
+          },
+        }}
+        className="footer-tube-offset-path--left"
         style={{
           offsetDistance: "var(--footer-tube-offset-path--left)",
           offsetRotate: "0deg",
@@ -137,7 +142,37 @@ export default function PipeIllustration({ className }) {
         />
         <path d="M132.8 667.17c2.6 0 4.8-2.1 4.8-4.8s-2.1-4.8-4.8-4.8-4.8 2.1-4.8 4.8 2.2 4.8 4.8 4.8z" />
       </m.g>
-      <g>
+      <m.g
+        animate={{
+          "--footer-tube-offset-path--left": ["0%", "30%", "70%", "85%"],
+          opacity: [0, 1],
+          rotateZ: [0, -360, 360, 720],
+        }}
+        transition={{
+          "--footer-tube-offset-path--left": {
+            ease: ["linear", "linear", "easeOut"],
+            duration: 12,
+            times: [0, 0.2, 0.4, 1],
+            delay: 4,
+          },
+          opacity: {
+            times: [0, 0.1],
+            duration: 12,
+            delay: 4,
+          },
+          rotateZ: {
+            duration: 12,
+            times: [0, 0.25, 0.4, 1],
+            ease: ["linear", "linear", "easeOut"],
+            delay: 4,
+          },
+        }}
+        className="footer-tube-offset-path--left"
+        style={{
+          offsetDistance: "var(--footer-tube-offset-path--left)",
+          offsetRotate: "0deg",
+        }}
+      >
         <path
           d="M234.2 609.77c12 0 21.7-9.7 21.7-21.7s-9.7-21.7-21.7-21.7-21.7 9.7-21.7 21.7 9.7 21.7 21.7 21.7z"
           fill="#74dde1"
@@ -153,15 +188,47 @@ export default function PipeIllustration({ className }) {
           strokeLinejoin="round"
         />
         <path d="M245.9 588.37c2.6 0 4.8-2.1 4.8-4.8s-2.1-4.8-4.8-4.8-4.8 2.1-4.8 4.8 2.1 4.8 4.8 4.8z" />
-      </g>
-      <g>
+      </m.g>
+      <m.g
+        initial={{
+          x: 160,
+        }}
+        animate={{
+          "--footer-tube-offset-path--right": ["0%", "30%", "70%", "100%"],
+          opacity: [0, 1],
+          rotateZ: [0, 360, -360, -720],
+        }}
+        transition={{
+          "--footer-tube-offset-path--right": {
+            ease: ["linear", "linear", "easeOut"],
+            duration: 12,
+            times: [0, 0.2, 0.4, 1],
+            delay: 5,
+          },
+          opacity: {
+            times: [0, 0.1],
+            duration: 12,
+            delay: 5,
+          },
+          rotateZ: {
+            duration: 12,
+            times: [0, 0.25, 0.4, 1],
+            ease: ["linear", "linear", "easeOut"],
+            delay: 5,
+          },
+        }}
+        className="footer-tube-offset-path--right"
+        style={{
+          offsetDistance: "var(--footer-tube-offset-path--right)",
+          offsetRotate: "0deg",
+        }}
+      >
         <path
           d="M752 698.27c11.8 0 21.4-9.6 21.4-21.4s-9.6-21.4-21.4-21.4-21.4 9.6-21.4 21.4 9.6 21.4 21.4 21.4z"
           style={{
             isolation: "isolate",
           }}
           fill="#6cff6a"
-          opacity={0.89}
         />
         <path
           d="M763.3 672.77c3.2 0 5.8-2.6 5.8-5.8s-2.6-5.8-5.8-5.8-5.8 2.6-5.8 5.8c-.1 3.2 2.5 5.8 5.8 5.8zM748.7 670.27c3.2 0 5.8-2.6 5.8-5.8s-2.6-5.8-5.8-5.8-5.8 2.6-5.8 5.8 2.6 5.8 5.8 5.8z"
@@ -174,15 +241,47 @@ export default function PipeIllustration({ className }) {
           strokeLinejoin="round"
         />
         <path d="M751.7 680.37c-2.6-1.7-2.3-4.8.7-6 1.3-.6 2.6-.5 3.4 1.2 1.7 4.2 4.5 8.9-1.2 6.3-1-.4-2-.9-2.9-1.5z" />
-      </g>
-      <g>
+      </m.g>
+      <m.g
+        initial={{
+          x: 160,
+        }}
+        animate={{
+          "--footer-tube-offset-path--right": ["0%", "30%", "70%", "93%"],
+          opacity: [0, 1],
+          rotateZ: [0, 360, -360, -720],
+        }}
+        transition={{
+          "--footer-tube-offset-path--right": {
+            ease: ["linear", "linear", "easeOut"],
+            duration: 12,
+            times: [0, 0.2, 0.4, 1],
+            delay: 2.4,
+          },
+          opacity: {
+            times: [0, 0.1],
+            duration: 12,
+            delay: 2.4,
+          },
+          rotateZ: {
+            duration: 12,
+            times: [0, 0.25, 0.4, 1],
+            ease: ["linear", "linear", "easeOut"],
+            delay: 2.4,
+          },
+        }}
+        className="footer-tube-offset-path--right"
+        style={{
+          offsetDistance: "var(--footer-tube-offset-path--right)",
+          offsetRotate: "0deg",
+        }}
+      >
         <path
           d="M1018 681.87c11.4 0 20.6-9.2 20.6-20.6s-9.2-20.6-20.6-20.6-20.6 9.2-20.6 20.6 9.3 20.6 20.6 20.6z"
           style={{
             isolation: "isolate",
           }}
           fill="#6cff6a"
-          opacity={0.89}
         />
         <path
           d="M1018.4 668.97c3.3 0 6-2.7 6-6s-2.7-6-6-6-6 2.7-6 6 2.7 6 6 6zM1003.5 666.37c3.3 0 6-2.7 6-6s-2.7-6-6-6-6 2.7-6 6 2.7 6 6 6z"
@@ -195,15 +294,47 @@ export default function PipeIllustration({ className }) {
           strokeLinejoin="round"
         />
         <path d="M1006.6 676.77c-2.6-1.7-2.4-4.9.7-6.2 1.4-.6 2.7-.5 3.5 1.3 1.7 4.3 4.6 9.1-1.2 6.5-1.1-.5-2.1-1-3-1.6z" />
-      </g>
-      <g>
+      </m.g>
+      <m.g
+        initial={{
+          x: 160,
+        }}
+        animate={{
+          "--footer-tube-offset-path--right": ["0%", "30%", "70%", "83%"],
+          opacity: [0, 1],
+          rotateZ: [0, 360, -360, -720],
+        }}
+        transition={{
+          "--footer-tube-offset-path--right": {
+            ease: ["linear", "linear", "easeOut"],
+            duration: 12,
+            times: [0, 0.2, 0.4, 1],
+            delay: 1.2,
+          },
+          opacity: {
+            times: [0, 0.1],
+            duration: 12,
+            delay: 1.2,
+          },
+          rotateZ: {
+            duration: 12,
+            times: [0, 0.25, 0.4, 1],
+            ease: ["linear", "linear", "easeOut"],
+            delay: 1.2,
+          },
+        }}
+        className="footer-tube-offset-path--right"
+        style={{
+          offsetDistance: "var(--footer-tube-offset-path--right)",
+          offsetRotate: "0deg",
+        }}
+      >
         <path
           d="M930.6 610.47c12.1 0 21.9-9.8 21.9-21.9s-9.8-21.9-21.9-21.9-21.9 9.8-21.9 21.9c.1 12.1 9.9 21.9 21.9 21.9z"
           style={{
             isolation: "isolate",
           }}
           fill="#6cff6a"
-          opacity={0.89}
         />
         <path
           d="M927.7 583.77c3.3 0 6-2.7 6-6s-2.7-6-6-6-6 2.7-6 6 2.7 6 6 6zM942.5 581.27c3.3 0 6-2.7 6-6s-2.7-6-6-6-6 2.7-6 6c.1 3.3 2.8 6 6 6z"
@@ -216,7 +347,7 @@ export default function PipeIllustration({ className }) {
           strokeLinejoin="round"
         />
         <path d="M939.5 591.57c2.6-1.7 2.4-4.9-.7-6.2-1.3-.6-2.7-.5-3.4 1.3-1.7 4.3-4.6 9.1 1.2 6.5 1-.5 2-1 2.9-1.6z" />
-      </g>
+      </m.g>
       <path
         d="M293.8 625.97s-11.7 42.3 0 73.7M270.3 625.97s-11.7 42.3 0 73.7M850.3 625.97s11.7 42.3 0 73.7M873.9 625.97s11.7 42.3 0 73.7"
         fill="none"

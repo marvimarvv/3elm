@@ -24,26 +24,50 @@ export default ({ className }) => {
   // create an event listener
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-    console.log(isMobile);
   });
 
   // finally you can render components conditionally if isMobile is True or False
-
   return (
     <Swiper
       // install Swiper modules
-      modules={[Navigation]}
+      modules={[Navigation, Pagination]}
       spaceBetween={0}
       navigation
       loop={true}
       className={className}
+      pagination={{ clickable: true }}
     >
       <SwiperSlide className="video-background aspect-video">
-        <div className="grid h-full place-items-center text-fluid-xl">1</div>
+        <div className="grid place-items-center">
+          <div className="absolute top-[3%] h-[94%] w-[79%] overflow-hidden rounded-2xl">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube-nocookie.com/embed/24BW--klGCE"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
       </SwiperSlide>
       <SwiperSlide className="video-background aspect-video">
-        <div className="grid h-full place-items-center text-fluid-xl">2</div>
+        <div className="grid place-items-center">
+          <div className="absolute top-[3%] h-[94%] w-[79%] overflow-hidden rounded-2xl">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube-nocookie.com/embed/Yf0Dc97SBE0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
       </SwiperSlide>
+
       <SwiperSlide className="video-background aspect-video">
         <div className="grid h-full place-items-center text-fluid-xl">3</div>
       </SwiperSlide>

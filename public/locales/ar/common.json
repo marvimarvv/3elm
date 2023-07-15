@@ -15,7 +15,31 @@
     "how text 2": "We're blending facts, technology and design, and our heritage to create a brighter future.",
     "how button": "CASE STUDIES",
     "brains title 1": "Our",
-    "brains title 2": "Brains"
+    "brains title 2": "Brains",
+    "abdel title": "Abdelrahman",
+    "abdel text": "Abdelrahman is a designer and a researcher, with a background in architecture and urbanism. He is passionate about the intersection of design, technology and culture. He is also a co-founder of 3elm.",
+    "amr title": "Amr",
+    "amr text": "",
+    "esraa title": "Esraa",
+    "esraa text": "",
+    "heba title": "Heba",
+    "heba text": "",
+    "hesahm title": "Hesahm",
+    "hesahm text": "",
+    "kay title": "Kay",
+    "kay text": "",
+    "kiro title": "Kiro",
+    "kiro text": "",
+    "mahmoud title": "Mahmoud",
+    "mahmoud text": "",
+    "marvin title": "Marvin",
+    "marvin text": "",
+    "nadia title": "Nadia",
+    "nadia text": "",
+    "toka title": "Toka",
+    "toka text": "",
+    "zaid title": "Zaid",
+    "zaid text": ""
   },
   "contact": {
     "title": "Lets make the world a more knowledgeable place together.",
@@ -36,13 +60,13 @@
   "footer": {
     "quotation": "“To speak a language is to take on a world, a culture.”",
     "author": "Frantz Fanon",
-    "imprint":"Imprint",
+    "imprint": "Imprint",
     "privacy": "Data and privacy policy",
     "copyright": "© 3elm GmbH, 2023.",
     "address headline": "Our Studio.",
     "address street": "Curschmannstraße 16",
     "address city": "Hamburg",
-    "address country":"Germany",
+    "address country": "Germany",
     "socials headline": "Find us.",
     "thanks": "Thank you!"
   },
@@ -71,7 +95,7 @@
     "socials title 1": "Our",
     "socials title 2": "Socials",
     "projects title 1": "Our",
-    "projects title 2": "Projects" 
+    "projects title 2": "Projects"
   },
   "imprint": {
     "title": "Impressum",
@@ -88,10 +112,16 @@
     "contact paragraph 3": "Umsatzsteuer-ID Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE354299714",
     "contact paragraph 4": "Verbraucherstreitbeilegung/Universalschlichtungsstelle: Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
   },
+  "metadata": {
+    "description": "The Arabic Science Platform"
+  },
   "navigation": {
     "work": "Work",
     "about": "About us",
-    "contact": "Contact us"
+    "contact": "Contact us",
+    "home": "Home",
+    "imprint": "Imprint",
+    "privacy": "Privacy"
   },
   "privacy": {
     "title": "Datenschutzerklärung"
@@ -99,4 +129,4 @@
   "work": {
     "title": "This is the work page."
   }
-} 
+}

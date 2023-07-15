@@ -37,6 +37,7 @@ module.exports = {
         16: "16px",
       },
       fontSize: {
+        "fluid-s": "clamp(0.81rem, calc(0.71rem + 0.47vw), 1.00rem)",
         "fluid-m": "clamp(1rem, calc(1rem + .78vw), 2rem)",
         "fluid-l": "clamp(1.4rem, calc(1rem + 2.28vw), 3rem)",
         "fluid-xl": "clamp(2rem, calc(1.32rem + 4.28vw), 9rem)",

@@ -1,4 +1,8 @@
+import { useTranslation } from "next-i18next";
+
 export default function HebaBack({ className }) {
+  const { t } = useTranslation();
+
   return (
     <div className={className}>
       <svg
@@ -147,8 +151,8 @@ export default function HebaBack({ className }) {
           </linearGradient>
         </defs>
       </svg>
-
-      <h3 className="absolute top-1/2">Heba</h3>
+      <h3 className="absolute top-1/2">{t("about.heba title")}</h3>
+      <p>{t("about.heba text")}</p>
     </div>
   );
 }

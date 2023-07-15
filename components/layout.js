@@ -3,16 +3,16 @@ import Head from "next/head";
 import Nav from "./nav";
 import { motion as m } from "framer-motion";
 import { useRef } from "react";
+import { useTranslation } from "next-i18next";
 
-export const siteTitle = "3elm";
-
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, siteTitle }) {
+  const { t } = useTranslation("");
   const pageContent = useRef(null);
 
   return (
     <m.div
       ref={pageContent}
-      className=" mx-auto max-w-screen-2xl overflow-hidden scroll-smooth pt-[max(20px,4vw)] font-cotext text-white selection:bg-orange selection:text-white sm:px-[max(20px,4vw)]"
+      className="mx-auto max-w-screen-2xl overflow-hidden scroll-smooth pt-[max(20px,4vw)] font-cotext text-white selection:bg-orange selection:text-white sm:px-[max(20px,4vw)]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{
@@ -20,20 +20,13 @@ export default function Layout({ children, home }) {
       }}
     >
       <Head>
+        <title>{siteTitle}</title>
         <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
-        <meta
-          name="description"
-          content="3elm - arabic scientific content for the world"
-        />
-        <meta name="og:title" content={siteTitle} />
-
-        {/* <meta
-          property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name="twitter:card" content="summary_large_image" /> */}
+        <meta name="description" content={t("metadata.description")} />
+        <meta property="og:title" content={siteTitle} />
+        <meta property="og:description" content={t("metadata.description")} />
+        <meta property="og:image" content="https:/3elm.com/favicon.svg" />
+        <meta property="og:site_name" content="3elm" />
       </Head>
       <header>
         <Nav pageContent={pageContent}></Nav>

@@ -1,4 +1,3 @@
-import Layout, { siteTitle } from "../components/layout";
 import { motion as m, stagger, useAnimate, useInView } from "framer-motion";
 
 import AbdelRhman from "../components/abdelrhman";
@@ -10,7 +9,6 @@ import CurvedText from "../components/curvedText";
 import Esraa from "../components/esraa";
 import EsraaBack from "../components/esraaBack";
 import Gif from "../public/images/ARABIC.gif";
-import Head from "next/head";
 import Heba from "../components/heba";
 import HebaBack from "../components/hebaBack";
 import Hesahm from "../components/hesahm";
@@ -20,6 +18,7 @@ import Kay from "../components/kay";
 import KayBack from "../components/kayBack";
 import Kiro from "../components/kiro";
 import KiroBack from "../components/kiroBack";
+import Layout from "../components/layout";
 import Mahmoud from "../components/mahmoud";
 import MahmoudBack from "../components/mahmoudBack";
 import Marvin from "../components/marvin";
@@ -89,10 +88,7 @@ export default function About() {
   }, [isInViewFirst, isInViewSecond, isInViewThird, isInViewFourth]);
 
   return (
-    <Layout>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
+    <Layout siteTitle={`3elm - ${t("navigation.about")}`}>
       <section ref={scopeFirst} className="mb-40 px-6 pt-6 sm:px-0 sm:pt-0">
         <h1 className="stagger mb-7 opacity-0">
           <span className=" text-fluid-s block font-cohead">

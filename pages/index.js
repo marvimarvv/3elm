@@ -1,4 +1,3 @@
-import Layout, { siteTitle } from "../components/layout";
 import { motion as m, stagger, useAnimate, useInView } from "framer-motion";
 
 import Carousel from "../components/carousel";
@@ -6,12 +5,12 @@ import DesignIllustration from "../components/designIllustration";
 import FacebookIcon from "../components/facebookIcon";
 import FishIllustration from "../components/fishIllustration";
 import GoalsIllustration from "../components/goalsIllustration";
-import Head from "next/head";
 import HeartIcon from "../components/heartIcon";
 import HeroIllustration from "../components/heroIllustration";
 import HeroIllustrationMobile from "../components/heroIllustrationMobile";
 import HoverCardDesignBack from "../components/hoverCardDesignBack";
 import InstagramIcon from "../components/instagramIcon";
+import Layout from "../components/layout";
 import LikeIcon from "../components/likeIcon";
 import LinkedinIcon from "../components/linkedinIcon";
 import PipeIllustration from "../components/pipeIllustration";
@@ -80,10 +79,7 @@ export default function Home() {
   }, [isInViewFirst, isInViewSecond, isInViewThird, isInViewFourth]);
 
   return (
-    <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
+    <Layout home siteTitle={`3elm - ${t("navigation.home")}`}>
       <section className="hidden sm:grid">
         <h1 className="z-10 col-start-1 col-end-2 row-start-1 row-end-1 flex flex-col font-cohead text-fluid-xl font-bold">
           <m.span
@@ -271,7 +267,7 @@ export default function Home() {
       </section>
       <section
         ref={scopeThird}
-        className=" rtl:reverse-rtl relative mb-40 grid grid-cols-3 items-end gap-y-12 gap-x-6 px-6 sm:px-0"
+        className=" rtl:reverse-rtl relative mb-40 grid grid-cols-3 items-end gap-x-6 gap-y-12 px-6 sm:px-0"
       >
         <h2 className="stagger flex flex-col justify-self-center text-center font-cohead text-fluid-l">
           <span className="text-green">{t("home.socials title 1")}</span>
@@ -289,8 +285,8 @@ export default function Home() {
             target="_blank"
             className="clip-path-message--left group col-start-1 col-end-2 row-start-1 row-end-2 block flex h-16 bg-orange transition-colors hover:bg-white active:bg-orange"
           >
-            <FacebookIcon className="h-3/5 pt-2.5 pl-2.5" fill="white" />
-            <span className="hidden pt-3 pl-2.5 text-white group-hover:text-orange group-active:text-white md:inline">
+            <FacebookIcon className="h-3/5 pl-2.5 pt-2.5" fill="white" />
+            <span className="hidden pl-2.5 pt-3 text-white group-hover:text-orange group-active:text-white md:inline">
               3elm
             </span>
           </a>
@@ -301,8 +297,8 @@ export default function Home() {
           target="_blank"
           className="stagger2 clip-path-message--left group col-start-1 col-end-2 row-start-2 row-end-3 flex h-16 -translate-y-2 translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange"
         >
-          <InstagramIcon className="h-3/5 pt-2.5 pl-2.5" fill="#E24F27" />
-          <span className="hidden pt-3 pl-2.5 text-darkorange group-active:text-white md:inline">
+          <InstagramIcon className="h-3/5 pl-2.5 pt-2.5" fill="#E24F27" />
+          <span className="hidden pl-2.5 pt-3 text-darkorange group-active:text-white md:inline">
             @3elmstudio
           </span>
         </a>
@@ -311,8 +307,8 @@ export default function Home() {
           target="_blank"
           className="stagger clip-path-message--left group col-start-1 col-end-2 row-start-3 row-end-4 flex h-16 bg-orange transition-colors hover:bg-white active:bg-orange"
         >
-          <TwitterIcon className="h-3/5 pt-2.5 pl-2.5" fill="white" />
-          <span className="hidden pt-3 pl-2.5 text-white group-hover:text-orange group-active:text-white md:inline">
+          <TwitterIcon className="h-3/5 pl-2.5 pt-2.5" fill="white" />
+          <span className="hidden pl-2.5 pt-3 text-white group-hover:text-orange group-active:text-white md:inline">
             @3elmstudio
           </span>
         </a>
@@ -320,13 +316,13 @@ export default function Home() {
         <a
           href="https://www.youtube.com/@3elmstudio"
           target="_blank"
-          className="stagger2 clip-path-message--right group col-start-3 col-end-4 row-start-1 row-end-2 flex h-16 -translate-y-2 -translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange"
+          className="stagger2 clip-path-message--right group col-start-3 col-end-4 row-start-1 row-end-2 flex h-16 -translate-x-2 -translate-y-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange"
         >
-          <span className="ml-auto hidden pt-3 pr-2.5 text-darkorange group-active:text-white md:inline">
+          <span className="ml-auto hidden pr-2.5 pt-3 text-darkorange group-active:text-white md:inline">
             @3elmstudio
           </span>
           <YoutubeIcon
-            className="ml-auto h-3/5 w-auto pt-2.5 pr-2.5 md:ml-0"
+            className="ml-auto h-3/5 w-auto pr-2.5 pt-2.5 md:ml-0"
             fill="#E24F27"
           />
         </a>
@@ -335,11 +331,11 @@ export default function Home() {
           target="_blank"
           className="stagger clip-path-message--right group col-start-3 col-end-4 row-start-2 row-end-3 flex h-16 bg-orange transition-colors hover:bg-white active:bg-orange"
         >
-          <span className="ml-auto hidden pt-3 pr-2.5 text-white group-hover:text-orange group-active:text-white md:inline">
+          <span className="ml-auto hidden pr-2.5 pt-3 text-white group-hover:text-orange group-active:text-white md:inline">
             @3elmstudio
           </span>
           <TiktokIcon
-            className="ml-auto h-3/5 w-auto pt-2.5 pr-2.5 md:ml-0"
+            className="ml-auto h-3/5 w-auto pr-2.5 pt-2.5 md:ml-0"
             fill="white"
           />
         </a>
@@ -349,13 +345,13 @@ export default function Home() {
         <a
           href="https://www.linkedin.com/company/3elmstudio/"
           target="_blank"
-          className="stagger2 clip-path-message--right group col-start-3 col-end-4 row-start-3 row-end-4 flex h-16 -translate-y-2 -translate-x-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange"
+          className="stagger2 clip-path-message--right group col-start-3 col-end-4 row-start-3 row-end-4 flex h-16 -translate-x-2 -translate-y-2 bg-white transition-all hover:translate-x-0 hover:translate-y-0 active:bg-orange"
         >
-          <span className="ml-auto hidden pt-3 pr-2.5 text-darkorange group-active:text-white md:inline">
+          <span className="ml-auto hidden pr-2.5 pt-3 text-darkorange group-active:text-white md:inline">
             3elm
           </span>
           <LinkedinIcon
-            className="ml-auto h-3/5 w-auto pt-2.5 pr-2.5 md:ml-0"
+            className="ml-auto h-3/5 w-auto pr-2.5 pt-2.5 md:ml-0"
             fill="#E24F27"
           />
         </a>
@@ -383,7 +379,7 @@ export default function Home() {
       https://github.com/w3c/IntersectionObserver/issues/376#issuecomment-708088219 */}
       <div className="relative">
         <PipeIllustration className="isolate -mb-[2.5%] h-full w-full px-4 sm:px-0" />
-        <RedStarIcon className="absolute top-1/2 right-4 w-[5%]" />
+        <RedStarIcon className="absolute right-4 top-1/2 w-[5%]" />
         <YellowBallIcon className="absolute left-4 top-2/3 w-[3%]" />
       </div>
     </Layout>

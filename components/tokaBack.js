@@ -1,4 +1,8 @@
+import { useTranslation } from "next-i18next";
+
 export default function TokaBack({ className }) {
+  const { t } = useTranslation();
+
   return (
     <div className={className}>
       <svg
@@ -38,8 +42,8 @@ export default function TokaBack({ className }) {
           stroke-linejoin="round"
         />
       </svg>
-
-      <h3 className="absolute top-1/2">Toka</h3>
+      <h3 className="absolute top-1/2">{t("about.toka title")}</h3>
+      <p>{t("about.toka text")}</p>
     </div>
   );
 }

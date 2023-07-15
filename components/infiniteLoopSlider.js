@@ -2,37 +2,7 @@
 
 import IconSmallStar from "./iconSmallStar";
 
-export default function InfiniteLoopSlider() {
-  const COLORS = [
-    "#bbf7d0",
-    "#99f6e4",
-    "#bfdbfe",
-    "#ddd6fe",
-    "#f5d0fe",
-    "#fed7aa",
-    "#fee2e2",
-  ];
-  const TAGS = [
-    "Thank you!",
-    "Thank you!",
-    "Thank you!",
-    "Thank you!",
-    "Thank you!",
-    "Thank you!",
-    "Thank you!",
-    "Thank you!",
-    "Thank you!",
-    "Thank you!",
-    "Thank you!",
-    "Thank you!",
-    "Thank you!",
-    "Thank you!",
-    "Thank you!",
-    "Thank you!",
-    "Thank you!",
-    "Thank you!",
-  ];
-
+export default function InfiniteLoopSlider({ TAGS }) {
   const DURATION = 25000;
   const ROWS = 1;
   const TAGS_PER_ROW = 15;
@@ -58,7 +28,7 @@ export default function InfiniteLoopSlider() {
   };
 
   const Tag = ({ text }) => (
-    <div className="align-center mr-6 flex flex-shrink-0 text-fluid-m">
+    <div className="mr-6 flex flex-shrink-0 items-center text-fluid-m">
       <IconSmallStar /> {text}
     </div>
   );
@@ -73,8 +43,8 @@ export default function InfiniteLoopSlider() {
         >
           {shuffle(TAGS)
             .slice(0, TAGS_PER_ROW)
-            .map((tag) => (
-              <Tag text={tag} key={i} />
+            .map((tag, index) => (
+              <Tag text={tag} key={`${i}-${index}`} />
             ))}
         </InfiniteLoopSlider>
       ))}

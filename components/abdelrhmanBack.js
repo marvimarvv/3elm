@@ -1,4 +1,8 @@
+import { useTranslation } from "next-i18next";
+
 export default function AbdelRhmanBack({ className }) {
+  const { t } = useTranslation();
+
   return (
     <div className={className}>
       <svg
@@ -51,7 +55,10 @@ export default function AbdelRhmanBack({ className }) {
           strokeLinejoin="round"
         />
       </svg>
-      <h3 className="absolute top-1/2">Abdel</h3>
+      <div className="absolute top-1/2 max-w-[20ch] -translate-y-1/2">
+        <h3 className="mb-4">{t("about.abdel title")}</h3>
+        <p className=" text-xs font-light">{t("about.abdel text")}</p>
+      </div>
     </div>
   );
 }

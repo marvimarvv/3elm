@@ -1,6 +1,4 @@
-import Layout, { siteTitle } from "../components/layout";
-
-import Head from "next/head";
+import Layout from "../components/layout";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
@@ -8,10 +6,7 @@ export default function Privacy() {
   const { t } = useTranslation();
 
   return (
-    <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
+    <Layout home siteTitle={`3elm - ${t("navigation.privacy")}`}>
       <section className="max-w-5xl px-6 pb-40 sm:px-0">
         <h1 className="text-cohead hyphens text-fluid-l">
           {t("privacy.title")}

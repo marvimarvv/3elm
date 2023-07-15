@@ -1,4 +1,8 @@
+import { useTranslation } from "next-i18next";
+
 export default function KayBack({ className }) {
+  const { t } = useTranslation();
+
   return (
     <div className={className}>
       <svg
@@ -35,7 +39,8 @@ export default function KayBack({ className }) {
           fill="#F15A24"
         />
       </svg>
-      <h3 className="absolute top-1/2">Kay</h3>
+      <h3 className="absolute top-1/2">{t("about.kay title")}</h3>
+      <p>{t("about.kay text")}</p>
     </div>
   );
 }

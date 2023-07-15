@@ -1,4 +1,8 @@
+import { useTranslation } from "next-i18next";
+
 export default function NadiaBack({ className }) {
+  const { t } = useTranslation();
+
   return (
     <div className={className}>
       <svg
@@ -18,8 +22,8 @@ export default function NadiaBack({ className }) {
           fill="#F15A24"
         />
       </svg>
-
-      <h3 className="absolute top-1/2">Nadia</h3>
+      <h3 className="absolute top-1/2">{t("about.nadia title")}</h3>
+      <p>{t("about.nadia text")}</p>
     </div>
   );
 }

@@ -1,4 +1,8 @@
+import { useTranslation } from "next-i18next";
+
 export default function EsraaBack({ className }) {
+  const { t } = useTranslation();
+
   return (
     <div className={className}>
       <svg
@@ -422,7 +426,8 @@ export default function EsraaBack({ className }) {
           stroke="#F15A24"
         />
       </svg>
-      <h3 className="absolute top-1/2">Esraa</h3>
+      <h3 className="absolute top-1/2">{t("about.esraa title")}</h3>
+      <p>{t("about.esraa text")}</p>
     </div>
   );
 }

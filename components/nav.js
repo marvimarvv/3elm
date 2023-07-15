@@ -23,8 +23,8 @@ export default function Nav({ pageContent }) {
         <Link
           className={
             router.pathname == "/work"
-              ? "relative m-auto text-center before:absolute before:top-1/2 before:left-1/2 before:-z-10 before:w-[130%] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-darkorange before:p-4"
-              : "m-auto text-center before:opacity-0 before:transition-opacity before:duration-300 hover:relative hover:before:absolute hover:before:top-1/2 hover:before:left-1/2 hover:before:-z-10 hover:before:w-[130%] hover:before:-translate-x-1/2 hover:before:-translate-y-1/2 hover:before:rounded-full hover:before:bg-darkorange hover:before:p-4 hover:before:opacity-50"
+              ? "relative m-auto text-center before:absolute before:left-1/2 before:top-1/2 before:-z-10 before:w-[130%] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-darkorange before:p-4"
+              : "m-auto text-center before:opacity-0 before:transition-opacity before:duration-300 hover:relative hover:before:absolute hover:before:left-1/2 hover:before:top-1/2 hover:before:-z-10 hover:before:w-[130%] hover:before:-translate-x-1/2 hover:before:-translate-y-1/2 hover:before:rounded-full hover:before:bg-darkorange hover:before:p-4 hover:before:opacity-50"
           }
           href="/work"
         >
@@ -34,8 +34,8 @@ export default function Nav({ pageContent }) {
         <Link
           className={
             router.pathname == "/about"
-              ? "relative m-auto text-center before:absolute before:top-1/2 before:left-1/2 before:-z-10 before:w-[130%] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-darkorange before:p-4"
-              : "m-auto text-center before:opacity-0 before:transition-opacity before:duration-300 hover:relative hover:before:absolute hover:before:top-1/2 hover:before:left-1/2 hover:before:-z-10 hover:before:w-[130%] hover:before:-translate-x-1/2 hover:before:-translate-y-1/2 hover:before:rounded-full hover:before:bg-darkorange hover:before:p-4 hover:before:opacity-50"
+              ? "relative m-auto text-center before:absolute before:left-1/2 before:top-1/2 before:-z-10 before:w-[130%] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-darkorange before:p-4"
+              : "m-auto text-center before:opacity-0 before:transition-opacity before:duration-300 hover:relative hover:before:absolute hover:before:left-1/2 hover:before:top-1/2 hover:before:-z-10 hover:before:w-[130%] hover:before:-translate-x-1/2 hover:before:-translate-y-1/2 hover:before:rounded-full hover:before:bg-darkorange hover:before:p-4 hover:before:opacity-50"
           }
           href="/about"
         >
@@ -47,21 +47,21 @@ export default function Nav({ pageContent }) {
         <Link
           className={
             router.pathname == "/contact"
-              ? "relative m-auto text-center before:absolute before:top-1/2 before:left-1/2 before:-z-10 before:w-[130%] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-darkorange before:p-4"
-              : "m-auto text-center before:opacity-0 before:transition-opacity before:duration-300 hover:relative hover:before:absolute hover:before:top-1/2 hover:before:left-1/2 hover:before:-z-10 hover:before:w-[130%] hover:before:-translate-x-1/2 hover:before:-translate-y-1/2 hover:before:rounded-full hover:before:bg-darkorange hover:before:p-4 hover:before:opacity-50"
+              ? "relative m-auto text-center before:absolute before:left-1/2 before:top-1/2 before:-z-10 before:w-[130%] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-darkorange before:p-4"
+              : "m-auto text-center before:opacity-0 before:transition-opacity before:duration-300 hover:relative hover:before:absolute hover:before:left-1/2 hover:before:top-1/2 hover:before:-z-10 hover:before:w-[130%] hover:before:-translate-x-1/2 hover:before:-translate-y-1/2 hover:before:rounded-full hover:before:bg-darkorange hover:before:p-4 hover:before:opacity-50"
           }
           href="/contact"
         >
           {t("navigation.contact")}
         </Link>
         <div className="h-2 w-2 rounded-full bg-orange"></div>
-        <LocaleSwitcher className="text-muted cursor-pointer text-center text-fluid-xl before:opacity-0 before:transition-opacity before:duration-300 hover:relative hover:before:absolute hover:before:top-1/2 hover:before:left-1/2 hover:before:-z-10 hover:before:w-[130%] hover:before:-translate-x-1/2 hover:before:-translate-y-1/2 hover:before:rounded-full hover:before:bg-darkorange hover:before:p-4 hover:before:opacity-50 md:m-auto md:text-base" />
+        <LocaleSwitcher className="text-muted cursor-pointer text-center text-fluid-xl before:opacity-0 before:transition-opacity before:duration-300 hover:relative hover:before:absolute hover:before:left-1/2 hover:before:top-1/2 hover:before:-z-10 hover:before:w-[130%] hover:before:-translate-x-1/2 hover:before:-translate-y-1/2 hover:before:rounded-full hover:before:bg-darkorange hover:before:p-4 hover:before:opacity-50 md:m-auto md:text-base" />
       </nav>
       <div className="grid grid-cols-3 md:hidden">
         <Logo className="z-20 col-[2/3] row-[1/-1]"></Logo>
         <MobileMenu
           pageContent={pageContent}
-          className="relative right-4 z-10 col-[3/-1] row-[1/-1] flex  justify-self-end"
+          className="relative right-4 z-10 col-[3/-1] row-[1/-1] flex justify-self-end"
         />
       </div>
     </>

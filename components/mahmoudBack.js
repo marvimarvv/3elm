@@ -1,4 +1,8 @@
+import { useTranslation } from "next-i18next";
+
 export default function MahmoudBack({ className }) {
+  const { t } = useTranslation();
+
   return (
     <div className={className}>
       <svg
@@ -1445,7 +1449,8 @@ export default function MahmoudBack({ className }) {
           </linearGradient>
         </defs>
       </svg>
-      <h3 className="absolute top-1/2">Mahmoud</h3>
+      <h3 className="absolute top-1/2">{t("about.mahmoud title")}</h3>
+      <p>{t("about.mahmoud text")}</p>
     </div>
   );
 }

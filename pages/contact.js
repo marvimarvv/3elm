@@ -1,11 +1,10 @@
-import Layout, { siteTitle } from "../components/layout";
 import { motion as m, stagger, useAnimate, useInView } from "framer-motion";
 
 import BirdIllustration from "../components/birdIllustration";
 import ContactForm from "../components/contactForm";
 import FishIllustrationContact from "../components/fishIllustration__contact";
-import Head from "next/head";
 import HeroContact from "../components/heroContact";
+import Layout from "../components/layout";
 import PearIllustration from "../components/pearIllustration";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useEffect } from "react";
@@ -63,10 +62,7 @@ export default function Contact() {
   }, [isInViewFirst, isInViewSecond, isInViewThird, isInViewFourth]);
 
   return (
-    <Layout>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
+    <Layout siteTitle={`3elm - ${t("navigation.contact")}`}>
       <section className="mb-40 flex flex-col gap-8 sm:mx-0 sm:mt-0 sm:flex-row">
         <m.h1
           initial={{ scale: 0 }}

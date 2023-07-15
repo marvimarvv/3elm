@@ -1,4 +1,8 @@
+import { useTranslation } from "next-i18next";
+
 export default function KiroBack({ className }) {
+  const { t } = useTranslation();
+
   return (
     <div className={className}>
       <svg
@@ -1212,7 +1216,8 @@ export default function KiroBack({ className }) {
           fill="#F15A24"
         />
       </svg>
-      <h3 className="absolute top-1/2">Kiro</h3>
+      <h3 className="absolute top-1/2">{t("about.kiro title")}</h3>
+      <p>{t("about.kiro text")}</p>
     </div>
   );
 }

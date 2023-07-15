@@ -1,4 +1,8 @@
+import { useTranslation } from "next-i18next";
+
 export default function HesahmBack({ className }) {
+  const { t } = useTranslation();
+
   return (
     <div className={className}>
       <svg
@@ -32,8 +36,8 @@ export default function HesahmBack({ className }) {
           fill="#F15A24"
         />
       </svg>
-
-      <h3 className="absolute top-1/2">Hesahm</h3>
+      <h3 className="absolute top-1/2">{t("about.hesahm title")}</h3>
+      <p>{t("about.hesahm text")}</p>
     </div>
   );
 }

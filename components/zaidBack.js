@@ -1,4 +1,8 @@
+import { useTranslation } from "next-i18next";
+
 export default function ZaidBack({ className }) {
+  const { t } = useTranslation();
+
   return (
     <div className={className}>
       <svg
@@ -65,8 +69,8 @@ export default function ZaidBack({ className }) {
           fill="#F15A24"
         />
       </svg>
-
-      <h3 className="absolute top-1/2">Zaid</h3>
+      <h3 className="absolute top-1/2">{t("about.zaid title")}</h3>
+      <p>{t("about.zaid text")}</p>
     </div>
   );
 }

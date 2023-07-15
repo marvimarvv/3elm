@@ -17,6 +17,24 @@ export default function Footer() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
+  const TAGS = [
+    t("footer.thanks"),
+    t("footer.thanks"),
+    t("footer.thanks"),
+    t("footer.thanks"),
+    t("footer.thanks"),
+    t("footer.thanks"),
+    t("footer.thanks"),
+    t("footer.thanks"),
+    t("footer.thanks"),
+    t("footer.thanks"),
+    t("footer.thanks"),
+    t("footer.thanks"),
+    t("footer.thanks"),
+    t("footer.thanks"),
+    t("footer.thanks"),
+  ];
+
   return (
     <m.div>
       <div
@@ -30,7 +48,7 @@ export default function Footer() {
         }}
       >
         <footer className="rounded-t-3xl bg-orange p-10 md:p-20">
-          <div className="flex flex-wrap gap-y-10 gap-x-20 md:gap-y-20">
+          <div className="flex flex-wrap gap-x-20 gap-y-10 md:gap-y-20">
             <blockquote className="flex basis-full flex-col font-cohead text-fluid-m font-bold">
               {t("footer.quotation")}
               <span className="font-normal">{t("footer.author")}</span>
@@ -121,7 +139,7 @@ export default function Footer() {
             </div>
           </div>
         </footer>
-        <InfiniteLoopSlider />
+        <InfiniteLoopSlider TAGS={TAGS} />
       </div>
     </m.div>
   );

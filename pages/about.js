@@ -8,7 +8,7 @@ import CircleScrollAnimation from "../components/circleScrollAnimation";
 import CurvedText from "../components/curvedText";
 import Esraa from "../components/esraa";
 import EsraaBack from "../components/esraaBack";
-import Gif from "../public/images/ARABIC.gif";
+import Gif from "../public/images/star.gif";
 import Heba from "../components/heba";
 import HebaBack from "../components/hebaBack";
 import Hesahm from "../components/hesahm";
@@ -91,7 +91,7 @@ export default function About() {
     <Layout siteTitle={`3elm - ${t("navigation.about")}`}>
       <section ref={scopeFirst} className="mb-40 px-6 pt-6 sm:px-0 sm:pt-0">
         <h1 className="stagger mb-7 opacity-0">
-          <span className=" text-fluid-s block font-cohead">
+          <span className=" block font-cohead text-fluid-s">
             {t("about.title top")}
           </span>
           <span className=" font-cohead text-fluid-l">
@@ -104,7 +104,7 @@ export default function About() {
           alt="Arabic letters moving up and down"
           className="rtl:gif-shape-outside-rtl ltr:gif-shape-outside-ltr rtl:mirror w-8/12 ltr:float-right rtl:relative rtl:-z-10 rtl:float-left md:w-5/12 ltr:md:-mr-8 rtl:md:-ml-8"
         />
-        <p className="stagger text-cohead text-fluid-s mb-7 leading-7 opacity-0">
+        <p className="stagger text-cohead mb-7 text-fluid-s leading-7 opacity-0">
           {t("about.paragraph 1")}
         </p>
         <p className="stagger f ont-cohead text-fluid-m opacity-0">
@@ -118,7 +118,7 @@ export default function About() {
             <h2 className="stagger mb-2 font-cohead text-fluid-l font-bold">
               {t("about.story title")}
             </h2>
-            <p className="stagger text-fluid-s max-w-[60ch]">
+            <p className="stagger max-w-[60ch] text-fluid-s">
               {t("about.story text")}
             </p>
           </div>
@@ -135,7 +135,7 @@ export default function About() {
             {t("about.how title question mark 2")}
           </span>
         </h2>
-        <p className="stagger text-fluid-s mb-6">{t("about.how text 1")}</p>
+        <p className="stagger mb-6 text-fluid-s">{t("about.how text 1")}</p>
         <p className="stagger mb-6 font-cohead text-fluid-m font-bold">
           {t("about.how text 2")}
         </p>

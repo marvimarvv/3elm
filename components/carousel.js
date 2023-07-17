@@ -39,7 +39,8 @@ export default ({ className }) => {
     >
       <SwiperSlide className="video-background aspect-video">
         <div className="grid place-items-center">
-          <div className="absolute top-[3%] h-[94%] w-[79%] overflow-hidden rounded-2xl">
+          {/* The left property is added for Safari where the slides are wrongly positioned otherwise */}
+          <div className="absolute left-[10.5%] top-[3%] h-[94%] w-[79%] overflow-hidden rounded-2xl">
             <iframe
               width="100%"
               height="100%"
@@ -54,7 +55,8 @@ export default ({ className }) => {
       </SwiperSlide>
       <SwiperSlide className="video-background aspect-video">
         <div className="grid place-items-center">
-          <div className="absolute top-[3%] h-[94%] w-[79%] overflow-hidden rounded-2xl">
+          {/* The left property is added for Safari where the slides are wrongly positioned otherwise */}
+          <div className="absolute left-[10.5%] top-[3%] h-[94%] w-[79%] overflow-hidden rounded-2xl">
             <iframe
               width="100%"
               height="100%"

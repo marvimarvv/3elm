@@ -11,14 +11,14 @@ export default function HeroContact({ className }) {
 
   const reflectionsColor = useTransform(
     scrollYProgress,
-    [0, 0.5, 1],
-    ["#d35326", "#ec881d", "#d35326"]
+    [0, 1],
+    ["#c44010", "#f7a54d"]
   );
 
   const reflectionsColor2 = useTransform(
     scrollYProgress,
-    [0, 0.5, 1],
-    ["#c64625", "#d35326", "#c64625"]
+    [0, 1],
+    ["#c44010", "#f7a54d"]
   );
 
   const reflectionsRotation = useTransform(

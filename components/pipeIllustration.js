@@ -1,11 +1,85 @@
-import { motion as m } from "framer-motion";
+import { motion as m, useAnimation } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 export default function PipeIllustration({ className }) {
+  const controls1 = useAnimation();
+  const controls2 = useAnimation();
+  const controls3 = useAnimation();
+  const controls4 = useAnimation();
+  const controls5 = useAnimation();
+  const controls6 = useAnimation();
+  const ref = useRef(null);
+  const intersectionObserver = useRef(null);
+  const [hasTriggered, setHasTriggered] = useState(false);
+
+  useEffect(() => {
+    intersectionObserver.current = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting && !hasTriggered) {
+          controls1.start({
+            "--footer-tube-offset-path--left": ["0%", "30%", "70%", "93%"],
+            opacity: [0, 1],
+            rotateZ: [0, -360, 360, 720],
+          });
+          controls2.start({
+            "--footer-tube-offset-path--left": ["0%", "30%", "70%", "90%"],
+            opacity: [0, 1],
+            rotateZ: [0, -360, 360, 720],
+          });
+          controls3.start({
+            "--footer-tube-offset-path--left": ["0%", "30%", "70%", "85%"],
+            opacity: [0, 1],
+            rotateZ: [0, -360, 360, 720],
+          });
+          controls4.start({
+            "--footer-tube-offset-path--right": ["0%", "30%", "70%", "100%"],
+            opacity: [0, 1],
+            rotateZ: [0, 360, -360, -720],
+          });
+          controls5.start({
+            "--footer-tube-offset-path--right": ["0%", "30%", "70%", "93%"],
+            opacity: [0, 1],
+            rotateZ: [0, 360, -360, -720],
+          });
+          controls6.start({
+            "--footer-tube-offset-path--right": ["0%", "30%", "70%", "83%"],
+            opacity: [0, 1],
+            rotateZ: [0, 360, -360, -720],
+          });
+          setHasTriggered(true); // Set the state to indicate that the animation has been triggered
+        }
+      },
+      {
+        threshold: 0.5, // Adjust the threshold value as needed
+      }
+    );
+
+    if (ref.current) {
+      intersectionObserver.current.observe(ref.current);
+    }
+
+    return () => {
+      if (intersectionObserver.current) {
+        intersectionObserver.current.disconnect();
+      }
+    };
+  }, [
+    controls1,
+    controls2,
+    controls3,
+    controls4,
+    controls5,
+    controls6,
+    hasTriggered,
+  ]);
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1170 812.47"
       className={className}
+      ref={ref}
     >
       <path
         d="M279.6 494.07h-80.5v50s-69.2-10-87.6 55c0 0-22.9 82.6 62.5 100.5h287v-74.2l-260.9.8c-2.2 0-4.3-.4-6.3-1.4-1.8-.9-3.4-2.3-2.9-4.3.2-.8.7-1.5 1.3-1.9.6-.5 1.4-.7 2.2-.7h10.4c11.5.1 22.8-2.1 33.4-6.3 12.3-5.1 26.2-14.1 34.4-30 4.1-8.2 6.2-17.2 6.2-26.4l.8-61.1z"
@@ -52,11 +126,8 @@ export default function PipeIllustration({ className }) {
         strokeLinejoin="round"
       />
       <m.g
-        animate={{
-          "--footer-tube-offset-path--left": ["0%", "30%", "70%", "93%"],
-          opacity: [0, 1],
-          rotateZ: [0, -360, 360, 720],
-        }}
+        initial={{ opacity: 0 }}
+        animate={controls1}
         transition={{
           "--footer-tube-offset-path--left": {
             ease: ["linear", "linear", "easeOut"],
@@ -99,11 +170,8 @@ export default function PipeIllustration({ className }) {
         <path d="M357.4 676.47c2.6 0 4.8-2.1 4.8-4.8s-2.1-4.8-4.8-4.8-4.8 2.1-4.8 4.8 2.2 4.8 4.8 4.8z" />
       </m.g>
       <m.g
-        animate={{
-          "--footer-tube-offset-path--left": ["0%", "30%", "70%", "90%"],
-          opacity: [0, 1],
-          rotateZ: [0, -360, 360, 720],
-        }}
+        initial={{ opacity: 0 }}
+        animate={controls2}
         transition={{
           "--footer-tube-offset-path--left": {
             ease: ["linear", "linear", "easeOut"],
@@ -143,11 +211,8 @@ export default function PipeIllustration({ className }) {
         <path d="M132.8 667.17c2.6 0 4.8-2.1 4.8-4.8s-2.1-4.8-4.8-4.8-4.8 2.1-4.8 4.8 2.2 4.8 4.8 4.8z" />
       </m.g>
       <m.g
-        animate={{
-          "--footer-tube-offset-path--left": ["0%", "30%", "70%", "85%"],
-          opacity: [0, 1],
-          rotateZ: [0, -360, 360, 720],
-        }}
+        initial={{ opacity: 0 }}
+        animate={controls3}
         transition={{
           "--footer-tube-offset-path--left": {
             ease: ["linear", "linear", "easeOut"],
@@ -192,12 +257,9 @@ export default function PipeIllustration({ className }) {
       <m.g
         initial={{
           x: 160,
+          opacity: 0,
         }}
-        animate={{
-          "--footer-tube-offset-path--right": ["0%", "30%", "70%", "100%"],
-          opacity: [0, 1],
-          rotateZ: [0, 360, -360, -720],
-        }}
+        animate={controls4}
         transition={{
           "--footer-tube-offset-path--right": {
             ease: ["linear", "linear", "easeOut"],
@@ -245,12 +307,9 @@ export default function PipeIllustration({ className }) {
       <m.g
         initial={{
           x: 160,
+          opacity: 0,
         }}
-        animate={{
-          "--footer-tube-offset-path--right": ["0%", "30%", "70%", "93%"],
-          opacity: [0, 1],
-          rotateZ: [0, 360, -360, -720],
-        }}
+        animate={controls5}
         transition={{
           "--footer-tube-offset-path--right": {
             ease: ["linear", "linear", "easeOut"],
@@ -298,12 +357,9 @@ export default function PipeIllustration({ className }) {
       <m.g
         initial={{
           x: 160,
+          opacity: 0,
         }}
-        animate={{
-          "--footer-tube-offset-path--right": ["0%", "30%", "70%", "83%"],
-          opacity: [0, 1],
-          rotateZ: [0, 360, -360, -720],
-        }}
+        animate={controls6}
         transition={{
           "--footer-tube-offset-path--right": {
             ease: ["linear", "linear", "easeOut"],

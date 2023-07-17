@@ -45,6 +45,12 @@ export default function Home() {
         duration: 1,
         transition: "all .7s cubic-bezier(.29,-1.08,.69,4)",
         delay: isInViewFirst ? stagger(0.3) : 0,
+      },
+      ".fadeIn",
+      isInViewFirst ? { opacity: 1 } : { opacity: 0 },
+      {
+        duration: 1,
+        transition: "all .7s cubic-bezier(.29,-1.08,.69,4)",
       }
     );
     animateSecond(
@@ -169,14 +175,14 @@ export default function Home() {
         <HeroIllustrationMobile className="h-full w-full sm:hidden" />
       </section>
       <div ref={scopeFirst}>
-        <section className="stagger border-image-perforation relative my-40 bg-brightorange px-[3vh] pb-[9rem] pt-6 sm:-mx-8">
+        <section className="stagger border-image-perforation relative mb-40 mt-20 bg-brightorange px-[3vh] pb-[9rem] pt-6 sm:-mx-8 md:my-40">
           <h2 className="stagger text-center font-cohead text-fluid-xl font-bold">
             {t("home.about title")}
           </h2>
-          <p className="stagger mx-auto max-w-[60ch] text-fluid-m">
+          <p className="stagger relative z-10 mx-auto max-w-[60ch] text-fluid-m">
             {t("home.about main")}
           </p>
-          <div className="stagger">
+          <div className="fadeIn">
             <StarIllustration className="absolute -bottom-16 scale-125 ltr:right-12 rtl:left-12 md:-bottom-12 md:scale-150"></StarIllustration>
           </div>
         </section>
@@ -267,7 +273,7 @@ export default function Home() {
       </section>
       <section
         ref={scopeThird}
-        className=" rtl:reverse-rtl relative mb-40 grid grid-cols-3 items-end gap-x-6 gap-y-12 px-6 sm:px-0"
+        className=" rtl:reverse-rtl relative grid grid-cols-3 items-end gap-x-6 gap-y-12 px-6 sm:px-0 md:mb-40"
       >
         <h2 className="stagger flex flex-col justify-self-center text-center font-cohead text-fluid-l">
           <span className="text-green">{t("home.socials title 1")}</span>
@@ -361,7 +367,7 @@ export default function Home() {
 
       <section
         ref={scopeFourth}
-        className="mb-40 text-center sm:-mx-[max(20px,4vw)] md:mx-0"
+        className="text-center sm:-mx-[max(20px,4vw)] md:mx-0"
       >
         <h2 className=" stagger mb-6 inline-flex flex-col text-center font-cohead text-fluid-l">
           <span className="text-green">{t("home.projects title 1")}</span>

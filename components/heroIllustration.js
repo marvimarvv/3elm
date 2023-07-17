@@ -1371,7 +1371,7 @@ export default function HeroIllustration({ className }) {
         <m.path
           initial={{ "--outer-tube-offset-path--outer": "0%" }}
           animate={{
-            "--outer-tube-offset-path--outer": "100%",
+            "--outer-tube-offset-path--outer": "96%",
             opacity: [0, 1, 1, 0],
           }}
           transition={{
@@ -1390,7 +1390,7 @@ export default function HeroIllustration({ className }) {
         <m.path
           initial={{ "--outer-tube-offset-path--outer": "0%" }}
           animate={{
-            "--outer-tube-offset-path--outer": "100%",
+            "--outer-tube-offset-path--outer": "96%",
             opacity: [0, 1, 1, 0],
           }}
           transition={{
@@ -1411,7 +1411,7 @@ export default function HeroIllustration({ className }) {
         <m.path
           initial={{ "--outer-tube-offset-path--outer": "0%" }}
           animate={{
-            "--outer-tube-offset-path--outer": "100%",
+            "--outer-tube-offset-path--outer": "96%",
             opacity: [0, 1, 1, 0],
           }}
           transition={{
@@ -1432,7 +1432,7 @@ export default function HeroIllustration({ className }) {
         <m.path
           initial={{ "--outer-tube-offset-path--outer": "0%" }}
           animate={{
-            "--outer-tube-offset-path--outer": "100%",
+            "--outer-tube-offset-path--outer": "96%",
             opacity: [0, 1, 1, 0],
           }}
           transition={{
@@ -1453,7 +1453,7 @@ export default function HeroIllustration({ className }) {
         <m.path
           initial={{ "--outer-tube-offset-path--outer": "0%" }}
           animate={{
-            "--outer-tube-offset-path--outer": "100%",
+            "--outer-tube-offset-path--outer": "96%",
             opacity: [0, 1, 1, 0],
           }}
           transition={{
@@ -1474,7 +1474,7 @@ export default function HeroIllustration({ className }) {
         <m.path
           initial={{ "--outer-tube-offset-path--outer": "0%" }}
           animate={{
-            "--outer-tube-offset-path--outer": "100%",
+            "--outer-tube-offset-path--outer": "96%",
             opacity: [0, 1, 1, 0],
           }}
           transition={{
@@ -1495,7 +1495,7 @@ export default function HeroIllustration({ className }) {
         <m.path
           initial={{ "--outer-tube-offset-path--outer": "0%" }}
           animate={{
-            "--outer-tube-offset-path--outer": "100%",
+            "--outer-tube-offset-path--outer": "96%",
             opacity: [0, 1, 1, 0],
           }}
           transition={{
@@ -1516,7 +1516,7 @@ export default function HeroIllustration({ className }) {
         <m.path
           initial={{ "--outer-tube-offset-path--outer": "0%" }}
           animate={{
-            "--outer-tube-offset-path--outer": "100%",
+            "--outer-tube-offset-path--outer": "96%",
             opacity: [0, 1, 1, 0],
           }}
           transition={{
@@ -1537,7 +1537,7 @@ export default function HeroIllustration({ className }) {
         <m.path
           initial={{ "--outer-tube-offset-path--outer": "0%" }}
           animate={{
-            "--outer-tube-offset-path--outer": "100%",
+            "--outer-tube-offset-path--outer": "96%",
             opacity: [0, 1, 1, 0],
           }}
           transition={{
@@ -1558,7 +1558,7 @@ export default function HeroIllustration({ className }) {
         <m.path
           initial={{ "--outer-tube-offset-path--outer": "0%" }}
           animate={{
-            "--outer-tube-offset-path--outer": "100%",
+            "--outer-tube-offset-path--outer": "96%",
             opacity: [0, 1, 1, 0],
           }}
           transition={{
@@ -1977,8 +1977,8 @@ export default function HeroIllustration({ className }) {
         initial={{ "--paper-pieces-offset": "0%", opacity: 1 }}
         animate={{ "--paper-pieces-offset": "100%", opacity: 0 }}
         transition={{
-          delay: 2.4,
-          duration: 8,
+          delay: 0.1,
+          duration: 12,
           ease: "easeInOut",
         }}
         className="paper-pieces-offset-path"
@@ -1993,8 +1993,8 @@ export default function HeroIllustration({ className }) {
         initial={{ "--paper-pieces-offset": "0%", opacity: 1 }}
         animate={{ "--paper-pieces-offset": "100%", opacity: 0 }}
         transition={{
-          delay: 2.2,
-          duration: 8,
+          delay: 0.2,
+          duration: 12,
           ease: "easeInOut",
         }}
         className="paper-pieces-offset-path"
@@ -2009,8 +2009,8 @@ export default function HeroIllustration({ className }) {
         initial={{ "--paper-pieces-offset": "0%", opacity: 1 }}
         animate={{ "--paper-pieces-offset": "100%", opacity: 0 }}
         transition={{
-          delay: 2,
-          duration: 8,
+          delay: 0,
+          duration: 12,
           ease: "easeInOut",
         }}
         className="paper-pieces-offset-path"

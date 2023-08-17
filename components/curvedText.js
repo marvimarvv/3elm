@@ -18,8 +18,7 @@ const CurvedText = ({ className, text }) => {
   useEffect(() => {
     const svgContainer = svgRef.current;
     const { width, height } = svgContainer.getBoundingClientRect();
-    const fontSize = Math.min(width, height) * 3.3;
-
+    const fontSize = Math.min(width, height) * 2.7;
     svgContainer.style.setProperty("--font-size", `${fontSize}px`);
   }, [text]);
 
@@ -49,8 +48,8 @@ const CurvedText = ({ className, text }) => {
           className="fill-green"
           xlinkHref="#curve"
           style={{
-            fontSize: "var(--font-size)",
             textAnchor: "middle",
+            fontSize: "var(--font-size)",
           }}
           startOffset={startOffset}
         >

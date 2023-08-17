@@ -1,8 +1,10 @@
 import { motion as m, stagger, useAnimate, useInView } from "framer-motion";
 
 import Carousel from "../components/carousel";
+import CurvedText from "../components/curvedText";
 import DesignIllustration from "../components/designIllustration";
 import FacebookIcon from "../components/facebookIcon";
+import FallingWords from "../components/fallingWords";
 import FishIllustration from "../components/fishIllustration";
 import GoalsIllustration from "../components/goalsIllustration";
 import HeartIcon from "../components/heartIcon";
@@ -53,7 +55,7 @@ export default function Home() {
         transition: "all .7s cubic-bezier(.29,-1.08,.69,4)",
       }
     );
-    animateSecond(
+    /* animateSecond(
       ".stagger",
       isInViewSecond
         ? { opacity: 1, scale: 1, x: 0 }
@@ -63,7 +65,7 @@ export default function Home() {
         transition: "all .7s cubic-bezier(.29,-1.08,.69,4)",
         delay: isInViewSecond ? stagger(0.3) : 0,
       }
-    );
+    ); */
     animateThird(
       ".stagger",
       isInViewThird ? { opacity: 1, y: -20 } : { opacity: 0, y: 0 },
@@ -169,7 +171,7 @@ export default function Home() {
         >
           {t("home.hero subtitle")}
         </m.h2>
-        <HeroIllustration className="rtl:mirror isolate col-start-1 col-end-3 row-start-1 row-end-4 mt-16 ltr:transform-none md:mt-0"></HeroIllustration>
+        <HeroIllustration className="rtl:mirror isolate col-start-1 col-end-3 row-start-1 row-end-4 mt-16 overflow-visible ltr:transform-none md:mt-0"></HeroIllustration>
       </section>
       <section>
         <HeroIllustrationMobile className="h-full w-full sm:hidden" />
@@ -187,7 +189,10 @@ export default function Home() {
           </div>
         </section>
       </div>
-      <section
+      <section>
+        <FallingWords />
+      </section>
+      {/* <section
         ref={scopeSecond}
         className="mb-40 flex flex-wrap justify-center gap-16"
       >
@@ -270,13 +275,16 @@ export default function Home() {
             </ul>
           </div>
         </div>
-      </section>
+      </section> */}
       <section
         ref={scopeThird}
         className=" rtl:reverse-rtl relative grid grid-cols-3 items-end gap-x-6 gap-y-12 px-6 sm:px-0 md:mb-40"
       >
         <h2 className="stagger flex flex-col justify-self-center text-center font-cohead text-fluid-l">
-          <span className="text-green">{t("home.socials title 1")}</span>
+          <CurvedText
+            className="overflow-visible text-green"
+            text={t("home.socials title 1")}
+          />
           <div className="flex justify-between px-2">
             <div className="h-2 w-2 rounded-full bg-orange"></div>
             <div className="h-2 w-2 rounded-full bg-orange"></div>
@@ -364,13 +372,15 @@ export default function Home() {
         <LikeIcon></LikeIcon>
         <HeartIcon></HeartIcon>
       </section>
-
       <section
         ref={scopeFourth}
         className="text-center sm:-mx-[max(20px,4vw)] md:mx-0"
       >
         <h2 className=" stagger mb-6 inline-flex flex-col text-center font-cohead text-fluid-l">
-          <span className="text-green">{t("home.projects title 1")}</span>
+          <CurvedText
+            className="overflow-visible text-green"
+            text={t("home.projects title 1")}
+          />
           <div className="flex justify-between px-2">
             <div className="h-2 w-2 rounded-full bg-orange"></div>
             <div className="h-2 w-2 rounded-full bg-orange"></div>

@@ -107,7 +107,7 @@ export default function About() {
         <p className="stagger text-cohead mb-7 text-fluid-s leading-7 opacity-0">
           {t("about.paragraph 1")}
         </p>
-        <p className="stagger f ont-cohead text-fluid-m opacity-0">
+        <p className="stagger font-cohead text-fluid-m opacity-0">
           {t("about.paragraph 2")}
         </p>
       </section>

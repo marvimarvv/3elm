@@ -46,6 +46,7 @@ export default function HeroContact({ className }) {
         viewBox="0 0 669 923"
         xmlSpace="preserve"
         enableBackground="new 0 0 669 923"
+        style={{ overflow: "visible" }}
       >
         <style>
           {

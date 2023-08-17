@@ -19,7 +19,7 @@ export default function Nav({ pageContent }) {
 
   return (
     <>
-      <nav className="hidden items-center gap-4 md:flex">
+      <nav className="hidden items-center gap-4 font-bold md:flex">
         <Link
           className={
             router.pathname == "/work"

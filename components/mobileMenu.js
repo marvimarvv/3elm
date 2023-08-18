@@ -34,7 +34,7 @@ export default function MobileMenu({ className, pageContent }) {
       {({ open }) => (
         <>
           <Popover.Button
-            className="relative z-20 text-fluid-xl"
+            className="relative z-20 text-fluid-xl rtl:ml-12"
             onClick={() => {
               hidePageContent();
             }}
@@ -166,7 +166,7 @@ export default function MobileMenu({ className, pageContent }) {
                   leaveTo="scale-0 opacity-0 -translate-x-80"
                 >
                   <Popover.Button
-                    className="grow text-center text-fluid-xl"
+                    className="grow text-center"
                     as={LocaleSwitcher}
                   ></Popover.Button>
                 </Transition.Child>

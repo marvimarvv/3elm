@@ -9,6 +9,10 @@
 }
 
 @layer components {
+  .curved-text-width {
+    width: clamp(6rem, calc(2.81rem + 10vw), 12rem);
+  }
+
   .hover-card {
     perspective: 50rem;
   }

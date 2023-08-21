@@ -27,7 +27,7 @@ export default function LocaleSwitcher({ className }) {
               onChange={() => handleLocaleChange(locale)}
               className={`${
                 locale === activeLocale ? "bg-indigo-600" : "bg-brightorange"
-              } relative inline-flex h-8 w-16 items-center rounded-full transition-all duration-500 `}
+              } relative inline-flex h-8 w-16 items-center rounded-full transition-all duration-500 group-hover:bg-darkorange`}
             >
               <span className="absolute ltr:left-2 rtl:right-3 rtl:top-0">
                 {locale === "ar" ? "En" : "ع"}

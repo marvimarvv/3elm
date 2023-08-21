@@ -10,17 +10,10 @@ const calculateStartOffset = (pathId, textContent) => {
   return startOffset > 0 ? startOffset : 0;
 };
 
-const CurvedText = ({ className, text }) => {
+const CurvedText = ({ text }) => {
   const [startOffset, setStartOffset] = useState(0);
 
   const svgRef = useRef(null);
-
-  useEffect(() => {
-    const svgContainer = svgRef.current;
-    const { width, height } = svgContainer.getBoundingClientRect();
-    const fontSize = Math.min(width, height) * 2.7;
-    svgContainer.style.setProperty("--font-size", `${fontSize}px`);
-  }, [text]);
 
   useEffect(() => {
     const pathId = "#curve";
@@ -37,26 +30,31 @@ const CurvedText = ({ className, text }) => {
   }, [text]);
 
   return (
-    <svg viewBox="0 0 500 500" ref={svgRef} className={className}>
-      <path
-        id="curve"
-        d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97"
-        fill="transparent"
-      />
-      <text width="500" style={{ transform: "translateY(65%)" }}>
-        <textPath
-          className="fill-green"
-          xlinkHref="#curve"
-          style={{
-            textAnchor: "middle",
-            fontSize: "var(--font-size)",
-          }}
-          startOffset={startOffset}
-        >
-          {text}
-        </textPath>
-      </text>
-    </svg>
+    // Wrap this in a div to make the svg responsive, viewport units don't work on svg
+    // Also, the svg otherwise always takes up 100% of the width of the container which
+    // makes it have different sizes with different words in the same flex container
+    <div className="curved-text-width mx-auto">
+      <svg viewBox="0 0 500 500" ref={svgRef} className="overflow-visible">
+        <path
+          id="curve"
+          d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97"
+          fill="transparent"
+        />
+        <text width="500" style={{ transform: "translateY(65%)" }}>
+          <textPath
+            className="fill-green"
+            xlinkHref="#curve"
+            style={{
+              textAnchor: "middle",
+              fontSize: "80px",
+            }}
+            startOffset={startOffset}
+          >
+            {text}
+          </textPath>
+        </text>
+      </svg>
+    </div>
   );
 };
 

@@ -20,7 +20,7 @@ export default function Zaid({ className }) {
             ? "rotate(0deg) scale(1)"
             : "rotate(720deg) scale(0)",
           opacity: isInView ? 1 : 0,
-          transition: "all 3s cubic-bezier(.43,.2,.54,1.17) 1s",
+          transition: "all 1.5s cubic-bezier(.43,.2,.54,1.17) .4s",
           width: "100%",
         }}
       >

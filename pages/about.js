@@ -1,4 +1,4 @@
-import { motion as m, stagger, useAnimate, useInView } from "framer-motion";
+import { stagger, useAnimate, useInView } from "framer-motion";
 
 import AbdelRhman from "../components/abdelrhman";
 import AbdelRhmanBack from "../components/abdelrhmanBack";
@@ -146,12 +146,9 @@ export default function About() {
       <section className="px-6 pb-40 text-center sm:px-0 md:px-16">
         <h2
           ref={scopeFourth}
-          className="mb-6 inline-flex flex-col text-center font-cohead text-fluid-l"
+          className="mb-6 inline-flex flex-col gap-y-2 text-center font-cohead text-fluid-l"
         >
-          {/* <CurvedText className="text-green" text={t("about.brains title 1")} /> */}
-          <span className="stagger text-green">
-            {t("about.brains title 1")}
-          </span>
+          <CurvedText text={t("about.brains title 1")} />
           <div className="stagger flex justify-between px-2">
             <div className="h-2 w-2 rounded-full bg-orange"></div>
             <div className="h-2 w-2 rounded-full bg-orange"></div>

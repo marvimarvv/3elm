@@ -280,11 +280,8 @@ export default function Home() {
         ref={scopeThird}
         className=" rtl:reverse-rtl relative grid grid-cols-3 items-end gap-x-6 gap-y-12 px-6 sm:px-0 md:mb-40"
       >
-        <h2 className="stagger flex flex-col justify-self-center text-center font-cohead text-fluid-l">
-          <CurvedText
-            className="overflow-visible text-green"
-            text={t("home.socials title 1")}
-          />
+        <h2 className="stagger inline-flex flex-col gap-y-2 justify-self-center text-center font-cohead text-fluid-l">
+          <CurvedText text={t("home.socials title 1")} />
           <div className="flex justify-between px-2">
             <div className="h-2 w-2 rounded-full bg-orange"></div>
             <div className="h-2 w-2 rounded-full bg-orange"></div>
@@ -376,11 +373,8 @@ export default function Home() {
         ref={scopeFourth}
         className="text-center sm:-mx-[max(20px,4vw)] md:mx-0"
       >
-        <h2 className=" stagger mb-6 inline-flex flex-col text-center font-cohead text-fluid-l">
-          <CurvedText
-            className="overflow-visible text-green"
-            text={t("home.projects title 1")}
-          />
+        <h2 className="stagger mb-6 inline-flex flex-col gap-y-2 text-center font-cohead text-fluid-l">
+          <CurvedText text={t("home.projects title 1")} />
           <div className="flex justify-between px-2">
             <div className="h-2 w-2 rounded-full bg-orange"></div>
             <div className="h-2 w-2 rounded-full bg-orange"></div>

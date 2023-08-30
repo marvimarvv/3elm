@@ -1,6 +1,5 @@
 import { motion as m, stagger, useAnimate, useInView } from "framer-motion";
 
-import Carousel from "../components/carousel";
 import CurvedText from "../components/curvedText";
 import DesignIllustration from "../components/designIllustration";
 import FacebookIcon from "../components/facebookIcon";
@@ -18,6 +17,7 @@ import LinkedinIcon from "../components/linkedinIcon";
 import PipeIllustration from "../components/pipeIllustration";
 import RedStarIcon from "../components/redStarIcon";
 import StarIllustration from "../components/starIllustration";
+import Swiper from "../components/swiper";
 import TiktokIcon from "../components/tiktokIcon";
 import TwitterIcon from "../components/twitterIcon";
 import ValuesIllustration from "../components/valuesIllustration";
@@ -177,7 +177,7 @@ export default function Home() {
         <HeroIllustrationMobile className="h-full w-full sm:hidden" />
       </section>
       <div ref={scopeFirst}>
-        <section className="stagger border-image-perforation relative mb-40 mt-20 bg-brightorange px-[3vh] pb-[9rem] pt-6 sm:-mx-8 md:my-40">
+        <section className="stagger border-image-perforation relative mt-20 bg-brightorange px-[3vh] pb-[9rem] pt-6 sm:-mx-8 md:mt-40">
           <h2 className="stagger text-center font-cohead text-fluid-xl font-bold">
             {t("home.about title")}
           </h2>
@@ -281,12 +281,17 @@ export default function Home() {
         className=" rtl:reverse-rtl relative grid grid-cols-3 items-end gap-x-6 gap-y-12 px-6 sm:px-0 md:mb-40"
       >
         <h2 className="stagger inline-flex flex-col gap-y-2 justify-self-center text-center font-cohead text-fluid-l">
-          <CurvedText text={t("home.socials title 1")} />
+          <CurvedText
+            className="curved-text-width mx-auto"
+            text={t("home.socials title 1")}
+          />
           <div className="flex justify-between px-2">
             <div className="h-2 w-2 rounded-full bg-orange"></div>
             <div className="h-2 w-2 rounded-full bg-orange"></div>
           </div>
-          <span className="text-cyan">{t("home.socials title 2")}</span>
+          <span className="ltr:show text-cyan rtl:hidden">
+            {t("home.socials title 2")}
+          </span>
         </h2>
         <FishIllustration className="stagger col-start-1 col-end-4 row-start-2 row-end-5 h-full w-full"></FishIllustration>
 
@@ -374,14 +379,19 @@ export default function Home() {
         className="text-center sm:-mx-[max(20px,4vw)] md:mx-0"
       >
         <h2 className="stagger mb-6 inline-flex flex-col gap-y-2 text-center font-cohead text-fluid-l">
-          <CurvedText text={t("home.projects title 1")} />
+          <CurvedText
+            className="curved-text-width mx-auto"
+            text={t("home.projects title 1")}
+          />
           <div className="flex justify-between px-2">
             <div className="h-2 w-2 rounded-full bg-orange"></div>
             <div className="h-2 w-2 rounded-full bg-orange"></div>
           </div>
-          <span className="text-cyan">{t("home.projects title 2")}</span>
+          <span className="ltr:show text-cyan rtl:hidden">
+            {t("home.projects title 2")}
+          </span>
         </h2>
-        <Carousel className="stagger" />
+        <Swiper className="stagger !pb-[max(35px,4vw)]" />
       </section>
       {/* This SVG is wrapped in a div bc of problems in the intersection observer of Chromium, Webkit 
       They only support the top level, so paths or other elements inside can't be used 

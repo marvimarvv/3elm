@@ -90,8 +90,8 @@ export default function About() {
   return (
     <Layout siteTitle={`3elm - ${t("navigation.about")}`}>
       <section ref={scopeFirst} className="mb-40 px-6 pt-6 sm:px-0 sm:pt-0">
-        <h1 className="stagger mb-7 opacity-0">
-          <span className=" block font-cohead text-fluid-s">
+        <h1 className="stagger mb-7 leading-snug opacity-0">
+          <span className="block font-cohead text-fluid-s font-bold tracking-[0.17em]">
             {t("about.title top")}
           </span>
           <span className=" font-cohead text-fluid-l">
@@ -102,20 +102,20 @@ export default function About() {
           unoptimized={true}
           src={Gif}
           alt="Arabic letters moving up and down"
-          className="rtl:gif-shape-outside-rtl ltr:gif-shape-outside-ltr rtl:mirror w-8/12 ltr:float-right rtl:relative rtl:-z-10 rtl:float-left md:w-5/12 ltr:md:-mr-8 rtl:md:-ml-8"
+          className="gif-shape-outside-ltr float-right w-8/12 md:-mr-8 md:w-5/12"
         />
-        <p className="stagger text-cohead mb-7 text-fluid-s leading-7 opacity-0">
+        <p className="stagger text-cohead mb-7 text-fluid-s opacity-0">
           {t("about.paragraph 1")}
         </p>
-        <p className="stagger font-cohead text-fluid-m opacity-0">
+        <p className="stagger font-cohead text-fluid-m leading-snug opacity-0">
           {t("about.paragraph 2")}
         </p>
       </section>
-      <CircleScrollAnimation className="relative mb-40 grid h-screen place-items-center overflow-y-clip md:-mx-8" />
+      <CircleScrollAnimation className="relative mb-40 grid h-[300vh] place-items-center overflow-y-clip md:-mx-8" />
       <div ref={scopeSecond}>
         <section className="stagger border-image-perforation mb-40 grid grid-cols-1 gap-10 bg-brightorange px-[2vh] py-16 sm:-mx-8 md:grid-cols-3">
           <div className="md:col-span-2 md:pl-6">
-            <h2 className="stagger mb-2 font-cohead text-fluid-l font-bold">
+            <h2 className="stagger mb-2 font-cohead text-fluid-l font-bold leading-snug">
               {t("about.story title")}
             </h2>
             <p className="stagger max-w-[60ch] text-fluid-s">
@@ -125,7 +125,7 @@ export default function About() {
           <StoryIllustration className="stagger h-full w-full" />
         </section>
       </div>
-      <section ref={scopeThird} className="mb-40 px-6 sm:px-0">
+      <section ref={scopeThird} className="mb-40 max-w-[75ch] px-6 sm:px-0">
         <h2 className="stagger mb-2 font-cohead text-fluid-xl font-bold text-green">
           {t("about.how title")}
           <span className="text-cyan ltr:ml-3 rtl:mr-3">
@@ -148,12 +148,17 @@ export default function About() {
           ref={scopeFourth}
           className="mb-6 inline-flex flex-col gap-y-2 text-center font-cohead text-fluid-l"
         >
-          <CurvedText text={t("about.brains title 1")} />
+          <CurvedText
+            className="stagger curved-text-width mx-auto"
+            text={t("about.brains title 1")}
+          />
           <div className="stagger flex justify-between px-2">
             <div className="h-2 w-2 rounded-full bg-orange"></div>
             <div className="h-2 w-2 rounded-full bg-orange"></div>
           </div>
-          <span className="stagger text-cyan">{t("about.brains title 2")}</span>
+          <span className="stagger ltr:show text-cyan rtl:hidden">
+            {t("about.brains title 2")}
+          </span>
         </h2>
         <div className="flex max-w-6xl flex-col items-center gap-y-10 lg:flex-row lg:flex-wrap">
           <div className="lg:align hover-card relative shrink-0 basis-1/3 self-start lg:self-center">

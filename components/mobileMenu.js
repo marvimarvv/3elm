@@ -1,7 +1,7 @@
 import { Popover, Transition } from "@headlessui/react";
 
 import Link from "next/link";
-import LocaleSwitcher from "./localeSwitcher";
+import LocaleSwitch from "./localeSwitch";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
@@ -34,7 +34,7 @@ export default function MobileMenu({ className, pageContent }) {
       {({ open }) => (
         <>
           <Popover.Button
-            className="relative z-20 text-fluid-xl rtl:ml-12"
+            className="relative z-20 text-fluid-xl focus:outline-none focus-visible:outline"
             onClick={() => {
               hidePageContent();
             }}
@@ -167,7 +167,7 @@ export default function MobileMenu({ className, pageContent }) {
                 >
                   <Popover.Button
                     className="grow text-center"
-                    as={LocaleSwitcher}
+                    as={LocaleSwitch}
                   ></Popover.Button>
                 </Transition.Child>
               </nav>

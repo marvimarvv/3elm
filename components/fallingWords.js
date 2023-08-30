@@ -11,7 +11,7 @@ export default function FallingWords() {
   const wordRef = useRef(null);
 
   // State for responsive behavior
-  const [constraints, setContraints] = useState();
+  const [constraints, setConstraints] = useState();
   const [scene, setScene] = useState();
 
   // State for applying gravity when in view
@@ -21,7 +21,7 @@ export default function FallingWords() {
 
   // Handle resizing of the canvas for responsiveness
   const handleResize = () => {
-    setContraints(boxRef.current.getBoundingClientRect());
+    setConstraints(boxRef.current?.getBoundingClientRect());
   };
 
   useEffect(() => {
@@ -125,16 +125,21 @@ export default function FallingWords() {
         const height = elemRef.offsetHeight;
 
         const initialX = randomNumberInRange * canvas.width - width; // Random x within canvas bounds
-        const initialY = randomNumberInRange * canvas.height - height; // Random y within canvas bounds
 
         return {
-          body: Matter.Bodies.rectangle(initialX, initialY, width, height, {
-            render: {
-              fillStyle: "transparent",
-              density: 1,
-              friction: 0.5,
-            },
-          }),
+          body: Matter.Bodies.rectangle(
+            initialX,
+            canvas.height / 2,
+            width,
+            height,
+            {
+              render: {
+                fillStyle: "transparent",
+                density: 1,
+                friction: 0.5,
+              },
+            }
+          ),
           elem: elemRef,
           render() {
             const { x, y } = this.body.position;
@@ -181,19 +186,6 @@ export default function FallingWords() {
         wordBodies.forEach((element) => {
           element.render();
 
-          /*  // Limit the velocity of the body if it exceeds a threshold
-          const maxVelocity = 0.5; // Adjust this value as needed
-          const velocity = element.body.velocity;
-          const velocityMagnitude = Matter.Vector.magnitude(velocity);
-
-          if (velocityMagnitude > maxVelocity) {
-            const limitedVelocity = Matter.Vector.mult(
-              Matter.Vector.normalise(velocity),
-              maxVelocity
-            );
-            Matter.Body.setVelocity(element.body, limitedVelocity);
-          } */
-
           const limitMaxSpeed = () => {
             let maxSpeed = 1;
             if (element.body.velocity.x > maxSpeed) {
@@ -231,7 +223,7 @@ export default function FallingWords() {
         requestAnimationFrame(rerender);
       })();
 
-      setContraints(boxRef.current.getBoundingClientRect());
+      setConstraints(boxRef?.current?.getBoundingClientRect());
       setScene(render);
 
       window.addEventListener("resize", handleResize);
@@ -304,7 +296,7 @@ export default function FallingWords() {
   }, [scene, constraints, isInView]);
 
   return (
-    <div className="relative mb-40 overflow-hidden">
+    <div className="relative -mt-32 mb-40 overflow-hidden font-bold sm:mt-0">
       <div ref={wordRef}>
         <span
           className={
@@ -381,11 +373,83 @@ export default function FallingWords() {
         <span
           className={
             isInView
-              ? "word absolute max-w-xs cursor-grab select-none text-fluid-m text-green transition-colors duration-500"
+              ? "word absolute max-w-xs cursor-grab select-none text-fluid-m text-cyan transition-colors duration-500"
               : "text-transparent"
           }
         >
-          {t("home.card 2 point 4")}
+          {t("home.card 2 point 5")}
+        </span>
+        <span
+          className={
+            isInView
+              ? "word absolute cursor-grab select-none text-fluid-m text-cyan transition-colors duration-500"
+              : "text-transparent"
+          }
+        >
+          {t("home.card 1 point 1")}
+        </span>
+        <span
+          className={
+            isInView
+              ? "word absolute cursor-grab select-none text-fluid-m text-green transition-colors duration-500"
+              : "text-transparent"
+          }
+        >
+          {t("home.card 1 point 2")}
+        </span>
+        <span
+          className={
+            isInView
+              ? "word absolute cursor-grab select-none text-fluid-m text-brightorange transition-colors duration-500"
+              : "text-transparent"
+          }
+        >
+          {t("home.card 1 point 3")}
+        </span>
+        <span
+          className={
+            isInView
+              ? "word absolute cursor-grab select-none text-fluid-m transition-colors duration-500"
+              : "text-transparent"
+          }
+        >
+          {t("home.card 1 point 4")}
+        </span>
+        <span
+          className={
+            isInView
+              ? "word absolute cursor-grab select-none text-fluid-m text-green transition-colors duration-500"
+              : "text-transparent"
+          }
+        >
+          {t("home.card 1 point 5")}
+        </span>
+        <span
+          className={
+            isInView
+              ? "word absolute cursor-grab select-none text-fluid-m text-cyan transition-colors duration-500"
+              : "text-transparent"
+          }
+        >
+          {t("home.card 2 point 1")}
+        </span>
+        <span
+          className={
+            isInView
+              ? "word absolute cursor-grab select-none text-fluid-m text-brightorange transition-colors duration-500"
+              : "text-transparent"
+          }
+        >
+          {t("home.card 2 point 2")}
+        </span>
+        <span
+          className={
+            isInView
+              ? "word absolute cursor-grab select-none text-fluid-m transition-colors duration-500"
+              : "text-transparent"
+          }
+        >
+          {t("home.card 2 point 3")}
         </span>
         <span
           className={
@@ -396,31 +460,13 @@ export default function FallingWords() {
         >
           {t("home.card 2 point 5")}
         </span>
-        <span
-          className={
-            isInView
-              ? "word absolute cursor-grab select-none text-fluid-m text-brightorange transition-colors duration-500"
-              : "text-transparent"
-          }
-        >
-          {t("home.card 3 point 1")}
-        </span>
-        <span
-          className={
-            isInView
-              ? "word absolute max-w-xs cursor-grab select-none text-fluid-m transition-colors duration-500"
-              : "text-transparent"
-          }
-        >
-          {t("home.card 3 point 2")}
-        </span>
       </div>
       <div
         ref={boxRef}
         style={{
           position: "relative",
           width: "100%",
-          height: "100%",
+          height: "80%",
           cursor: "grab",
         }}
       >

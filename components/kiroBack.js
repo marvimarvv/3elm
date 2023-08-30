@@ -1,10 +1,67 @@
+import { motion as m, useAnimation } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+
 import { useTranslation } from "next-i18next";
 
 export default function KiroBack({ className }) {
   const { t } = useTranslation();
 
+  const ref = useRef(null);
+
+  const controls1 = useAnimation();
+  const intersectionObserver = useRef(null);
+  const [hasTriggered, setHasTriggered] = useState(false);
+
+  useEffect(() => {
+    intersectionObserver.current = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting && !hasTriggered) {
+          controls1.start({
+            rotateY: [-180, -60, -180],
+            scale: [0, 1],
+          });
+          setHasTriggered(true); // Set the state to indicate that the animation has been triggered
+        }
+      },
+      {
+        threshold: 0.5, // Adjust the threshold value as needed
+      }
+    );
+
+    if (ref.current) {
+      intersectionObserver.current.observe(ref.current);
+    }
+
+    return () => {
+      if (intersectionObserver.current) {
+        intersectionObserver.current.disconnect();
+      }
+    };
+  }, [controls1, hasTriggered]);
+
   return (
-    <div className={className}>
+    <m.div
+      className={className}
+      ref={ref}
+      initial={{ rotateY: "0deg", scale: 0 }}
+      animate={controls1}
+      transition={{
+        rotateY: {
+          times: [0.5, 0.75, 1],
+          delay: 0,
+          duration: 3,
+        },
+        scale: {
+          times: [0, 0.5],
+          duration: 3,
+        },
+      }}
+      style={{
+        transition: "all cubic-bezier(.43,.2,.54,1.17)",
+        width: "100%",
+      }}
+    >
       <svg
         width="301"
         height="349"
@@ -1218,6 +1275,6 @@ export default function KiroBack({ className }) {
       </svg>
       <h3 className="absolute top-1/2">{t("about.kiro title")}</h3>
       <p>{t("about.kiro text")}</p>
-    </div>
+    </m.div>
   );
 }

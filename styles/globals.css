@@ -232,10 +232,14 @@
   }
 
   :root {
-    --swiper-navigation-top-offset: calc(50% - min(2.5vw, 44px));
+    /* Center the arrows by subtracting half of their own height and subtracting
+    half of the added padding-bottom of the swiper (was added to have the bullet points below) */
+    --swiper-navigation-top-offset: calc(
+      50% - min(2.5vw, 44px) - max(17.5px, 2vw)
+    );
     --swiper-navigation-sides-offset: 0px;
     --swiper-pagination-color: theme("colors.cyan");
-    --swiper-pagination-bottom: 4%;
+    --swiper-pagination-bottom: 0;
     --swiper-pagination-bullet-size: 16px;
     --swiper-pagination-bullet-inactive-color: #ccc;
   }

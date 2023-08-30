@@ -614,10 +614,10 @@ export default function HeroIllustrationMobile({ className }) {
               scaleY: [0, 1],
               y: [2, 0],
               transition: {
-                duration: 0.2,
+                duration: 0.4,
                 ease: "easeInOut",
                 repeat: Infinity,
-                repeatDelay: 3,
+                repeatDelay: 2,
               },
             }}
           >
@@ -2430,7 +2430,7 @@ export default function HeroIllustrationMobile({ className }) {
             }}
             transition={{
               repeat: Infinity,
-              repeatDelay: 3,
+              repeatDelay: 2,
               ease: "easeInOut",
               duration: 2,
             }}
@@ -2460,7 +2460,7 @@ export default function HeroIllustrationMobile({ className }) {
             }}
             transition={{
               repeat: Infinity,
-              repeatDelay: 3,
+              repeatDelay: 2,
               ease: "easeInOut",
               duration: 2,
             }}
@@ -4130,7 +4130,7 @@ export default function HeroIllustrationMobile({ className }) {
                 type: "spring",
                 repeat: "reverse",
                 repeatType: Infinity,
-                repeatDelay: 6,
+                repeatDelay: 2,
               },
             }}
           >

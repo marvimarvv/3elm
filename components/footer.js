@@ -81,6 +81,7 @@ export default function Footer() {
                 {t("footer.address headline")}
               </h3>
               <address className="font-light not-italic opacity-80">
+                <p>{t("footer.address street")}</p>
                 <p>{t("footer.address city")}</p>
                 <p>{t("footer.address country")}</p>
               </address>

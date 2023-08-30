@@ -4,7 +4,7 @@ import { useRef } from "react";
 
 export default function AbdelRhman({ className }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true }, { amount: 0.9 });
+  const isInView = useInView(ref, { once: true }, { amount: 0.5 });
 
   return (
     <m.div className={className}>

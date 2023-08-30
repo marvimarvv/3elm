@@ -63,7 +63,7 @@ export default function Contact() {
 
   return (
     <Layout siteTitle={`3elm - ${t("navigation.contact")}`}>
-      <section className="mb-40 flex flex-col gap-8 sm:mx-0 sm:mt-0 sm:flex-row">
+      <section className="mb-40 flex flex-col gap-8 sm:mx-0 sm:mt-0 sm:flex-row sm:rtl:flex-row-reverse">
         <m.h1
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
@@ -72,7 +72,7 @@ export default function Contact() {
             stiffness: 100,
             duration: 2,
           }}
-          className="text-cohead center flex flex-col gap-3 self-center border-y-16 border-y-brightorange py-2 text-center text-fluid-l font-bold md:w-[15ch]"
+          className="text-cohead center flex flex-col gap-3 self-center border-y-16 border-y-brightorange py-2 text-center text-fluid-l font-bold leading-snug md:w-[15ch]"
         >
           {t("contact.title")}
         </m.h1>
@@ -80,8 +80,10 @@ export default function Contact() {
       </section>
       <div className="grid grid-cols-1 gap-20 px-6 pb-40 sm:px-0 md:grid-cols-2">
         <section ref={scopeFirst} className="relative flex flex-col gap-4">
-          <span className="stagger absolute bg-brightorange p-4">1</span>
-          <h2 className="stagger text-center font-cohead text-fluid-m">
+          <span className="stagger absolute -mt-2 bg-brightorange px-4 py-3">
+            1
+          </span>
+          <h2 className="stagger px-12 text-center font-cohead text-fluid-m font-bold">
             {t("contact.enterprise headline")}
           </h2>
           <FishIllustrationContact className="stagger w-full" />
@@ -94,8 +96,10 @@ export default function Contact() {
           </a>
         </section>
         <section ref={scopeSecond} className="relative flex flex-col gap-4">
-          <span className="stagger absolute bg-brightorange p-4">2</span>
-          <h2 className="stagger text-center font-cohead text-fluid-m">
+          <span className="stagger absolute -mt-2 bg-brightorange px-4 py-3">
+            2
+          </span>
+          <h2 className="stagger px-12 text-center font-cohead text-fluid-m font-bold">
             {t("contact.support headline")}
           </h2>
           <PearIllustration className="stagger w-full" />
@@ -110,8 +114,10 @@ export default function Contact() {
           </a>
         </section>
         <section ref={scopeThird} className="relative flex flex-col gap-4">
-          <span className="stagger absolute bg-brightorange p-4">3</span>
-          <h2 className="stagger text-center font-cohead text-fluid-m">
+          <span className="stagger absolute -mt-2 bg-brightorange px-4 py-3">
+            3
+          </span>
+          <h2 className="stagger px-12 text-center font-cohead text-fluid-m font-bold">
             {t("contact.reach headline")}
           </h2>
           <BirdIllustration className="stagger w-full" />

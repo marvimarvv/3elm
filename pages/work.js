@@ -8,7 +8,9 @@ export default function Home() {
   return (
     <Layout siteTitle={`3elm - ${t("navigation.work")}`}>
       <section>
-        <h1 className="text-cohead text-fluid-xl">{t("work.title")}</h1>
+        <h1 className="text-cohead px-6 py-10 text-fluid-xl">
+          {t("work.title")}
+        </h1>
       </section>
     </Layout>
   );

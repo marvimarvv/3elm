@@ -16,8 +16,8 @@ export default function circleScrollAnimation({ className }) {
   const scaleCenterCircle = useSpring(
     useTransform(
       scrollYProgress,
-      [0, 0.2, 0.4, 0.55, 0.7, 1],
-      [0, 0.1, 0.5, 0.4, 3, 4]
+      [0, 0.2, 0.4, 0.55, 0.6, 1],
+      [0, 0.1, 0.5, 0.4, 1, 1.8]
     )
   );
   const scaleSmallCircles = useSpring(
@@ -34,6 +34,12 @@ export default function circleScrollAnimation({ className }) {
     scrollYProgress,
     [0, 0.55, 0.6, 1],
     [0, 0, 1, 1]
+  );
+
+  const topCenterCircle = useTransform(
+    scrollYProgress,
+    [0, 0.55, 1],
+    ["50%", "43%", "100%"]
   );
 
   const circle1Top = useTransform(
@@ -63,7 +69,7 @@ export default function circleScrollAnimation({ className }) {
   const circle2Left = useTransform(
     scrollYProgress,
     [0, 0.2, 0.4, 0.55],
-    ["60%", "50%", "40%", "50%"]
+    ["60%", "57%", "55%", "50%"]
   );
 
   const circle2Color = useTransform(
@@ -138,7 +144,7 @@ export default function circleScrollAnimation({ className }) {
           backgroundColor: circle1Color,
           scale: scaleSmallCircles,
         }}
-        className="absolute -translate-x-2/4 -translate-y-2/4 rounded-full"
+        className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full"
       ></m.div>
       <m.div
         style={{
@@ -150,7 +156,7 @@ export default function circleScrollAnimation({ className }) {
           backgroundColor: circle2Color,
           scale: scaleSmallCircles,
         }}
-        className="absolute -translate-x-2/4 -translate-y-2/4 rounded-full"
+        className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full"
       ></m.div>
       <m.div
         style={{
@@ -162,7 +168,7 @@ export default function circleScrollAnimation({ className }) {
           backgroundColor: circle3Color,
           scale: scaleSmallCircles,
         }}
-        className="absolute -translate-x-2/4 -translate-y-2/4 rounded-full"
+        className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full"
       ></m.div>
       <m.div
         style={{
@@ -174,7 +180,7 @@ export default function circleScrollAnimation({ className }) {
           backgroundColor: circle4Color,
           scale: scaleSmallCircles,
         }}
-        className="absolute -translate-x-2/4 -translate-y-2/4 rounded-full"
+        className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full"
       ></m.div>
       <m.div
         style={{
@@ -186,24 +192,25 @@ export default function circleScrollAnimation({ className }) {
           backgroundColor: circle5Color,
           scale: scaleSmallCircles,
         }}
-        className="absolute -translate-x-2/4 -translate-y-2/4 rounded-full"
+        className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full"
       ></m.div>
       <m.div
-        className="relative grid place-items-center rounded-full bg-brightorange text-center"
+        className="absolute grid place-items-center rounded-full bg-brightorange text-center"
         style={{
           scale: scaleCenterCircle,
+          top: topCenterCircle,
           height: "50vw",
           width: "50vw",
         }}
       >
         <m.span
-          className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 font-cohead text-fluid-l"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-cohead text-fluid-l"
           style={{ opacity: opacityFirstText }}
         >
           {t("about.circle text 1")}
         </m.span>
         <m.span
-          className="absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 font-cohead text-fluid-l"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-cohead text-fluid-l"
           style={{ opacity: opacitySecondText }}
         >
           {t("about.circle text 2")}

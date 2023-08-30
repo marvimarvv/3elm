@@ -10,7 +10,7 @@ const calculateStartOffset = (pathId, textContent) => {
   return startOffset > 0 ? startOffset : 0;
 };
 
-const CurvedText = ({ text }) => {
+const CurvedText = ({ text, className }) => {
   const [startOffset, setStartOffset] = useState(0);
 
   const svgRef = useRef(null);
@@ -33,7 +33,7 @@ const CurvedText = ({ text }) => {
     // Wrap this in a div to make the svg responsive, viewport units don't work on svg
     // Also, the svg otherwise always takes up 100% of the width of the container which
     // makes it have different sizes with different words in the same flex container
-    <div className="curved-text-width mx-auto">
+    <div className={className}>
       <svg viewBox="0 0 500 500" ref={svgRef} className="overflow-visible">
         <path
           id="curve"
@@ -46,7 +46,8 @@ const CurvedText = ({ text }) => {
             xlinkHref="#curve"
             style={{
               textAnchor: "middle",
-              fontSize: "80px",
+              fontSize: "90px",
+              letterSpacing: "-4px",
             }}
             startOffset={startOffset}
           >

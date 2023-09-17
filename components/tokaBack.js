@@ -42,8 +42,10 @@ export default function TokaBack({ className }) {
           stroke-linejoin="round"
         />
       </svg>
-      <h3 className="absolute top-1/2">{t("about.toka title")}</h3>
-      <p>{t("about.toka text")}</p>
+      <div className="absolute top-1/2 max-w-[20ch] -translate-y-1/2">
+        <h3 className="mb-4">{t("about.toka title")}</h3>
+        <p className=" text-xs font-light">{t("about.toka text")}</p>
+      </div>
     </div>
   );
 }

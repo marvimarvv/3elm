@@ -426,8 +426,10 @@ export default function EsraaBack({ className }) {
           stroke="#F15A24"
         />
       </svg>
-      <h3 className="absolute top-1/2">{t("about.esraa title")}</h3>
-      <p>{t("about.esraa text")}</p>
+      <div className="absolute top-1/2 max-w-[20ch] -translate-y-1/2">
+        <h3 className="mb-4">{t("about.esraa title")}</h3>
+        <p className=" text-xs font-light">{t("about.esraa text")}</p>
+      </div>
     </div>
   );
 }

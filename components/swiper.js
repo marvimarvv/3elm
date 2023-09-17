@@ -69,13 +69,6 @@ export default ({ className }) => {
           </div>
         </div>
       </SwiperSlide>
-
-      <SwiperSlide className="video-background aspect-video">
-        <div className="grid h-full place-items-center text-fluid-xl">3</div>
-      </SwiperSlide>
-      <SwiperSlide className="video-background aspect-video">
-        <div className="grid h-full place-items-center text-fluid-xl">4</div>
-      </SwiperSlide>
     </Swiper>
   );
 };

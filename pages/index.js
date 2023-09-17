@@ -167,7 +167,7 @@ export default function Home() {
               ease: "easeInOut",
             },
           }}
-          className="z-10 col-start-1 col-end-2 row-start-2 row-end-3 text-fluid-m text-white"
+          className="z-10 col-start-1 col-end-2 row-start-2 row-end-3 max-w-[20ch] text-fluid-m text-white"
         >
           {t("home.hero subtitle")}
         </m.h2>

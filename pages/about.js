@@ -19,6 +19,7 @@ import KayBack from "../components/kayBack";
 import Kiro from "../components/kiro";
 import KiroBack from "../components/kiroBack";
 import Layout from "../components/layout";
+import Link from "next/link";
 import Mahmoud from "../components/mahmoud";
 import MahmoudBack from "../components/mahmoudBack";
 import Marvin from "../components/marvin";
@@ -102,7 +103,7 @@ export default function About() {
           unoptimized={true}
           src={Gif}
           alt="Arabic letters moving up and down"
-          className="gif-shape-outside-ltr float-right w-8/12 md:-mr-8 md:w-5/12"
+          className="gif-shape-outside-ltr -mt-8 md:-mr-8 md:w-8/12 md:ltr:float-right md:rtl:float-left"
         />
         <p className="stagger text-cohead mb-7 text-fluid-s opacity-0">
           {t("about.paragraph 1")}
@@ -139,9 +140,12 @@ export default function About() {
         <p className="stagger mb-6 font-cohead text-fluid-m font-bold">
           {t("about.how text 2")}
         </p>
-        <a className="stagger flex cursor-pointer items-center justify-center rounded-full bg-brightorange p-4 transition-all hover:-translate-y-2 active:translate-y-2 active:bg-darkorange md:inline-flex">
+        <Link
+          href="/work"
+          className="stagger flex cursor-pointer items-center justify-center rounded-full bg-brightorange p-4 transition-all hover:-translate-y-2 active:translate-y-2 active:bg-darkorange md:inline-flex"
+        >
           {t("about.how button")}
-        </a>
+        </Link>
       </section>
       <section className="px-6 pb-40 text-center sm:px-0 md:px-16">
         <h2

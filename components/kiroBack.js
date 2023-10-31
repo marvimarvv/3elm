@@ -40,6 +40,18 @@ export default function KiroBack({ className }) {
     };
   }, [controls1, hasTriggered]);
 
+  // Remove the style attribute because Framer Motion will add a transform "none" style,
+  // that makes the hover not work, the timeout is to make sure the animation has finished
+  const onAnimationComplete = () => {
+    requestAnimationFrame(() => {
+      const drawer = ref.current;
+      setTimeout(() => {
+        if (drawer) drawer.removeAttribute("style");
+      }, 1000);
+      console.log("Animation complete");
+    });
+  };
+
   return (
     <m.div
       className={className}
@@ -61,6 +73,7 @@ export default function KiroBack({ className }) {
         transition: "all cubic-bezier(.43,.2,.54,1.17)",
         width: "100%",
       }}
+      onAnimationComplete={onAnimationComplete}
     >
       <svg
         width="301"

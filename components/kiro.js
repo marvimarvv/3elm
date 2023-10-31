@@ -43,13 +43,25 @@ export default function Kiro({ className }) {
     };
   }, [controls1, hasTriggered]);
 
+  // Remove the style attribute because Framer Motion will add a transform "none" style,
+  // that makes the hover not work, the timeout is to make sure the animation has finished
+  const onAnimationComplete = () => {
+    requestAnimationFrame(() => {
+      const drawer = ref.current;
+      setTimeout(() => {
+        if (drawer) drawer.removeAttribute("style");
+      }, 1000);
+      console.log("Animation complete");
+    });
+  };
+
   const transitionStyle = {
     width: "100%",
     transition: "all cubic-bezier(.43,.2,.54,1.17)",
   };
 
   return (
-    <div style={{ perspective: "1000px" }}>
+    <div>
       <m.div
         className={className}
         ref={ref}
@@ -69,7 +81,8 @@ export default function Kiro({ className }) {
             duration: 3,
           },
         }}
-        style={isAnimating ? transitionStyle : { transform: "inherit" }}
+        onAnimationComplete={onAnimationComplete}
+        style={isAnimating ? transitionStyle : {}}
       >
         <svg
           width="301"

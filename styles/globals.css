@@ -17,21 +17,6 @@
     perspective: 50rem;
   }
 
-  .hover-card-hint::after {
-    content: "+";
-    position: absolute;
-    bottom: -20px;
-    left: -20px;
-    width: 40px;
-    height: 40px;
-    background-color: theme("colors.cyan");
-    display: grid;
-    place-items: center;
-    font-size: 40px;
-    line-height: 1;
-    border-radius: 500px;
-  }
-
   .hover-card__side {
     backface-visibility: hidden;
     overflow: hidden;
@@ -152,14 +137,6 @@
       "M163.5 1C80 39 129.5 56.5 100 71C70.7467 85.3787 -5.99998 108.5 2.00008 172L5.00002 662.5"
     );
     transform: translate(-1.9%, -6.4%);
-  }
-
-  .list-square {
-    list-style-type: square;
-  }
-
-  .list-item-width-80 {
-    width: 80%;
   }
 
   .mirror {

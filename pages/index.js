@@ -1,15 +1,12 @@
 import { motion as m, stagger, useAnimate, useInView } from "framer-motion";
 
 import CurvedText from "../components/curvedText";
-import DesignIllustration from "../components/designIllustration";
 import FacebookIcon from "../components/facebookIcon";
 import FallingWords from "../components/fallingWords";
 import FishIllustration from "../components/fishIllustration";
-import GoalsIllustration from "../components/goalsIllustration";
 import HeartIcon from "../components/heartIcon";
 import HeroIllustration from "../components/heroIllustration";
 import HeroIllustrationMobile from "../components/heroIllustrationMobile";
-import HoverCardDesignBack from "../components/hoverCardDesignBack";
 import InstagramIcon from "../components/instagramIcon";
 import Layout from "../components/layout";
 import LikeIcon from "../components/likeIcon";
@@ -20,7 +17,6 @@ import StarIllustration from "../components/starIllustration";
 import Swiper from "../components/swiper";
 import TiktokIcon from "../components/tiktokIcon";
 import TwitterIcon from "../components/twitterIcon";
-import ValuesIllustration from "../components/valuesIllustration";
 import YellowBallIcon from "../components/yellowBallIcon";
 import YoutubeIcon from "../components/youtubeIcon";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -192,90 +188,6 @@ export default function Home() {
       <section>
         <FallingWords />
       </section>
-      {/* <section
-        ref={scopeSecond}
-        className="mb-40 flex flex-wrap justify-center gap-16"
-      >
-        <div className="stagger hover-card hover-card-hint relative aspect-square basis-[20rem]">
-          <div className="hover-card__side hover-card__side--front clip-path-corner--right absolute inset-0 grid place-items-center bg-orange">
-            <figgroup className="clip-path-corner--right flex h-[90%] w-[90%] flex-col bg-darkorange">
-              <figcaption>
-                <h3 className="mt-3 text-center font-cohead text-fluid-m">
-                  {t("home.card 1 title")}
-                </h3>
-              </figcaption>
-              <figure className="arrow-background m-3 flex-grow bg-repeat-space">
-                <ValuesIllustration></ValuesIllustration>
-              </figure>
-            </figgroup>
-          </div>
-          <div className="hover-card__side hover-card__side--back clip-path-corner--left absolute inset-0 flex items-center justify-center bg-orange p-4">
-            <ul role="list" className="flex h-full flex-col justify-evenly">
-              <li className="rotate-12 text-4xl">{t("home.card 1 point 1")}</li>
-              <li className="-ml-5 -rotate-6 text-lg">
-                {t("home.card 1 point 2")}
-              </li>
-              <li className="ml-8 -rotate-6 text-4xl">
-                {t("home.card 1 point 3")}
-              </li>
-              <li className="text-2xl">{t("home.card 1 point 4")}</li>
-              <li className="rotate-[15deg] self-end text-xl">
-                {t("home.card 1 point 5")}
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="stagger hover-card hover-card-hint relative aspect-square basis-[20rem]">
-          <div className="hover-card__side hover-card__side--front clip-path-corner--right absolute inset-0 grid place-items-center bg-orange">
-            <figgroup className="clip-path-corner--right flex h-[90%] w-[90%] flex-col bg-darkorange">
-              <figcaption>
-                <h3 className="mt-3 text-center font-cohead text-fluid-m">
-                  {t("home.card 2 title")}
-                </h3>
-              </figcaption>
-              <figure className="arrow-background m-3 flex-grow bg-repeat-space">
-                <DesignIllustration></DesignIllustration>
-              </figure>
-            </figgroup>
-          </div>
-          <div className="hover-card__side hover-card__side--back clip-path-corner--left absolute inset-0 h-full items-center justify-center bg-orange p-4">
-            <HoverCardDesignBack className="-mt-8"></HoverCardDesignBack>
-            <ul
-              role="list"
-              className="list-square flex flex-col items-center pt-6 text-center text-sm font-light"
-            >
-              <li>{t("home.card 2 point 1")}</li>
-              <li>{t("home.card 2 point 2")}</li>
-              <li>{t("home.card 2 point 3")}</li>
-              <li className="list-item-width-80">{t("home.card 2 point 4")}</li>
-              <li>{t("home.card 2 point 5")}</li>
-            </ul>
-          </div>
-        </div>
-        <div className="stagger hover-card hover-card-hint relative aspect-square basis-[20rem]">
-          <div className="hover-card__side hover-card__side--front clip-path-corner--right absolute inset-0 grid place-items-center bg-orange">
-            <figgroup className="clip-path-corner--right flex h-[90%] w-[90%] flex-col bg-darkorange">
-              <figcaption>
-                <h3 className="mt-3 text-center font-cohead text-fluid-m">
-                  {t("home.card 3 title")}
-                </h3>
-              </figcaption>
-              <figure className="arrow-background m-3 flex-grow bg-repeat-space">
-                <GoalsIllustration></GoalsIllustration>
-              </figure>
-            </figgroup>
-          </div>
-          <div className="hover-card__side hover-card__side--back clip-path-corner--left absolute inset-0 flex items-center justify-center bg-orange p-4">
-            <ul
-              role="list"
-              className="flex h-full list-disc flex-col justify-evenly p-8 marker:text-deepblue"
-            >
-              <li>{t("home.card 3 point 1")}</li>
-              <li>{t("home.card 3 point 2")}</li>
-            </ul>
-          </div>
-        </div>
-      </section> */}
       <section
         ref={scopeThird}
         className=" rtl:reverse-rtl relative grid grid-cols-3 items-end gap-x-6 gap-y-12 px-6 sm:px-0 md:mb-40"

@@ -156,7 +156,7 @@ export default function About() {
             className="stagger curved-text-width mx-auto"
             text={t("about.brains title 1")}
           />
-          <div className="stagger flex justify-between px-2">
+          <div className="stagger flex justify-between">
             <div className="h-2 w-2 rounded-full bg-orange"></div>
             <div className="h-2 w-2 rounded-full bg-orange"></div>
           </div>

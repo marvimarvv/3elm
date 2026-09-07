@@ -19,9 +19,9 @@ import TiktokIcon from "../components/tiktokIcon";
 import TwitterIcon from "../components/twitterIcon";
 import YellowBallIcon from "../components/yellowBallIcon";
 import YoutubeIcon from "../components/youtubeIcon";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
 import { useEffect } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 
 export default function Home() {
   const { t } = useTranslation();

@@ -1,6 +1,81 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-cotext: cotext, system-ui, sans-serif;
+  --font-cohead: cohead, system-ui, sans-serif;
+
+  /* Replace the entire default color palette, mirroring the old
+     tailwind.config.js `theme.colors` (not `theme.extend.colors`). */
+  --color-*: initial;
+  --color-blue: #0007bf;
+  --color-black: #000;
+  --color-brightorange: #e15027;
+  --color-current: currentColor;
+  --color-cyan: #00ffff;
+  --color-darkorange: #b74128;
+  --color-deepblue: #00002a;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --color-gray-950: #030712;
+  --color-green: #6cff6a;
+  --color-orange: #dd5127;
+  --color-pink: #ff3ffd;
+  --color-red: #d41100;
+  --color-transparent: transparent;
+  --color-white: #fff;
+  --color-yellow: #f4ff15;
+
+  --text-fluid-s: clamp(0.81rem, calc(0.71rem + 0.47vw), 1rem);
+  --text-fluid-m: clamp(1rem, calc(1rem + 0.78vw), 2rem);
+  --text-fluid-l: clamp(1.4rem, calc(1rem + 2.28vw), 3rem);
+  --text-fluid-xl: clamp(2rem, calc(1.32rem + 4.28vw), 9rem);
+
+  /* Tailwind v4's default type scale pairs font-size with a *unitless*
+     line-height ratio (e.g. `calc(1.5 / 1)`), whereas v3 paired it with an
+     absolute rem value. Unitless line-heights recompute against whatever
+     font-size ultimately wins the cascade on a given element, which changes
+     rendering wherever another rule (e.g. nested `marker:` variants such as
+     `marker:text-fluid-l` on a parent list bleeding into `marker:text-base`
+     on a nested list, as in pages/privacy.js) overrides font-size but not
+     line-height. Restoring v3's fixed rem values keeps that cascade inert,
+     matching the old output exactly. */
+  --text-xs--line-height: 1rem;
+  --text-sm--line-height: 1.25rem;
+  --text-base--line-height: 1.5rem;
+  --text-lg--line-height: 1.75rem;
+  --text-xl--line-height: 1.75rem;
+  --text-2xl--line-height: 2rem;
+  --text-3xl--line-height: 2.25rem;
+  --text-4xl--line-height: 2.5rem;
+
+  --animate-loop: loop var(--loop-duration) linear infinite var(--loop-direction);
+  @keyframes loop {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/* Defined via @utility (rather than inside @layer utilities) so that they
+   can be combined with variants, e.g. `rtl:mirror` / `rtl:reverse-rtl`. */
+@utility mirror {
+  transform: rotateY(180deg);
+}
+
+@utility reverse-rtl {
+  direction: ltr;
+}
 
 @layer base {
   html {
@@ -139,10 +214,6 @@
     transform: translate(-1.9%, -6.4%);
   }
 
-  .mirror {
-    transform: rotateY(180deg);
-  }
-
   .outer-tube-offset-path--outer {
     offset-path: path(
       "M1 0.5C26 12.1667 59 42 51.5 50C31.6716 71.1503 106 78 153.5 144C165.735 161 151.5 668.167 151 883.5"
@@ -166,10 +237,6 @@
     offset-path: path(
       "M31.5 0.5C40.3333 16.1667 28 49 0.5 21C21.5 47 42.0828 48.5 60.5 31C47.6667 42.8333 21.5 74 3 58"
     );
-  }
-
-  .reverse-rtl {
-    direction: ltr;
   }
 
   .swiper .swiper-button-next,

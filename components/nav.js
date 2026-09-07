@@ -4,7 +4,7 @@ import Logo from "./logo";
 import MobileMenu from "./mobileMenu";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 
 export default function Nav({ pageContent }) {
   const router = useRouter();

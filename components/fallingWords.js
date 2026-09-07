@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 import Matter from "matter-js";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 
 export default function FallingWords() {
   const { t } = useTranslation();

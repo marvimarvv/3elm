@@ -4,7 +4,7 @@ import Link from "next/link";
 import LocaleSwitch from "./localeSwitch";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 
 export default function MobileMenu({ className, pageContent }) {
   const router = useRouter();
@@ -64,10 +64,12 @@ export default function MobileMenu({ className, pageContent }) {
             </div>
           </Popover.Button>
           <Transition
+            as="div"
             show={open}
             className="fixed inset-0 grid place-items-center"
           >
             <Transition.Child
+              as="div"
               enter="transition duration-500 ease"
               enterFrom="opacity-0"
               enterTo="opacity-100"
@@ -80,6 +82,7 @@ export default function MobileMenu({ className, pageContent }) {
             <Popover.Panel className="fixed inset-0 grid place-items-center">
               <nav className="flex flex-col items-center justify-center gap-4">
                 <Transition.Child
+                  as="div"
                   enter="transition transform duration-500 ease"
                   enterFrom="scale-50 opacity-0 -translate-x-80"
                   enterTo="scale-100 opacity-100 translate-x-0"
@@ -96,6 +99,7 @@ export default function MobileMenu({ className, pageContent }) {
                   </Popover.Button>
                 </Transition.Child>
                 <Transition.Child
+                  as="div"
                   enter="transition transform duration-500 ease"
                   enterFrom="scale-50 opacity-0"
                   enterTo="scale-100 opacity-100"
@@ -106,6 +110,7 @@ export default function MobileMenu({ className, pageContent }) {
                   <div className="h-2 w-2 rounded-full bg-orange"></div>
                 </Transition.Child>
                 <Transition.Child
+                  as="div"
                   enter="transition transform duration-500 ease delay-100"
                   enterFrom="scale-50 opacity-0 -translate-x-80"
                   enterTo="scale-100 opacity-100 translate-x-0"
@@ -122,6 +127,7 @@ export default function MobileMenu({ className, pageContent }) {
                   </Popover.Button>
                 </Transition.Child>
                 <Transition.Child
+                  as="div"
                   enter="transition transform duration-500 ease"
                   enterFrom="scale-50 opacity-0"
                   enterTo="scale-100 opacity-100"
@@ -132,6 +138,7 @@ export default function MobileMenu({ className, pageContent }) {
                   <div className="h-2 w-2 rounded-full bg-orange"></div>
                 </Transition.Child>
                 <Transition.Child
+                  as="div"
                   enter="transition transform duration-500 ease delay-200"
                   enterFrom="scale-50 opacity-0 -translate-x-80"
                   enterTo="scale-100 opacity-100 translate-x-0"
@@ -148,6 +155,7 @@ export default function MobileMenu({ className, pageContent }) {
                   </Popover.Button>
                 </Transition.Child>
                 <Transition.Child
+                  as="div"
                   enter="transition transform duration-500 ease"
                   enterFrom="scale-50 opacity-0"
                   enterTo="scale-100 opacity-100"
@@ -158,6 +166,7 @@ export default function MobileMenu({ className, pageContent }) {
                   <div className="h-2 w-2 rounded-full bg-orange"></div>
                 </Transition.Child>
                 <Transition.Child
+                  as="div"
                   enter="transition transform duration-500 ease delay-300"
                   enterFrom="scale-50 opacity-0 -translate-x-80"
                   enterTo="scale-100 opacity-100 translate-x-0"

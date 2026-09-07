@@ -1,7 +1,7 @@
 import { motion as m, useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 
 export default function KiroBack({ className }) {
   const { t } = useTranslation();

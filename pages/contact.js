@@ -6,9 +6,9 @@ import FishIllustrationContact from "../components/fishIllustration__contact";
 import HeroContact from "../components/heroContact";
 import Layout from "../components/layout";
 import PearIllustration from "../components/pearIllustration";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
 import { useEffect } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 
 export default function Contact() {
   const { t } = useTranslation();

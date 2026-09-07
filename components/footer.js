@@ -9,7 +9,7 @@ import TiktokIcon from "./tiktokIcon";
 import TwitterIcon from "./twitterIcon";
 import YoutubeIcon from "./youtubeIcon";
 import { useRef } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 
 export default function Footer() {
   const { t } = useTranslation();

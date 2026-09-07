@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import PageLoader from "../components/pageLoader";
 import Router from "next/router";
-import { appWithTranslation } from "next-i18next";
+import { appWithTranslation } from "next-i18next/pages";
 
 function MyApp({ Component, pageProps, router }) {
   const [loading, setLoading] = useState(true); // Initialize loading state to true

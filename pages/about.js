@@ -31,9 +31,9 @@ import Toka from "../components/toka";
 import TokaBack from "../components/tokaBack";
 import Zaid from "../components/zaid";
 import ZaidBack from "../components/zaidBack";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
 import { useEffect } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 
 export default function About() {
   const { t } = useTranslation();

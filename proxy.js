@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 const PUBLIC_FILE = /\.(.*)$/;
 
-export function middleware(request) {
+export function proxy(request) {
   const shouldHandleLocale =
     !PUBLIC_FILE.test(request.nextUrl.pathname) &&
     !request.nextUrl.pathname.includes("/api/") &&

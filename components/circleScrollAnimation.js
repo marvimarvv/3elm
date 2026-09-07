@@ -2,7 +2,7 @@ import { useScroll, useSpring, useTransform } from "framer-motion";
 
 import { motion as m } from "framer-motion";
 import { useRef } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 
 export default function circleScrollAnimation({ className }) {
   const { t } = useTranslation();

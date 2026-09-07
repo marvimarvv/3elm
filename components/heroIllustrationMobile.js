@@ -4126,8 +4126,11 @@ export default function HeroIllustrationMobile({ className }) {
               scale: [1.2, 0.8, 1],
               transition: {
                 duration: 3,
-                bounce: 0.8,
-                type: "spring",
+                // `type: "spring"` only supports two keyframes as of
+                // framer-motion v11+; "tween" + a bouncy easing curve is the
+                // closest match for this 3-keyframe pulse.
+                type: "tween",
+                ease: "backInOut",
                 repeat: "reverse",
                 repeatType: Infinity,
                 repeatDelay: 2,
